@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const siteRoot = path.resolve(__dirname, "..");
-const workspaceRoot = path.resolve(siteRoot, "../../../..");
+const workspaceRoot = path.resolve(siteRoot, "../../..");
 const envPath = path.join(workspaceRoot, ".secrets/.env.shopify-tracking-uploader");
 const apiVersion = "2026-04";
 const windowDays = 90;
