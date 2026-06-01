@@ -213,7 +213,8 @@
       }
 
       function productCell(item) {
-        return `<div class="sku">${item.sku || "无 SKU"}</div><div class="title">${item.title || ""}</div>`;
+        const raw = item.rawSkus?.length ? `<div class="title">变体：${item.rawSkus.join(" / ")}</div>` : "";
+        return `<div class="sku">${item.sku || "无 SKU"}</div><div class="title">${item.title || ""}</div>${raw}`;
       }
 
       function table(items, type) {
@@ -224,6 +225,7 @@
               <td>${productCell(item)}</td>
               <td>${formatNumber(item.sold30)}</td>
               <td>${formatNumber(item.sold90)}</td>
+              <td>${item.salesStatusText || "无"}</td>
               <td>${daysLabel(item.daysSinceLastSale)}</td>
               <td><span class="tag hot">${item.action}</span></td>
             </tr>`;
@@ -232,13 +234,14 @@
             <td>${productCell(item)}</td>
             <td>${formatNumber(item.inventory)}</td>
             <td>${formatNumber(item.sold90)}</td>
+            <td>${item.salesStatusText || "无"}</td>
             <td>${daysLabel(item.daysSinceLastSale)}</td>
             <td><span class="tag ${item.action.includes("清仓") ? "cold" : "watch"}">${item.action}</span></td>
           </tr>`;
         }).join("");
         const headers = type === "soldOut"
-          ? "<tr><th>商品</th><th>30天销量</th><th>90天销量</th><th>最近出单</th><th>建议</th></tr>"
-          : "<tr><th>商品</th><th>库存</th><th>90天销量</th><th>最近出单</th><th>建议</th></tr>";
+          ? "<tr><th>商品</th><th>30天实销</th><th>90天实销</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>"
+          : "<tr><th>商品</th><th>实物库存</th><th>90天实销</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>";
         return `<table><thead>${headers}</thead><tbody>${rows}</tbody></table>`;
       }
 
@@ -248,10 +251,12 @@
         document.getElementById("report-meta").textContent =
           `生成时间：${data.generatedAt}｜数据范围：近 ${data.windowDays} 天｜数据源：Shopify Admin API 只读聚合`;
         document.getElementById("summary").innerHTML = [
-          metric("跟踪 SKU", data.summary.trackedSkus),
+          metric("基础 SKU", data.summary.trackedSkus),
           metric("售罄提醒", data.summary.soldOutAlerts),
           metric("滞销提醒", data.summary.slowMovingAlerts),
-          metric("90天销量", data.summary.unitsSold90)
+          metric("90天实销", data.summary.unitsSold90),
+          metric("90天定金", data.summary.depositQty90),
+          metric("90天尾款", data.summary.balanceQty90)
         ].join("");
         document.getElementById("sold-out").innerHTML = table(data.soldOutAlerts, "soldOut");
         document.getElementById("slow-moving").innerHTML = table(data.slowMovingAlerts, "slowMoving");

@@ -10,6 +10,7 @@ const apiVersion = "2026-04";
 const windowDays = 90;
 const now = new Date();
 const since = new Date(now.getTime() - windowDays * 24 * 60 * 60 * 1000);
+const fullSkuSuffixExceptions = new Set(["WT-WOLF-PARTS-B", "WT-WOLF-PARTS-O"]);
 
 function parseEnv(text) {
   const env = {};
@@ -97,6 +98,8 @@ query Orders($cursor: String, $query: String!) {
           quantity
           sku
           title
+          variantTitle
+          originalUnitPriceSet { shopMoney { amount } }
           variant { id }
           product { id }
         }
@@ -133,25 +136,91 @@ function daysSince(dateValue) {
   return (now.getTime() - new Date(dateValue).getTime()) / (24 * 60 * 60 * 1000);
 }
 
+function isFullSkuSuffixException(sku) {
+  return fullSkuSuffixExceptions.has(String(sku || "").trim().toUpperCase());
+}
+
+function baseSku(sku) {
+  const value = String(sku || "").trim();
+  if (isFullSkuSuffixException(value)) return value;
+  return value.replace(/-(D|B)$/i, "").replace(/-P$/i, "");
+}
+
+function classifySku({ sku, title = "", variantTitle = "", price = 0 }) {
+  const value = String(sku || "").trim();
+  const text = `${title} ${variantTitle}`;
+  const amount = Number(price || 0);
+  if (isFullSkuSuffixException(value)) return "normal";
+  if (/-D$/i.test(value)) return "deposit";
+  if (/-B$/i.test(value)) return "balance";
+  if (amount > 0 && amount <= 1000 && text.includes("予約商品")) return "deposit";
+  if (/-P$/i.test(value) && /(全額|全额|期間限定)/.test(variantTitle)) return "preorder_full";
+  if (/-P$/i.test(value) || text.includes("予約商品")) return "preorder_unknown";
+  return "normal";
+}
+
+function mergeLatest(left, right) {
+  if (!left) return right || null;
+  if (!right) return left || null;
+  return new Date(left) > new Date(right) ? left : right;
+}
+
+function displayStatus(item) {
+  const parts = [];
+  if (item.normalSold90) parts.push(`普通 ${item.normalSold90}`);
+  if (item.preorderFullSold90) parts.push(`全额预约 ${item.preorderFullSold90}`);
+  if (item.preorderUnknownQty90) parts.push(`预约待判 ${item.preorderUnknownQty90}`);
+  if (item.depositQty90) parts.push(`定金 ${item.depositQty90}`);
+  if (item.balanceQty90) parts.push(`尾款 ${item.balanceQty90}`);
+  return parts.join(" / ") || "无";
+}
+
 function buildDashboard(products, orders) {
-  const variants = new Map();
+  const productGroups = new Map();
   for (const product of products) {
     for (const variant of product.variants.nodes) {
       const sku = variant.sku?.trim();
       if (!sku) continue;
-      variants.set(sku, {
+      const skuBase = baseSku(sku);
+      const kind = classifySku({
         sku,
+        title: product.title,
+        variantTitle: variant.title,
+        price: variant.price
+      });
+      if (!productGroups.has(skuBase)) {
+        productGroups.set(skuBase, {
+        sku: skuBase,
+        rawSkus: new Set(),
         title: product.title,
         handle: product.handle,
         productUrl: product.onlineStoreUrl,
         productCreatedAt: product.createdAt,
-        inventory: Number(variant.inventoryQuantity ?? 0),
+        inventory: 0,
         totalInventory: Number(product.totalInventory ?? 0),
         price: Number(variant.price ?? 0),
+        normalSold30: 0,
+        normalSold90: 0,
+        preorderFullSold30: 0,
+        preorderFullSold90: 0,
+        preorderUnknownQty30: 0,
+        preorderUnknownQty90: 0,
+        depositQty30: 0,
+        depositQty90: 0,
+        balanceQty30: 0,
+        balanceQty90: 0,
         sold30: 0,
         sold90: 0,
         lastSaleAt: null
       });
+      }
+      const record = productGroups.get(skuBase);
+      record.rawSkus.add(sku);
+      if (kind === "normal" || kind === "preorder_full" || kind === "preorder_unknown") {
+        record.inventory += Number(variant.inventoryQuantity ?? 0);
+      }
+      if (kind === "normal" && !record.productUrl && product.onlineStoreUrl) record.productUrl = product.onlineStoreUrl;
+      if (kind === "normal") record.price = Number(variant.price ?? record.price ?? 0);
     }
   }
 
@@ -160,19 +229,48 @@ function buildDashboard(products, orders) {
     const is30d = orderDate >= new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
     for (const item of order.lineItems.nodes) {
       const sku = item.sku?.trim();
-      if (!sku || !variants.has(sku)) continue;
-      const record = variants.get(sku);
+      const skuBase = baseSku(sku);
+      if (!sku || !productGroups.has(skuBase)) continue;
+      const record = productGroups.get(skuBase);
+      const kind = classifySku({
+        sku,
+        title: item.title,
+        variantTitle: item.variantTitle,
+        price: item.originalUnitPriceSet?.shopMoney?.amount
+      });
       const qty = Number(item.quantity || 0);
-      record.sold90 += qty;
-      if (is30d) record.sold30 += qty;
-      if (!record.lastSaleAt || orderDate > new Date(record.lastSaleAt)) {
-        record.lastSaleAt = order.createdAt;
+      if (kind === "deposit") {
+        record.depositQty90 += qty;
+        if (is30d) record.depositQty30 += qty;
+      } else if (kind === "balance") {
+        record.balanceQty90 += qty;
+        if (is30d) record.balanceQty30 += qty;
+      } else if (kind === "preorder_full") {
+        record.preorderFullSold90 += qty;
+        if (is30d) record.preorderFullSold30 += qty;
+        record.sold90 += qty;
+        if (is30d) record.sold30 += qty;
+        record.lastSaleAt = mergeLatest(record.lastSaleAt, order.createdAt);
+      } else if (kind === "preorder_unknown") {
+        record.preorderUnknownQty90 += qty;
+        if (is30d) record.preorderUnknownQty30 += qty;
+        record.sold90 += qty;
+        if (is30d) record.sold30 += qty;
+        record.lastSaleAt = mergeLatest(record.lastSaleAt, order.createdAt);
+      } else {
+        record.normalSold90 += qty;
+        if (is30d) record.normalSold30 += qty;
+        record.sold90 += qty;
+        if (is30d) record.sold30 += qty;
+        record.lastSaleAt = mergeLatest(record.lastSaleAt, order.createdAt);
       }
     }
   }
 
-  const records = [...variants.values()].map((item) => ({
+  const records = [...productGroups.values()].map((item) => ({
     ...item,
+    rawSkus: [...item.rawSkus].sort(),
+    salesStatusText: displayStatus(item),
     daysSinceLastSale: daysSince(item.lastSaleAt),
     productAgeDays: daysSince(item.productCreatedAt)
   }));
@@ -202,7 +300,9 @@ function buildDashboard(products, orders) {
       trackedSkus: records.length,
       soldOutAlerts: soldOutAlerts.length,
       slowMovingAlerts: slowMovingAlerts.length,
-      unitsSold90: records.reduce((sum, item) => sum + item.sold90, 0)
+      unitsSold90: records.reduce((sum, item) => sum + item.sold90, 0),
+      depositQty90: records.reduce((sum, item) => sum + item.depositQty90, 0),
+      balanceQty90: records.reduce((sum, item) => sum + item.balanceQty90, 0)
     },
     soldOutAlerts,
     slowMovingAlerts
