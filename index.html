@@ -3,69 +3,263 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>第 14 级部署练习</title>
+    <title>77figure Shopify 销售监控</title>
     <style>
       :root {
         color-scheme: light;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f5f7fb;
-        color: #172033;
+        background: #f4f6f8;
+        color: #1d2733;
+      }
+
+      * {
+        box-sizing: border-box;
       }
 
       body {
         margin: 0;
         min-height: 100vh;
-        display: grid;
-        place-items: center;
       }
 
-      main {
-        width: min(720px, calc(100vw - 32px));
-        padding: 32px;
-        background: #ffffff;
-        border: 1px solid #d9e0ec;
-        border-radius: 8px;
-        box-shadow: 0 18px 45px rgba(23, 32, 51, 0.08);
+      header {
+        background: #15324a;
+        color: #ffffff;
+        padding: 28px 24px;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
       }
 
       h1 {
-        margin: 0 0 12px;
-        font-size: 28px;
-        line-height: 1.25;
+        margin: 0 0 8px;
+        font-size: 30px;
+        line-height: 1.2;
         letter-spacing: 0;
       }
 
-      p {
-        margin: 0 0 16px;
-        font-size: 16px;
-        line-height: 1.7;
+      .meta {
+        margin: 0;
+        color: #c6d6e2;
+        font-size: 14px;
+        line-height: 1.6;
       }
 
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 10px;
-        border-radius: 6px;
-        background: #eef8f0;
-        color: #176b35;
+      main {
+        padding: 24px 0 40px;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .metric,
+      .panel {
+        background: #ffffff;
+        border: 1px solid #dde4ec;
+        border-radius: 8px;
+      }
+
+      .metric {
+        padding: 16px;
+      }
+
+      .label {
+        display: block;
+        color: #657487;
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+
+      .value {
+        display: block;
+        color: #162231;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .panel {
+        overflow: hidden;
+      }
+
+      .panel h2 {
+        margin: 0;
+        padding: 16px;
+        border-bottom: 1px solid #e5ebf2;
+        font-size: 18px;
+        line-height: 1.3;
+        letter-spacing: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 11px 12px;
+        border-bottom: 1px solid #eef2f6;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: #536477;
+        background: #f8fafc;
         font-weight: 600;
       }
 
-      .status::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: currentColor;
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .sku {
+        font-weight: 700;
+        color: #1c2d3f;
+        white-space: nowrap;
+      }
+
+      .title {
+        color: #536477;
+        line-height: 1.45;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-weight: 700;
+      }
+
+      .tag.hot {
+        background: #fff0df;
+        color: #925100;
+      }
+
+      .tag.cold {
+        background: #edf2ff;
+        color: #294c9b;
+      }
+
+      .tag.watch {
+        background: #eef8f0;
+        color: #176b35;
+      }
+
+      .empty {
+        padding: 18px 16px;
+        color: #657487;
+      }
+
+      @media (max-width: 880px) {
+        .summary,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        table {
+          min-width: 720px;
+        }
+
+        .table-scroll {
+          overflow-x: auto;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>第 14 级部署练习</h1>
-      <p>这是一个最小静态网页，用来练习从本地验证到 GitHub Pages 线上验证的完整闭环。</p>
-      <p class="status">本地页面已准备，等待部署验证</p>
+    <header>
+      <div class="wrap">
+        <h1>77figure Shopify 销售监控</h1>
+        <p class="meta" id="report-meta">读取数据中...</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="summary" id="summary"></section>
+      <section class="grid">
+        <article class="panel">
+          <h2>售罄补货提醒</h2>
+          <div class="table-scroll" id="sold-out"></div>
+        </article>
+        <article class="panel">
+          <h2>滞销/折扣提醒</h2>
+          <div class="table-scroll" id="slow-moving"></div>
+        </article>
+      </section>
     </main>
+
+    <script>
+      const formatNumber = (value) => new Intl.NumberFormat("zh-CN").format(value || 0);
+      const daysLabel = (days) => Number.isFinite(days) ? `${Math.round(days)} 天` : "无记录";
+
+      function metric(label, value) {
+        return `<div class="metric"><span class="label">${label}</span><span class="value">${formatNumber(value)}</span></div>`;
+      }
+
+      function productCell(item) {
+        return `<div class="sku">${item.sku || "无 SKU"}</div><div class="title">${item.title || ""}</div>`;
+      }
+
+      function table(items, type) {
+        if (!items.length) return '<div class="empty">当前没有触发提醒的商品。</div>';
+        const rows = items.map((item) => {
+          if (type === "soldOut") {
+            return `<tr>
+              <td>${productCell(item)}</td>
+              <td>${formatNumber(item.sold30)}</td>
+              <td>${formatNumber(item.sold90)}</td>
+              <td>${daysLabel(item.daysSinceLastSale)}</td>
+              <td><span class="tag hot">${item.action}</span></td>
+            </tr>`;
+          }
+          return `<tr>
+            <td>${productCell(item)}</td>
+            <td>${formatNumber(item.inventory)}</td>
+            <td>${formatNumber(item.sold90)}</td>
+            <td>${daysLabel(item.daysSinceLastSale)}</td>
+            <td><span class="tag ${item.action.includes("清仓") ? "cold" : "watch"}">${item.action}</span></td>
+          </tr>`;
+        }).join("");
+        const headers = type === "soldOut"
+          ? "<tr><th>商品</th><th>30天销量</th><th>90天销量</th><th>最近出单</th><th>建议</th></tr>"
+          : "<tr><th>商品</th><th>库存</th><th>90天销量</th><th>最近出单</th><th>建议</th></tr>";
+        return `<table><thead>${headers}</thead><tbody>${rows}</tbody></table>`;
+      }
+
+      async function main() {
+        const response = await fetch("./data/dashboard.json", { cache: "no-store" });
+        const data = await response.json();
+        document.getElementById("report-meta").textContent =
+          `生成时间：${data.generatedAt}｜数据范围：近 ${data.windowDays} 天｜数据源：Shopify Admin API 只读聚合`;
+        document.getElementById("summary").innerHTML = [
+          metric("跟踪 SKU", data.summary.trackedSkus),
+          metric("售罄提醒", data.summary.soldOutAlerts),
+          metric("滞销提醒", data.summary.slowMovingAlerts),
+          metric("90天销量", data.summary.unitsSold90)
+        ].join("");
+        document.getElementById("sold-out").innerHTML = table(data.soldOutAlerts, "soldOut");
+        document.getElementById("slow-moving").innerHTML = table(data.slowMovingAlerts, "slowMoving");
+      }
+
+      main().catch((error) => {
+        document.getElementById("report-meta").textContent = `数据读取失败：${error.message}`;
+      });
+    </script>
   </body>
 </html>
