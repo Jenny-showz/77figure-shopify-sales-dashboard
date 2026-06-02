@@ -38,6 +38,7 @@ node scripts/run-dashboard-update.mjs
 - 每天 UTC 01:00 自动运行，即北京时间 09:00。
 - 支持在 GitHub Actions 页面手动触发 `workflow_dispatch`。
 - 读取 GitHub Secrets：`SHOPIFY_STORE_DOMAIN`、`SHOPIFY_ACCESS_TOKEN`。
+- 使用 Node.js 24 运行。
 - 成功后只提交 `data/dashboard.json` 和 `data/last-run.json`。
 - `logs/` 不提交到仓库。
 

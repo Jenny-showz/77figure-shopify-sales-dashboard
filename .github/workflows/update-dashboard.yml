@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
       SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
       DASHBOARD_UPDATE_TIMEOUT_MS: 600000
@@ -30,7 +31,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Validate secrets
         run: |
