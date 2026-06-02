@@ -1,0 +1,53 @@
+name: Update dashboard data
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+      SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+      DASHBOARD_UPDATE_TIMEOUT_MS: 600000
+      DASHBOARD_UPDATE_ATTEMPTS: 2
+      SHOPIFY_REQUEST_TIMEOUT_MS: 30000
+      SHOPIFY_REQUEST_ATTEMPTS: 3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate secrets
+        run: |
+          test -n "$SHOPIFY_STORE_DOMAIN"
+          test -n "$SHOPIFY_ACCESS_TOKEN"
+
+      - name: Build dashboard data
+        run: node scripts/run-dashboard-update.mjs
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard.json data/last-run.json
+          if git diff --cached --quiet; then
+            echo "No dashboard data changes to commit."
+            exit 0
+          fi
+          git commit -m "Update dashboard data"
+          git push

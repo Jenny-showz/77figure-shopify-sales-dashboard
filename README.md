@@ -10,6 +10,37 @@ node scripts/build-dashboard.mjs
 
 脚本读取本机 `.secrets/.env.shopify-tracking-uploader`，不会把 token 写入 `data/dashboard.json` 或前端页面。
 
+## 稳定更新
+
+第 15 级定时任务准备版：
+
+```bash
+node scripts/run-dashboard-update.mjs
+```
+
+包装脚本提供整轮 timeout、整轮 retry、运行日志和状态文件：
+
+- 日志：`logs/dashboard-update-*.log`
+- 成功状态：`data/last-run.json`
+- 失败状态：`data/last-error.json`
+
+默认值：
+
+- `DASHBOARD_UPDATE_TIMEOUT_MS=600000`
+- `DASHBOARD_UPDATE_ATTEMPTS=2`
+- `SHOPIFY_REQUEST_TIMEOUT_MS=30000`
+- `SHOPIFY_REQUEST_ATTEMPTS=3`
+
+## GitHub Actions
+
+线上自动更新使用 `.github/workflows/update-dashboard.yml`：
+
+- 每天 UTC 01:00 自动运行，即北京时间 09:00。
+- 支持在 GitHub Actions 页面手动触发 `workflow_dispatch`。
+- 读取 GitHub Secrets：`SHOPIFY_STORE_DOMAIN`、`SHOPIFY_ACCESS_TOKEN`。
+- 成功后只提交 `data/dashboard.json` 和 `data/last-run.json`。
+- `logs/` 不提交到仓库。
+
 ## SKU 归一化口径
 
 看板复用 `77运营/ERP录单自动化/定尾收款` 的定尾逻辑，先把销售状态 SKU 归到基础 SKU，再做补货和滞销判断。

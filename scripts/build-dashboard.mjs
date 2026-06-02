@@ -11,6 +11,9 @@ const windowDays = 90;
 const now = new Date();
 const since = new Date(now.getTime() - windowDays * 24 * 60 * 60 * 1000);
 const fullSkuSuffixExceptions = new Set(["WT-WOLF-PARTS-B", "WT-WOLF-PARTS-O"]);
+const requestTimeoutMs = Number(process.env.SHOPIFY_REQUEST_TIMEOUT_MS || 30000);
+const requestMaxAttempts = Number(process.env.SHOPIFY_REQUEST_ATTEMPTS || 3);
+const retryBaseDelayMs = Number(process.env.SHOPIFY_RETRY_BASE_DELAY_MS || 1000);
 
 function parseEnv(text) {
   const env = {};
@@ -28,7 +31,13 @@ function parseEnv(text) {
 }
 
 async function loadConfig() {
-  const env = parseEnv(await readFile(envPath, "utf8"));
+  let env = {
+    SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
+    SHOPIFY_ACCESS_TOKEN: process.env.SHOPIFY_ACCESS_TOKEN
+  };
+  if (!env.SHOPIFY_STORE_DOMAIN || !env.SHOPIFY_ACCESS_TOKEN) {
+    env = parseEnv(await readFile(envPath, "utf8"));
+  }
   const storeDomain = env.SHOPIFY_STORE_DOMAIN?.replace(/^https?:\/\//, "").split("/")[0];
   const token = env.SHOPIFY_ACCESS_TOKEN;
   if (!storeDomain || !token) {
@@ -37,26 +46,53 @@ async function loadConfig() {
   return { storeDomain, token };
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function isRetryableStatus(status) {
+  return status === 429 || status >= 500;
+}
+
 async function shopifyGraphql(config, query, variables) {
-  const response = await fetch(`https://${config.storeDomain}/admin/api/${apiVersion}/graphql.json`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Shopify-Access-Token": config.token
-    },
-    body: JSON.stringify({ query, variables })
-  });
-  const text = await response.text();
-  let payload;
-  try {
-    payload = JSON.parse(text);
-  } catch {
-    throw new Error(`Shopify returned non-JSON response: ${response.status}`);
+  let lastError;
+  for (let attempt = 1; attempt <= requestMaxAttempts; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
+    try {
+      const response = await fetch(`https://${config.storeDomain}/admin/api/${apiVersion}/graphql.json`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Shopify-Access-Token": config.token
+        },
+        body: JSON.stringify({ query, variables }),
+        signal: controller.signal
+      });
+      const text = await response.text();
+      let payload;
+      try {
+        payload = JSON.parse(text);
+      } catch {
+        throw new Error(`Shopify returned non-JSON response: ${response.status}`);
+      }
+      if (!response.ok || payload.errors) {
+        const message = JSON.stringify(payload.errors || payload, null, 2);
+        if (isRetryableStatus(response.status) && attempt < requestMaxAttempts) {
+          throw new Error(`Retryable Shopify response ${response.status}: ${message}`);
+        }
+        throw new Error(message);
+      }
+      return payload.data;
+    } catch (error) {
+      lastError = error;
+      if (attempt >= requestMaxAttempts) break;
+      await sleep(retryBaseDelayMs * attempt);
+    } finally {
+      clearTimeout(timeout);
+    }
   }
-  if (!response.ok || payload.errors) {
-    throw new Error(JSON.stringify(payload.errors || payload, null, 2));
-  }
-  return payload.data;
+  throw lastError;
 }
 
 const productQuery = `#graphql
