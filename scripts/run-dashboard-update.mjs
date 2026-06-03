@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
 import { spawn } from "node:child_process";
 import path from "node:path";
@@ -16,6 +16,11 @@ const logFile = path.join(logsDir, `dashboard-update-${stamp}.log`);
 
 function appendLine(stream, value) {
   stream.write(`${value}\n`);
+}
+
+function writeChunk(stream, chunk, output) {
+  stream.write(chunk);
+  output.write(chunk);
 }
 
 function runAttempt(attempt, stream) {
@@ -38,8 +43,8 @@ function runAttempt(attempt, stream) {
       setTimeout(() => child.kill("SIGKILL"), 5000).unref();
     }, timeoutMs);
 
-    child.stdout.on("data", (chunk) => stream.write(chunk));
-    child.stderr.on("data", (chunk) => stream.write(chunk));
+    child.stdout.on("data", (chunk) => writeChunk(stream, chunk, process.stdout));
+    child.stderr.on("data", (chunk) => writeChunk(stream, chunk, process.stderr));
     child.on("close", (code, signal) => {
       clearTimeout(timeout);
       const finishedAt = new Date();
@@ -89,6 +94,14 @@ stream.end();
 
 if (!status.ok) {
   console.error(`Dashboard update failed. See ${logFile}`);
+  try {
+    const logText = await readFile(logFile, "utf8");
+    console.error("----- dashboard update log -----");
+    console.error(logText);
+    console.error("----- end dashboard update log -----");
+  } catch (error) {
+    console.error(`Could not read log file: ${error.message}`);
+  }
   process.exit(1);
 }
 
