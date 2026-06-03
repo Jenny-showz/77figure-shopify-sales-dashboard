@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-dashboard.mjs",
-    "update": "node scripts/run-dashboard-update.mjs"
+    "update": "node scripts/run-dashboard-update.mjs",
+    "action-server": "node scripts/dashboard-action-server.mjs"
   },
   "repository": {
     "type": "git",

@@ -334,7 +334,9 @@
     </main>
 
     <script>
-      const actionApiUrl = window.DASHBOARD_ACTION_API_URL || localStorage.getItem("dashboardActionApiUrl") || "";
+      const actionApiUrl = window.DASHBOARD_ACTION_API_URL
+        || localStorage.getItem("dashboardActionApiUrl")
+        || "http://127.0.0.1:8787/shopify-product-action";
       const formatNumber = (value) => new Intl.NumberFormat("zh-CN").format(value || 0);
       const formatMoney = (value) => `¥${formatNumber(Math.round(value || 0))}`;
       const daysLabel = (days) => Number.isFinite(days) ? `${Math.round(days)} 天` : "无记录";
@@ -504,20 +506,24 @@
         if (!productId) return;
         const defaultLabel = button.dataset.defaultLabel || button.textContent;
         button.dataset.defaultLabel = defaultLabel;
-        if (!actionApiUrl) {
+        button.disabled = true;
+        try {
+          const response = await fetch(actionApiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action, productId })
+          });
+          if (!response.ok) throw new Error(await response.text());
+          button.textContent = "已提交";
+        } catch (error) {
           await navigator.clipboard.writeText(commandFor(action, productId));
+          button.disabled = false;
           button.textContent = "已复制命令";
           setTimeout(() => { button.textContent = defaultLabel; }, 1600);
-          return;
+          console.error(error);
+          return false;
         }
-        button.disabled = true;
-        const response = await fetch(actionApiUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action, productId })
-        });
-        if (!response.ok) throw new Error(await response.text());
-        button.textContent = "已提交";
+        return true;
       }
 
       function renderDashboard(data) {
@@ -579,8 +585,8 @@
           return;
         }
         try {
-          await runProductAction(action, button.dataset.product, button);
-          if (action === "end-preorder") {
+          const executed = await runProductAction(action, button.dataset.product, button);
+          if (executed && action === "end-preorder") {
             setSoldOutStatus(button.dataset.soldOutKey, "preorder-ended");
             if (dashboardData) renderDashboard(dashboardData);
           }

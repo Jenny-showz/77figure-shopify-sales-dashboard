@@ -95,11 +95,24 @@ node scripts/run-dashboard-update.mjs
 - `再入荷`：移除 Shopify 商品标题前的 `【品切れ】`。
 - `忽略`：仅在当前浏览器本地隐藏该行。
 
-GitHub Pages 是静态页面，不能安全保存 Admin token。按钮默认会复制本地执行命令；如需点击即执行，需要配置受保护的 Action API URL。也可在本地执行：
+GitHub Pages 是静态页面，不能安全保存 Admin token。要让线上看板按钮直接修改 Shopify，先在本机启动本地执行器：
+
+```bash
+npm run action-server
+```
+
+执行器只监听 `127.0.0.1:8787`，读取本机 `.secrets/.env.shopify-tracking-uploader`。线上页面按钮会默认调用：
+
+```text
+http://127.0.0.1:8787/shopify-product-action
+```
+
+如果本地执行器没有启动，页面按钮会退回为复制本地执行命令。也可手动执行：
 
 ```bash
 node scripts/shopify-product-action.mjs --action mark-sold-out --product gid://shopify/Product/123 --commit
 node scripts/shopify-product-action.mjs --action restock --product gid://shopify/Product/123 --commit
+node scripts/shopify-product-action.mjs --action end-preorder --product gid://shopify/Product/123 --commit
 ```
 
 ## 安全边界
