@@ -20,6 +20,11 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
       SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+      ERP_DB_HOST: ${{ secrets.ERP_DB_HOST }}
+      ERP_DB_PORT: ${{ secrets.ERP_DB_PORT }}
+      ERP_DB_NAME: ${{ secrets.ERP_DB_NAME }}
+      ERP_DB_USER: ${{ secrets.ERP_DB_USER }}
+      ERP_DB_PASSWORD: ${{ secrets.ERP_DB_PASSWORD }}
       DASHBOARD_UPDATE_TIMEOUT_MS: 600000
       DASHBOARD_UPDATE_ATTEMPTS: 2
       SHOPIFY_REQUEST_TIMEOUT_MS: 30000
@@ -37,6 +42,13 @@ jobs:
         run: |
           test -n "$SHOPIFY_STORE_DOMAIN"
           test -n "$SHOPIFY_ACCESS_TOKEN"
+          test -n "$ERP_DB_HOST"
+          test -n "$ERP_DB_NAME"
+          test -n "$ERP_DB_USER"
+          test -n "$ERP_DB_PASSWORD"
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build dashboard data
         run: node scripts/run-dashboard-update.mjs

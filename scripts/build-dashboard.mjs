@@ -1,13 +1,17 @@
 import { readFile, mkdir, writeFile } from "node:fs/promises";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import pg from "pg";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const siteRoot = path.resolve(__dirname, "..");
 const workspaceRoot = path.resolve(siteRoot, "../../..");
 const envPath = path.join(workspaceRoot, ".secrets/.env.shopify-tracking-uploader");
+const erpEnvPath = path.join(workspaceRoot, ".secrets/.env.erp");
 const apiVersion = "2026-04";
 const windowDays = 90;
+const staleInboundDays = 60;
 const now = new Date();
 const since = new Date(now.getTime() - windowDays * 24 * 60 * 60 * 1000);
 const fullSkuSuffixExceptions = new Set(["WT-WOLF-PARTS-B", "WT-WOLF-PARTS-O"]);
@@ -30,7 +34,7 @@ function parseEnv(text) {
   return env;
 }
 
-async function loadConfig() {
+async function loadShopifyConfig() {
   let env = {
     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
     SHOPIFY_ACCESS_TOKEN: process.env.SHOPIFY_ACCESS_TOKEN
@@ -44,6 +48,31 @@ async function loadConfig() {
     throw new Error("Missing SHOPIFY_STORE_DOMAIN or SHOPIFY_ACCESS_TOKEN");
   }
   return { storeDomain, token };
+}
+
+async function loadErpConfig() {
+  let env = {
+    ERP_DB_HOST: process.env.ERP_DB_HOST,
+    ERP_DB_PORT: process.env.ERP_DB_PORT,
+    ERP_DB_NAME: process.env.ERP_DB_NAME,
+    ERP_DB_USER: process.env.ERP_DB_USER,
+    ERP_DB_PASSWORD: process.env.ERP_DB_PASSWORD
+  };
+  if (!env.ERP_DB_HOST || !env.ERP_DB_NAME || !env.ERP_DB_USER || !env.ERP_DB_PASSWORD) {
+    if (!fs.existsSync(erpEnvPath)) return null;
+    env = parseEnv(await readFile(erpEnvPath, "utf8"));
+  }
+  const required = ["ERP_DB_HOST", "ERP_DB_NAME", "ERP_DB_USER", "ERP_DB_PASSWORD"];
+  if (required.some((key) => !env[key])) return null;
+  return {
+    host: env.ERP_DB_HOST,
+    port: Number(env.ERP_DB_PORT || 5432),
+    database: env.ERP_DB_NAME,
+    user: env.ERP_DB_USER,
+    password: env.ERP_DB_PASSWORD,
+    ssl: { rejectUnauthorized: false },
+    connectionTimeoutMillis: 15000
+  };
 }
 
 function sleep(ms) {
@@ -167,9 +196,89 @@ async function fetchRecentOrders(config) {
   return orders.filter((order) => !order.cancelledAt);
 }
 
+async function fetchErpInventory() {
+  const config = await loadErpConfig();
+  if (!config) {
+    return { rows: [], connected: false, error: "Missing ERP database configuration" };
+  }
+  const client = new pg.Client(config);
+  await client.connect();
+  try {
+    const result = await client.query(`
+      with stock as (
+        select sku_id, stock, pre_stock, purchase_price, transfer_add_price
+        from erp.admin_t_gundamit_platform_sku_stock
+        where platform = '77figure'
+      ),
+      inbound as (
+        select sku_id, max(created_time) as last_inbound_at
+        from erp.admin_t_gundamit_platform_sku_record
+        where platform = '77figure'
+          and type = 1
+        group by sku_id
+      ),
+      sold as (
+        select
+          op.sku_id,
+          sum(op.product_count)::int as sold_90,
+          max(od.created_time) as last_erp_sale_at
+        from erp.admin_t_gundamit_platform_order_product op
+        join erp.admin_t_gundamit_platform_order_detail od
+          on od.id = op.order_detail_id
+        where od.shop_platform = '77figure'
+          and od.created_time > now() - interval '90 days'
+          and coalesce(od.order_status, '') <> 'Cancelled'
+          and coalesce(od.refund_status, 0) = 0
+        group by op.sku_id
+      )
+      select
+        sku.sku_code,
+        sku.name_cn,
+        coalesce(fig.sale_status, sku.sale_status) as sale_status,
+        coalesce(nullif(fig.price, 0), nullif(sku.price, 0), 0) as erp_price,
+        stock.stock,
+        stock.pre_stock,
+        coalesce(stock.purchase_price, sku.purchase_price, 0) as purchase_price,
+        coalesce(stock.transfer_add_price, 0) as transfer_add_price,
+        (stock.stock * coalesce(stock.purchase_price, sku.purchase_price, 0)) as stock_cost,
+        inbound.last_inbound_at,
+        coalesce(sold.sold_90, 0) as erp_sold_90,
+        sold.last_erp_sale_at
+      from stock
+      join erp.admin_t_gundamit_platform_sku sku on sku.id = stock.sku_id
+      left join erp.admin_t_dd_platform_figure_sku fig on fig.sku_code = sku.sku_code
+      left join inbound on inbound.sku_id = stock.sku_id
+      left join sold on sold.sku_id = stock.sku_id
+      order by stock_cost desc nulls last
+    `);
+    return { rows: result.rows, connected: true, error: null };
+  } finally {
+    await client.end();
+  }
+}
+
 function daysSince(dateValue) {
   if (!dateValue) return null;
   return (now.getTime() - new Date(dateValue).getTime()) / (24 * 60 * 60 * 1000);
+}
+
+function monthsOfStock(stock, sold90) {
+  const monthly = Number(sold90 || 0) / 3;
+  if (monthly <= 0) return null;
+  return Number(stock || 0) / monthly;
+}
+
+function stockClearanceAction(item) {
+  if (item.saleStatus !== "In Stock") return "状态检查";
+  if (item.erpSold90 === 0 && item.stockAgeDays >= staleInboundDays && item.erpStock >= 3) return "建议清仓";
+  if (item.stockMonths !== null && item.stockMonths >= 12) return "建议折扣";
+  if (item.erpSold90 <= 1) return "低速观察";
+  return "继续观察";
+}
+
+function shopifyAdminProductUrl(storeDomain, productGid) {
+  const id = String(productGid || "").split("/").pop();
+  return id ? `https://admin.shopify.com/store/${storeDomain.split(".")[0]}/products/${id}` : "";
 }
 
 function isFullSkuSuffixException(sku) {
@@ -211,7 +320,7 @@ function displayStatus(item) {
   return parts.join(" / ") || "无";
 }
 
-function buildDashboard(products, orders) {
+function buildDashboard(products, orders, erpInventory, shopifyConfig) {
   const productGroups = new Map();
   for (const product of products) {
     for (const variant of product.variants.nodes) {
@@ -231,6 +340,8 @@ function buildDashboard(products, orders) {
         title: product.title,
         handle: product.handle,
         productUrl: product.onlineStoreUrl,
+        productId: product.id,
+        shopifyAdminUrl: shopifyAdminProductUrl(shopifyConfig.storeDomain, product.id),
         productCreatedAt: product.createdAt,
         inventory: 0,
         totalInventory: Number(product.totalInventory ?? 0),
@@ -278,6 +389,9 @@ function buildDashboard(products, orders) {
       if (kind === "deposit") {
         record.depositQty90 += qty;
         if (is30d) record.depositQty30 += qty;
+        record.sold90 += qty;
+        if (is30d) record.sold30 += qty;
+        record.lastSaleAt = mergeLatest(record.lastSaleAt, order.createdAt);
       } else if (kind === "balance") {
         record.balanceQty90 += qty;
         if (is30d) record.balanceQty30 += qty;
@@ -311,6 +425,40 @@ function buildDashboard(products, orders) {
     productAgeDays: daysSince(item.productCreatedAt)
   }));
 
+  const recordBySku = new Map(records.map((item) => [item.sku, item]));
+  const erpRows = (erpInventory.rows || []).map((row) => {
+    const sku = String(row.sku_code || "").trim();
+    const linked = recordBySku.get(sku) || null;
+    const erpStock = Number(row.stock || 0);
+    const erpSold90 = Number(row.erp_sold_90 || 0);
+    const stockAgeDays = daysSince(row.last_inbound_at);
+    const stockMonths = monthsOfStock(erpStock, erpSold90);
+    const releaseAmount = Number(row.stock_cost || 0);
+    return {
+      sku,
+      rawSkus: linked?.rawSkus || [sku],
+      title: linked?.title || row.name_cn || "",
+      handle: linked?.handle || "",
+      productUrl: linked?.productUrl || "",
+      productId: linked?.productId || "",
+      shopifyAdminUrl: linked?.shopifyAdminUrl || "",
+      saleStatus: row.sale_status || "",
+      erpStock,
+      shopifyInventory: Number(linked?.inventory ?? 0),
+      shopifyTotalInventory: Number(linked?.totalInventory ?? 0),
+      purchasePrice: Number(row.purchase_price || 0),
+      releaseAmount,
+      erpSold90,
+      shopifySold90: Number(linked?.sold90 || 0),
+      salesStatusText: linked?.salesStatusText || "",
+      lastInboundAt: row.last_inbound_at,
+      lastErpSaleAt: row.last_erp_sale_at,
+      stockAgeDays,
+      stockMonths,
+      action: ""
+    };
+  });
+
   const soldOutAlerts = records
     .filter((item) => item.inventory <= 0 && item.sold90 > 0)
     .map((item) => ({
@@ -329,6 +477,42 @@ function buildDashboard(products, orders) {
     .sort((a, b) => b.inventory - a.inventory || a.sold90 - b.sold90)
     .slice(0, 30);
 
+  const stockClearanceSuggestions = erpRows
+    .filter((item) => item.erpStock > 0)
+    .filter((item) => item.saleStatus === "In Stock")
+    .filter((item) => item.stockAgeDays === null || item.stockAgeDays >= staleInboundDays)
+    .filter((item) => item.erpSold90 <= 1 || (item.stockMonths !== null && item.stockMonths >= 12))
+    .map((item) => ({
+      ...item,
+      action: stockClearanceAction(item)
+    }))
+    .sort((a, b) => b.releaseAmount - a.releaseAmount || b.erpStock - a.erpStock)
+    .slice(0, 50);
+
+  const shopifyProductChecks = records
+    .map((item) => {
+      const erp = erpRows.find((row) => row.sku === item.sku);
+      const erpStock = Number(erp?.erpStock || 0);
+      const shopifyInventory = Number(item.inventory || 0);
+      const soldOutTitleMissing = erpStock <= 0 && shopifyInventory <= 0 && !String(item.title || "").startsWith("【品切れ】");
+      const inventoryMismatch = Boolean(erp) && erpStock !== shopifyInventory;
+      let issue = "";
+      if (soldOutTitleMissing) issue = "售罄标题缺标记";
+      else if (inventoryMismatch) issue = "库存不一致";
+      return {
+        ...item,
+        erpStock,
+        shopifyInventory,
+        issue,
+        severity: soldOutTitleMissing ? "critical" : inventoryMismatch ? "warning" : "normal"
+      };
+    })
+    .filter((item) => item.issue)
+    .sort((a, b) => {
+      if (a.severity !== b.severity) return a.severity === "critical" ? -1 : 1;
+      return Math.abs(b.erpStock - b.shopifyInventory) - Math.abs(a.erpStock - a.shopifyInventory);
+    });
+
   return {
     generatedAt: now.toISOString(),
     windowDays,
@@ -336,21 +520,34 @@ function buildDashboard(products, orders) {
       trackedSkus: records.length,
       soldOutAlerts: soldOutAlerts.length,
       slowMovingAlerts: slowMovingAlerts.length,
+      stockClearanceSuggestions: stockClearanceSuggestions.length,
+      productCheckIssues: shopifyProductChecks.length,
+      erpStockSkus: erpRows.length,
+      erpStockValue: Math.round(erpRows.reduce((sum, item) => sum + item.releaseAmount, 0)),
+      clearanceReleaseValue: Math.round(stockClearanceSuggestions.reduce((sum, item) => sum + item.releaseAmount, 0)),
       unitsSold90: records.reduce((sum, item) => sum + item.sold90, 0),
       depositQty90: records.reduce((sum, item) => sum + item.depositQty90, 0),
       balanceQty90: records.reduce((sum, item) => sum + item.balanceQty90, 0)
     },
+    erpInventory: {
+      connected: erpInventory.connected,
+      error: erpInventory.error,
+      staleInboundDays
+    },
     soldOutAlerts,
-    slowMovingAlerts
+    slowMovingAlerts,
+    stockClearanceSuggestions,
+    shopifyProductChecks
   };
 }
 
-const config = await loadConfig();
-const [products, orders] = await Promise.all([
+const config = await loadShopifyConfig();
+const [products, orders, erpInventory] = await Promise.all([
   fetchAllProducts(config),
-  fetchRecentOrders(config)
+  fetchRecentOrders(config),
+  fetchErpInventory()
 ]);
-const dashboard = buildDashboard(products, orders);
+const dashboard = buildDashboard(products, orders, erpInventory, config);
 
 await mkdir(path.join(siteRoot, "data"), { recursive: true });
 await writeFile(
@@ -364,5 +561,7 @@ console.log(JSON.stringify({
   trackedSkus: dashboard.summary.trackedSkus,
   soldOutAlerts: dashboard.summary.soldOutAlerts,
   slowMovingAlerts: dashboard.summary.slowMovingAlerts,
+  stockClearanceSuggestions: dashboard.summary.stockClearanceSuggestions,
+  productCheckIssues: dashboard.summary.productCheckIssues,
   unitsSold90: dashboard.summary.unitsSold90
 }, null, 2));

@@ -89,6 +89,12 @@
         gap: 16px;
       }
 
+      .stack {
+        display: grid;
+        gap: 16px;
+        margin-top: 16px;
+      }
+
       .panel {
         overflow: hidden;
       }
@@ -161,6 +167,47 @@
         color: #176b35;
       }
 
+      .tag.alert {
+        background: #fff1f2;
+        color: #a11d2a;
+      }
+
+      .issue-critical td {
+        background: #fff8f8;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .actions button,
+      .actions a {
+        min-height: 28px;
+        border: 1px solid #c9d4e0;
+        border-radius: 6px;
+        padding: 4px 8px;
+        background: #ffffff;
+        color: #1f3349;
+        font: inherit;
+        font-size: 12px;
+        line-height: 1.2;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .actions button.primary {
+        border-color: #a11d2a;
+        background: #a11d2a;
+        color: #ffffff;
+      }
+
+      .actions button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
       .empty {
         padding: 18px 16px;
         color: #657487;
@@ -202,19 +249,38 @@
           <div class="table-scroll" id="slow-moving"></div>
         </article>
       </section>
+      <section class="stack">
+        <article class="panel">
+          <h2>ERP 库存清理建议</h2>
+          <div class="table-scroll" id="stock-clearance"></div>
+        </article>
+        <article class="panel">
+          <h2>Shopify 商品信息检查</h2>
+          <div class="table-scroll" id="product-checks"></div>
+        </article>
+      </section>
     </main>
 
     <script>
+      const actionApiUrl = window.DASHBOARD_ACTION_API_URL || localStorage.getItem("dashboardActionApiUrl") || "";
       const formatNumber = (value) => new Intl.NumberFormat("zh-CN").format(value || 0);
+      const formatMoney = (value) => `¥${formatNumber(Math.round(value || 0))}`;
       const daysLabel = (days) => Number.isFinite(days) ? `${Math.round(days)} 天` : "无记录";
+      const monthsLabel = (months) => Number.isFinite(months) ? `${Math.round(months)} 个月` : "无销量";
+      const escapeHtml = (value) => String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
 
       function metric(label, value) {
         return `<div class="metric"><span class="label">${label}</span><span class="value">${formatNumber(value)}</span></div>`;
       }
 
       function productCell(item) {
-        const raw = item.rawSkus?.length ? `<div class="title">变体：${item.rawSkus.join(" / ")}</div>` : "";
-        return `<div class="sku">${item.sku || "无 SKU"}</div><div class="title">${item.title || ""}</div>${raw}`;
+        const raw = item.rawSkus?.length ? `<div class="title">变体：${item.rawSkus.map(escapeHtml).join(" / ")}</div>` : "";
+        const link = item.productUrl ? `<a href="${escapeHtml(item.productUrl)}" target="_blank" rel="noopener">${escapeHtml(item.sku || "无 SKU")}</a>` : escapeHtml(item.sku || "无 SKU");
+        return `<div class="sku">${link}</div><div class="title">${escapeHtml(item.title || "")}</div>${raw}`;
       }
 
       function table(items, type) {
@@ -245,22 +311,108 @@
         return `<table><thead>${headers}</thead><tbody>${rows}</tbody></table>`;
       }
 
+      function clearanceTable(items) {
+        if (!items.length) return '<div class="empty">当前没有满足清理条件的 ERP 库存。</div>';
+        const rows = items.map((item) => `<tr>
+          <td>${productCell(item)}</td>
+          <td>${formatNumber(item.erpStock)}</td>
+          <td>${formatMoney(item.releaseAmount)}</td>
+          <td>${formatNumber(item.erpSold90)}</td>
+          <td>${daysLabel(item.stockAgeDays)}</td>
+          <td>${monthsLabel(item.stockMonths)}</td>
+          <td>${escapeHtml(item.saleStatus || "无")}</td>
+          <td><span class="tag ${item.action.includes("清仓") || item.action.includes("折扣") ? "cold" : "watch"}">${escapeHtml(item.action)}</span></td>
+        </tr>`).join("");
+        return `<table><thead><tr><th>商品</th><th>ERP库存</th><th>预计释放金额</th><th>90天ERP销量</th><th>距最近入库</th><th>库存月数</th><th>ERP状态</th><th>建议</th></tr></thead><tbody>${rows}</tbody></table>`;
+      }
+
+      function commandFor(action, productId) {
+        return `node scripts/shopify-product-action.mjs --action ${action} --product ${productId} --commit`;
+      }
+
+      function actionButtons(item) {
+        const disabled = !item.productId;
+        return `<div class="actions">
+          <button class="primary" type="button" data-action="mark-sold-out" data-product="${escapeHtml(item.productId || "")}" ${disabled ? "disabled" : ""}>确认售罄并修改状态</button>
+          <button type="button" data-action="restock" data-product="${escapeHtml(item.productId || "")}" ${disabled ? "disabled" : ""}>再入荷</button>
+          <button type="button" data-action="ignore" data-sku="${escapeHtml(item.sku || "")}">忽略</button>
+          ${item.shopifyAdminUrl ? `<a href="${escapeHtml(item.shopifyAdminUrl)}" target="_blank" rel="noopener">Shopify</a>` : ""}
+        </div>`;
+      }
+
+      function productChecksTable(items) {
+        const ignored = new Set(JSON.parse(localStorage.getItem("dashboardIgnoredSkus") || "[]"));
+        const visible = items.filter((item) => !ignored.has(item.sku));
+        if (!visible.length) return '<div class="empty">当前没有需要人工检查的商品。</div>';
+        const rows = visible.map((item) => `<tr class="${item.severity === "critical" ? "issue-critical" : ""}">
+          <td>${productCell(item)}</td>
+          <td>${formatNumber(item.erpStock)}</td>
+          <td>${formatNumber(item.shopifyInventory)}</td>
+          <td><span class="tag ${item.severity === "critical" ? "alert" : "watch"}">${escapeHtml(item.issue)}</span></td>
+          <td>${actionButtons(item)}</td>
+        </tr>`).join("");
+        return `<table><thead><tr><th>商品</th><th>ERP库存</th><th>Shopify库存</th><th>问题</th><th>操作</th></tr></thead><tbody>${rows}</tbody></table>`;
+      }
+
+      async function runProductAction(action, productId, button) {
+        if (!productId) return;
+        if (!actionApiUrl) {
+          await navigator.clipboard.writeText(commandFor(action, productId));
+          button.textContent = "已复制命令";
+          setTimeout(() => { button.textContent = action === "mark-sold-out" ? "确认售罄并修改状态" : "再入荷"; }, 1600);
+          return;
+        }
+        button.disabled = true;
+        const response = await fetch(actionApiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action, productId })
+        });
+        if (!response.ok) throw new Error(await response.text());
+        button.textContent = "已提交";
+      }
+
       async function main() {
         const response = await fetch("./data/dashboard.json", { cache: "no-store" });
         const data = await response.json();
         document.getElementById("report-meta").textContent =
-          `生成时间：${data.generatedAt}｜数据范围：近 ${data.windowDays} 天｜数据源：Shopify Admin API 只读聚合`;
+          `生成时间：${data.generatedAt}｜数据范围：近 ${data.windowDays} 天｜数据源：Shopify Admin API + ERP 库存只读聚合`;
         document.getElementById("summary").innerHTML = [
           metric("基础 SKU", data.summary.trackedSkus),
           metric("售罄提醒", data.summary.soldOutAlerts),
           metric("滞销提醒", data.summary.slowMovingAlerts),
+          metric("清理建议", data.summary.stockClearanceSuggestions),
+          metric("商品检查", data.summary.productCheckIssues),
+          metric("可释放库存金额", data.summary.clearanceReleaseValue),
           metric("90天实销", data.summary.unitsSold90),
           metric("90天定金", data.summary.depositQty90),
           metric("90天尾款", data.summary.balanceQty90)
         ].join("");
         document.getElementById("sold-out").innerHTML = table(data.soldOutAlerts, "soldOut");
         document.getElementById("slow-moving").innerHTML = table(data.slowMovingAlerts, "slowMoving");
+        document.getElementById("stock-clearance").innerHTML = clearanceTable(data.stockClearanceSuggestions || []);
+        document.getElementById("product-checks").innerHTML = productChecksTable(data.shopifyProductChecks || []);
       }
+
+      document.addEventListener("click", async (event) => {
+        const button = event.target.closest("button[data-action]");
+        if (!button) return;
+        const action = button.dataset.action;
+        if (action === "ignore") {
+          const ignored = new Set(JSON.parse(localStorage.getItem("dashboardIgnoredSkus") || "[]"));
+          ignored.add(button.dataset.sku);
+          localStorage.setItem("dashboardIgnoredSkus", JSON.stringify([...ignored]));
+          button.closest("tr")?.remove();
+          return;
+        }
+        try {
+          await runProductAction(action, button.dataset.product, button);
+        } catch (error) {
+          button.disabled = false;
+          button.textContent = "失败";
+          console.error(error);
+        }
+      });
 
       main().catch((error) => {
         document.getElementById("report-meta").textContent = `数据读取失败：${error.message}`;

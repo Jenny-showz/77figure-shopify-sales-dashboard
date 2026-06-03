@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "第 14 级部署练习项目：用本地只读脚本生成 Shopify 销售监控数据，再部署为静态网页。",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-dashboard.mjs",
+    "update": "node scripts/run-dashboard-update.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jenny-showz/77figure-shopify-sales-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jenny-showz/77figure-shopify-sales-dashboard/issues"
+  },
+  "homepage": "https://github.com/Jenny-showz/77figure-shopify-sales-dashboard#readme",
+  "dependencies": {
+    "pg": "^8.21.0"
+  }
+}
