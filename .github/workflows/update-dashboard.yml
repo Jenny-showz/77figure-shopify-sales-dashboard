@@ -40,12 +40,12 @@ jobs:
 
       - name: Validate secrets
         run: |
-          test -n "$SHOPIFY_STORE_DOMAIN"
-          test -n "$SHOPIFY_ACCESS_TOKEN"
-          test -n "$ERP_DB_HOST"
-          test -n "$ERP_DB_NAME"
-          test -n "$ERP_DB_USER"
-          test -n "$ERP_DB_PASSWORD"
+          test -n "$(printf '%s' "$SHOPIFY_STORE_DOMAIN" | xargs)"
+          test -n "$(printf '%s' "$SHOPIFY_ACCESS_TOKEN" | xargs)"
+          test -n "$(printf '%s' "$ERP_DB_HOST" | xargs)"
+          test -n "$(printf '%s' "$ERP_DB_NAME" | xargs)"
+          test -n "$(printf '%s' "$ERP_DB_USER" | xargs)"
+          test -n "$(printf '%s' "$ERP_DB_PASSWORD" | xargs)"
 
       - name: Install dependencies
         run: npm ci

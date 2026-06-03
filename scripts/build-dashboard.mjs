@@ -34,6 +34,10 @@ function parseEnv(text) {
   return env;
 }
 
+function cleanEnvValue(value) {
+  return String(value || "").trim().replace(/^['"]|['"]$/g, "");
+}
+
 async function loadShopifyConfig() {
   let env = {
     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
@@ -52,11 +56,11 @@ async function loadShopifyConfig() {
 
 async function loadErpConfig() {
   let env = {
-    ERP_DB_HOST: process.env.ERP_DB_HOST,
-    ERP_DB_PORT: process.env.ERP_DB_PORT,
-    ERP_DB_NAME: process.env.ERP_DB_NAME,
-    ERP_DB_USER: process.env.ERP_DB_USER,
-    ERP_DB_PASSWORD: process.env.ERP_DB_PASSWORD
+    ERP_DB_HOST: cleanEnvValue(process.env.ERP_DB_HOST),
+    ERP_DB_PORT: cleanEnvValue(process.env.ERP_DB_PORT),
+    ERP_DB_NAME: cleanEnvValue(process.env.ERP_DB_NAME),
+    ERP_DB_USER: cleanEnvValue(process.env.ERP_DB_USER),
+    ERP_DB_PASSWORD: cleanEnvValue(process.env.ERP_DB_PASSWORD)
   };
   if (!env.ERP_DB_HOST || !env.ERP_DB_NAME || !env.ERP_DB_USER || !env.ERP_DB_PASSWORD) {
     if (!fs.existsSync(erpEnvPath)) return null;
@@ -65,11 +69,11 @@ async function loadErpConfig() {
   const required = ["ERP_DB_HOST", "ERP_DB_NAME", "ERP_DB_USER", "ERP_DB_PASSWORD"];
   if (required.some((key) => !env[key])) return null;
   return {
-    host: env.ERP_DB_HOST,
+    host: cleanEnvValue(env.ERP_DB_HOST),
     port: Number(env.ERP_DB_PORT || 5432),
-    database: env.ERP_DB_NAME,
-    user: env.ERP_DB_USER,
-    password: env.ERP_DB_PASSWORD,
+    database: cleanEnvValue(env.ERP_DB_NAME),
+    user: cleanEnvValue(env.ERP_DB_USER),
+    password: cleanEnvValue(env.ERP_DB_PASSWORD),
     ssl: { rejectUnauthorized: false },
     connectionTimeoutMillis: 15000
   };
