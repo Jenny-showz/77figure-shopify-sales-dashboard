@@ -115,6 +115,29 @@ node scripts/shopify-product-action.mjs --action restock --product gid://shopify
 node scripts/shopify-product-action.mjs --action end-preorder --product gid://shopify/Product/123 --commit
 ```
 
+### 团队共享执行器
+
+同事不方便启动本地执行器时，可以部署仓库内置的 Cloudflare Worker：
+
+- Worker 代码：`workers/shopify-action-worker.js`
+- 配置模板：`wrangler.toml.example`
+- 前端公开配置：`data/action-config.json`
+
+部署后把 `data/action-config.json` 改为 Worker 地址：
+
+```json
+{
+  "actionApiUrl": "https://your-worker.your-account.workers.dev/shopify-product-action"
+}
+```
+
+Worker 需要配置：
+
+- `SHOPIFY_STORE_DOMAIN`：公开变量。
+- `SHOPIFY_ACCESS_TOKEN`：Secret。
+- `DASHBOARD_ACTION_SECRET`：Secret，用作同事第一次点击按钮时输入的操作密钥。
+- `ALLOWED_ORIGINS`：公开变量，默认允许 `https://jenny-showz.github.io`。
+
 ## 安全边界
 
 - 前端不保存 Shopify token。

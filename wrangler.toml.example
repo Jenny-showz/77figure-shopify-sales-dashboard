@@ -1,0 +1,11 @@
+name = "77figure-dashboard-actions"
+main = "workers/shopify-action-worker.js"
+compatibility_date = "2026-06-03"
+
+[vars]
+SHOPIFY_STORE_DOMAIN = "your-store.myshopify.com"
+ALLOWED_ORIGINS = "https://jenny-showz.github.io"
+
+# Set these as secrets, not vars:
+# wrangler secret put SHOPIFY_ACCESS_TOKEN
+# wrangler secret put DASHBOARD_ACTION_SECRET

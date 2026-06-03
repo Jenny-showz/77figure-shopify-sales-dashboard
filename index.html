@@ -334,9 +334,10 @@
     </main>
 
     <script>
-      const actionApiUrl = window.DASHBOARD_ACTION_API_URL
+      let actionApiUrl = window.DASHBOARD_ACTION_API_URL
         || localStorage.getItem("dashboardActionApiUrl")
         || "http://127.0.0.1:8787/shopify-product-action";
+      let actionApiSecret = localStorage.getItem("dashboardActionSecret") || "";
       const formatNumber = (value) => new Intl.NumberFormat("zh-CN").format(value || 0);
       const formatMoney = (value) => `¥${formatNumber(Math.round(value || 0))}`;
       const daysLabel = (days) => Number.isFinite(days) ? `${Math.round(days)} 天` : "无记录";
@@ -508,11 +509,14 @@
         button.dataset.defaultLabel = defaultLabel;
         button.disabled = true;
         try {
-          const response = await fetch(actionApiUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ action, productId })
-          });
+          let response = await sendProductAction(action, productId);
+          if (response.status === 401 || response.status === 403) {
+            const secret = window.prompt("请输入看板操作密钥");
+            if (!secret) throw new Error("Missing dashboard action secret");
+            actionApiSecret = secret;
+            localStorage.setItem("dashboardActionSecret", secret);
+            response = await sendProductAction(action, productId);
+          }
           if (!response.ok) throw new Error(await response.text());
           button.textContent = "已提交";
         } catch (error) {
@@ -524,6 +528,32 @@
           return false;
         }
         return true;
+      }
+
+      function actionHeaders() {
+        const headers = { "Content-Type": "application/json" };
+        if (actionApiSecret) headers["X-Dashboard-Action-Secret"] = actionApiSecret;
+        return headers;
+      }
+
+      function sendProductAction(action, productId) {
+        return fetch(actionApiUrl, {
+          method: "POST",
+          headers: actionHeaders(),
+          body: JSON.stringify({ action, productId })
+        });
+      }
+
+      async function loadActionConfig() {
+        try {
+          const response = await fetch("./data/action-config.json", { cache: "no-store" });
+          if (!response.ok) return;
+          const config = await response.json();
+          const configuredUrl = String(config.actionApiUrl || "").trim();
+          if (configuredUrl && !localStorage.getItem("dashboardActionApiUrl")) actionApiUrl = configuredUrl;
+        } catch {
+          // Local action server remains the fallback.
+        }
       }
 
       function renderDashboard(data) {
@@ -547,6 +577,7 @@
       }
 
       async function main() {
+        await loadActionConfig();
         const response = await fetch("./data/dashboard.json", { cache: "no-store" });
         dashboardData = await response.json();
         renderDashboard(dashboardData);
