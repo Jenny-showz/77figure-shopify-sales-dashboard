@@ -38,6 +38,29 @@ function cleanEnvValue(value) {
   return String(value || "").trim().replace(/^['"]|['"]$/g, "");
 }
 
+function normalizeDbHost(value) {
+  let host = cleanEnvValue(value);
+  if (host.includes("=")) host = cleanEnvValue(host.split("=").pop());
+  if (/^postgres(ql)?:\/\//i.test(host) || /^https?:\/\//i.test(host)) {
+    try {
+      host = new URL(host).hostname;
+    } catch {
+      host = host.replace(/^[a-z]+:\/\//i, "");
+    }
+  }
+  return host.split("/")[0].trim();
+}
+
+async function loadPreviousDashboard() {
+  const file = path.join(siteRoot, "data/dashboard.json");
+  if (!fs.existsSync(file)) return null;
+  try {
+    return JSON.parse(await readFile(file, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 async function loadShopifyConfig() {
   let env = {
     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
@@ -69,7 +92,7 @@ async function loadErpConfig() {
   const required = ["ERP_DB_HOST", "ERP_DB_NAME", "ERP_DB_USER", "ERP_DB_PASSWORD"];
   if (required.some((key) => !env[key])) return null;
   return {
-    host: cleanEnvValue(env.ERP_DB_HOST),
+    host: normalizeDbHost(env.ERP_DB_HOST),
     port: Number(env.ERP_DB_PORT || 5432),
     database: cleanEnvValue(env.ERP_DB_NAME),
     user: cleanEnvValue(env.ERP_DB_USER),
@@ -203,11 +226,11 @@ async function fetchRecentOrders(config) {
 async function fetchErpInventory() {
   const config = await loadErpConfig();
   if (!config) {
-    return { rows: [], connected: false, error: "Missing ERP database configuration" };
+    return { rows: null, connected: false, error: "Missing ERP database configuration" };
   }
   const client = new pg.Client(config);
-  await client.connect();
   try {
+    await client.connect();
     const result = await client.query(`
       with stock as (
         select sku_id, stock, pre_stock, purchase_price, transfer_add_price
@@ -256,8 +279,15 @@ async function fetchErpInventory() {
       order by stock_cost desc nulls last
     `);
     return { rows: result.rows, connected: true, error: null };
+  } catch (error) {
+    const errorLabel = error.code || error.name || "ERROR";
+    const safeMessage = error.code
+      ? `${error.code} while connecting to ERP database`
+      : `Unable to connect to ERP database`;
+    console.error(`ERP inventory unavailable: ${errorLabel}`);
+    return { rows: null, connected: false, error: safeMessage };
   } finally {
-    await client.end();
+    await client.end().catch(() => {});
   }
 }
 
@@ -324,7 +354,7 @@ function displayStatus(item) {
   return parts.join(" / ") || "无";
 }
 
-function buildDashboard(products, orders, erpInventory, shopifyConfig) {
+function buildDashboard(products, orders, erpInventory, shopifyConfig, previousDashboard) {
   const productGroups = new Map();
   for (const product of products) {
     for (const variant of product.variants.nodes) {
@@ -430,6 +460,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
   }));
 
   const recordBySku = new Map(records.map((item) => [item.sku, item]));
+  const hasFreshErpRows = Array.isArray(erpInventory.rows);
   const erpRows = (erpInventory.rows || []).map((row) => {
     const sku = String(row.sku_code || "").trim();
     const linked = recordBySku.get(sku) || null;
@@ -481,7 +512,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
     .sort((a, b) => b.inventory - a.inventory || a.sold90 - b.sold90)
     .slice(0, 30);
 
-  const stockClearanceSuggestions = erpRows
+  const stockClearanceSuggestions = hasFreshErpRows ? erpRows
     .filter((item) => item.erpStock > 0)
     .filter((item) => item.saleStatus === "In Stock")
     .filter((item) => item.stockAgeDays === null || item.stockAgeDays >= staleInboundDays)
@@ -491,9 +522,9 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
       action: stockClearanceAction(item)
     }))
     .sort((a, b) => b.releaseAmount - a.releaseAmount || b.erpStock - a.erpStock)
-    .slice(0, 50);
+    .slice(0, 50) : (previousDashboard?.stockClearanceSuggestions || []);
 
-  const shopifyProductChecks = records
+  const shopifyProductChecks = hasFreshErpRows ? records
     .map((item) => {
       const erp = erpRows.find((row) => row.sku === item.sku);
       const erpStock = Number(erp?.erpStock || 0);
@@ -515,7 +546,9 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
     .sort((a, b) => {
       if (a.severity !== b.severity) return a.severity === "critical" ? -1 : 1;
       return Math.abs(b.erpStock - b.shopifyInventory) - Math.abs(a.erpStock - a.shopifyInventory);
-    });
+    }) : (previousDashboard?.shopifyProductChecks || []);
+
+  const fallbackSummary = previousDashboard?.summary || {};
 
   return {
     generatedAt: now.toISOString(),
@@ -526,8 +559,10 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
       slowMovingAlerts: slowMovingAlerts.length,
       stockClearanceSuggestions: stockClearanceSuggestions.length,
       productCheckIssues: shopifyProductChecks.length,
-      erpStockSkus: erpRows.length,
-      erpStockValue: Math.round(erpRows.reduce((sum, item) => sum + item.releaseAmount, 0)),
+      erpStockSkus: hasFreshErpRows ? erpRows.length : (fallbackSummary.erpStockSkus || 0),
+      erpStockValue: hasFreshErpRows
+        ? Math.round(erpRows.reduce((sum, item) => sum + item.releaseAmount, 0))
+        : (fallbackSummary.erpStockValue || 0),
       clearanceReleaseValue: Math.round(stockClearanceSuggestions.reduce((sum, item) => sum + item.releaseAmount, 0)),
       unitsSold90: records.reduce((sum, item) => sum + item.sold90, 0),
       depositQty90: records.reduce((sum, item) => sum + item.depositQty90, 0),
@@ -536,6 +571,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
     erpInventory: {
       connected: erpInventory.connected,
       error: erpInventory.error,
+      fallbackFromPreviousRun: !hasFreshErpRows,
       staleInboundDays
     },
     soldOutAlerts,
@@ -546,12 +582,13 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig) {
 }
 
 const config = await loadShopifyConfig();
+const previousDashboard = await loadPreviousDashboard();
 const [products, orders, erpInventory] = await Promise.all([
   fetchAllProducts(config),
   fetchRecentOrders(config),
   fetchErpInventory()
 ]);
-const dashboard = buildDashboard(products, orders, erpInventory, config);
+const dashboard = buildDashboard(products, orders, erpInventory, config, previousDashboard);
 
 await mkdir(path.join(siteRoot, "data"), { recursive: true });
 await writeFile(
