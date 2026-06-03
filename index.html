@@ -99,13 +99,37 @@
         overflow: hidden;
       }
 
-      .panel h2 {
-        margin: 0;
+      .panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
         padding: 16px;
         border-bottom: 1px solid #e5ebf2;
+      }
+
+      .panel h2 {
+        margin: 0;
         font-size: 18px;
         line-height: 1.3;
         letter-spacing: 0;
+      }
+
+      .panel-toggle {
+        min-height: 30px;
+        border: 1px solid #c9d4e0;
+        border-radius: 6px;
+        padding: 4px 10px;
+        background: #ffffff;
+        color: #1f3349;
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .panel.collapsed .table-scroll {
+        display: none;
       }
 
       table {
@@ -213,6 +237,34 @@
         color: #657487;
       }
 
+      .pager {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 12px 16px;
+        border-top: 1px solid #eef2f6;
+        color: #657487;
+        font-size: 13px;
+      }
+
+      .pager button {
+        min-height: 30px;
+        border: 1px solid #c9d4e0;
+        border-radius: 6px;
+        padding: 4px 10px;
+        background: #ffffff;
+        color: #1f3349;
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .pager button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
       @media (max-width: 880px) {
         .summary,
         .grid {
@@ -240,22 +292,34 @@
     <main class="wrap">
       <section class="summary" id="summary"></section>
       <section class="grid">
-        <article class="panel">
-          <h2>售罄补货提醒</h2>
+        <article class="panel" data-panel="sold-out">
+          <div class="panel-header">
+            <h2>售罄补货提醒</h2>
+            <button class="panel-toggle" type="button" data-toggle-panel="sold-out">收起</button>
+          </div>
           <div class="table-scroll" id="sold-out"></div>
         </article>
-        <article class="panel">
-          <h2>滞销/折扣提醒</h2>
+        <article class="panel" data-panel="slow-moving">
+          <div class="panel-header">
+            <h2>滞销/折扣提醒</h2>
+            <button class="panel-toggle" type="button" data-toggle-panel="slow-moving">收起</button>
+          </div>
           <div class="table-scroll" id="slow-moving"></div>
         </article>
       </section>
       <section class="stack">
-        <article class="panel">
-          <h2>ERP 库存清理建议</h2>
+        <article class="panel" data-panel="stock-clearance">
+          <div class="panel-header">
+            <h2>ERP 库存清理建议</h2>
+            <button class="panel-toggle" type="button" data-toggle-panel="stock-clearance">收起</button>
+          </div>
           <div class="table-scroll" id="stock-clearance"></div>
         </article>
-        <article class="panel">
-          <h2>Shopify 商品信息检查</h2>
+        <article class="panel" data-panel="product-checks">
+          <div class="panel-header">
+            <h2>Shopify 商品信息检查</h2>
+            <button class="panel-toggle" type="button" data-toggle-panel="product-checks">收起</button>
+          </div>
           <div class="table-scroll" id="product-checks"></div>
         </article>
       </section>
@@ -267,6 +331,14 @@
       const formatMoney = (value) => `¥${formatNumber(Math.round(value || 0))}`;
       const daysLabel = (days) => Number.isFinite(days) ? `${Math.round(days)} 天` : "无记录";
       const monthsLabel = (months) => Number.isFinite(months) ? `${Math.round(months)} 个月` : "无销量";
+      const pageSize = 25;
+      const pages = {
+        soldOut: 1,
+        slowMoving: 1,
+        stockClearance: 1,
+        productChecks: 1
+      };
+      let dashboardData = null;
       const escapeHtml = (value) => String(value ?? "")
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
@@ -289,6 +361,8 @@
           if (type === "soldOut") {
             return `<tr>
               <td>${productCell(item)}</td>
+              <td>${escapeHtml(item.alertOption || "售罄")}</td>
+              <td>${formatNumber(item.alertInventory)}</td>
               <td>${formatNumber(item.sold30)}</td>
               <td>${formatNumber(item.sold90)}</td>
               <td>${item.salesStatusText || "无"}</td>
@@ -306,7 +380,7 @@
           </tr>`;
         }).join("");
         const headers = type === "soldOut"
-          ? "<tr><th>商品</th><th>30天实销</th><th>90天实销</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>"
+          ? "<tr><th>商品</th><th>售罄选项</th><th>选项库存</th><th>30天销量</th><th>90天销量</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>"
           : "<tr><th>商品</th><th>实物库存</th><th>90天实销</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>";
         return `<table><thead>${headers}</thead><tbody>${rows}</tbody></table>`;
       }
@@ -354,6 +428,30 @@
         return `<table><thead><tr><th>商品</th><th>ERP库存</th><th>Shopify库存</th><th>问题</th><th>操作</th></tr></thead><tbody>${rows}</tbody></table>`;
       }
 
+      function pager(section, totalItems) {
+        const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+        pages[section] = Math.min(Math.max(1, pages[section] || 1), totalPages);
+        if (totalPages <= 1) return "";
+        return `<div class="pager">
+          <button type="button" data-page-section="${section}" data-page-delta="-1" ${pages[section] <= 1 ? "disabled" : ""}>上一页</button>
+          <span>第 ${pages[section]} / ${totalPages} 页，共 ${formatNumber(totalItems)} 行</span>
+          <button type="button" data-page-section="${section}" data-page-delta="1" ${pages[section] >= totalPages ? "disabled" : ""}>下一页</button>
+        </div>`;
+      }
+
+      function renderPagedTable(section, elementId, items, renderer) {
+        const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+        pages[section] = Math.min(Math.max(1, pages[section] || 1), totalPages);
+        const start = (pages[section] - 1) * pageSize;
+        const pageItems = items.slice(start, start + pageSize);
+        document.getElementById(elementId).innerHTML = `${renderer(pageItems)}${pager(section, items.length)}`;
+      }
+
+      function visibleProductChecks(items) {
+        const ignored = new Set(JSON.parse(localStorage.getItem("dashboardIgnoredSkus") || "[]"));
+        return items.filter((item) => !ignored.has(item.sku));
+      }
+
       async function runProductAction(action, productId, button) {
         if (!productId) return;
         if (!actionApiUrl) {
@@ -372,9 +470,7 @@
         button.textContent = "已提交";
       }
 
-      async function main() {
-        const response = await fetch("./data/dashboard.json", { cache: "no-store" });
-        const data = await response.json();
+      function renderDashboard(data) {
         document.getElementById("report-meta").textContent =
           `生成时间：${data.generatedAt}｜数据范围：近 ${data.windowDays} 天｜数据源：Shopify Admin API + ERP 库存只读聚合`;
         document.getElementById("summary").innerHTML = [
@@ -388,13 +484,35 @@
           metric("90天定金", data.summary.depositQty90),
           metric("90天尾款", data.summary.balanceQty90)
         ].join("");
-        document.getElementById("sold-out").innerHTML = table(data.soldOutAlerts, "soldOut");
-        document.getElementById("slow-moving").innerHTML = table(data.slowMovingAlerts, "slowMoving");
-        document.getElementById("stock-clearance").innerHTML = clearanceTable(data.stockClearanceSuggestions || []);
-        document.getElementById("product-checks").innerHTML = productChecksTable(data.shopifyProductChecks || []);
+        renderPagedTable("soldOut", "sold-out", data.soldOutAlerts || [], (items) => table(items, "soldOut"));
+        renderPagedTable("slowMoving", "slow-moving", data.slowMovingAlerts || [], (items) => table(items, "slowMoving"));
+        renderPagedTable("stockClearance", "stock-clearance", data.stockClearanceSuggestions || [], clearanceTable);
+        renderPagedTable("productChecks", "product-checks", visibleProductChecks(data.shopifyProductChecks || []), productChecksTable);
+      }
+
+      async function main() {
+        const response = await fetch("./data/dashboard.json", { cache: "no-store" });
+        dashboardData = await response.json();
+        renderDashboard(dashboardData);
       }
 
       document.addEventListener("click", async (event) => {
+        const toggle = event.target.closest("button[data-toggle-panel]");
+        if (toggle) {
+          const panel = document.querySelector(`[data-panel="${toggle.dataset.togglePanel}"]`);
+          panel?.classList.toggle("collapsed");
+          toggle.textContent = panel?.classList.contains("collapsed") ? "展开" : "收起";
+          return;
+        }
+
+        const pageButton = event.target.closest("button[data-page-section]");
+        if (pageButton) {
+          const section = pageButton.dataset.pageSection;
+          pages[section] = (pages[section] || 1) + Number(pageButton.dataset.pageDelta || 0);
+          if (dashboardData) renderDashboard(dashboardData);
+          return;
+        }
+
         const button = event.target.closest("button[data-action]");
         if (!button) return;
         const action = button.dataset.action;
@@ -402,7 +520,7 @@
           const ignored = new Set(JSON.parse(localStorage.getItem("dashboardIgnoredSkus") || "[]"));
           ignored.add(button.dataset.sku);
           localStorage.setItem("dashboardIgnoredSkus", JSON.stringify([...ignored]));
-          button.closest("tr")?.remove();
+          if (dashboardData) renderDashboard(dashboardData);
           return;
         }
         try {

@@ -378,6 +378,10 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
         shopifyAdminUrl: shopifyAdminProductUrl(shopifyConfig.storeDomain, product.id),
         productCreatedAt: product.createdAt,
         inventory: 0,
+        normalInventory: 0,
+        preorderFullInventory: 0,
+        preorderDepositInventory: 0,
+        preorderUnknownInventory: 0,
         totalInventory: Number(product.totalInventory ?? 0),
         price: Number(variant.price ?? 0),
         normalSold30: 0,
@@ -397,9 +401,12 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
       }
       const record = productGroups.get(skuBase);
       record.rawSkus.add(sku);
-      if (kind === "normal" || kind === "preorder_full" || kind === "preorder_unknown") {
-        record.inventory += Number(variant.inventoryQuantity ?? 0);
-      }
+      const variantInventory = Number(variant.inventoryQuantity ?? 0);
+      if (kind === "normal") record.normalInventory += variantInventory;
+      else if (kind === "preorder_full") record.preorderFullInventory += variantInventory;
+      else if (kind === "deposit") record.preorderDepositInventory += variantInventory;
+      else if (kind === "preorder_unknown") record.preorderUnknownInventory += variantInventory;
+      if (kind === "normal" || kind === "preorder_full" || kind === "preorder_unknown") record.inventory += variantInventory;
       if (kind === "normal" && !record.productUrl && product.onlineStoreUrl) record.productUrl = product.onlineStoreUrl;
       if (kind === "normal") record.price = Number(variant.price ?? record.price ?? 0);
     }
@@ -495,7 +502,43 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
   });
 
   const soldOutAlerts = records
-    .filter((item) => item.inventory <= 0 && item.sold90 > 0)
+    .flatMap((item) => {
+      const rows = [];
+      const hasPreorderFullOption = item.rawSkus.some((sku) => /-P$/i.test(sku));
+      const hasPreorderDepositOption = item.rawSkus.some((sku) => /-D$/i.test(sku));
+      const hasPreorderOptions = hasPreorderFullOption || hasPreorderDepositOption;
+      if (hasPreorderOptions) {
+        if (hasPreorderFullOption && item.preorderFullSold90 > 0 && item.preorderFullInventory <= 0) {
+          rows.push({
+            ...item,
+            alertOption: "预售全额",
+            alertInventory: item.preorderFullInventory,
+            sold30: item.preorderFullSold30,
+            sold90: item.preorderFullSold90
+          });
+        }
+        if (hasPreorderDepositOption && item.depositQty90 > 0 && item.preorderDepositInventory <= 0) {
+          rows.push({
+            ...item,
+            alertOption: "预售定金",
+            alertInventory: item.preorderDepositInventory,
+            sold30: item.depositQty30,
+            sold90: item.depositQty90
+          });
+        }
+        return rows;
+      }
+      if (item.normalInventory <= 0 && item.normalSold90 > 0) {
+        rows.push({
+          ...item,
+          alertOption: "普通库存",
+          alertInventory: item.normalInventory,
+          sold30: item.normalSold30,
+          sold90: item.normalSold90
+        });
+      }
+      return rows;
+    })
     .map((item) => ({
       ...item,
       action: item.sold30 >= 3 ? "优先补货" : item.sold90 >= 3 ? "评估补货" : "观察需求"
