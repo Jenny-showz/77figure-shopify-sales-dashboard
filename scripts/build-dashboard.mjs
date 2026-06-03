@@ -507,6 +507,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
       const hasPreorderFullOption = item.rawSkus.some((sku) => /-P$/i.test(sku));
       const hasPreorderDepositOption = item.rawSkus.some((sku) => /-D$/i.test(sku));
       const hasPreorderOptions = hasPreorderFullOption || hasPreorderDepositOption;
+      const hasBracketPrefix = /^【[^】]+】/.test(String(item.title || "").trim());
       if (hasPreorderOptions) {
         if (hasPreorderFullOption && item.preorderFullSold90 > 0 && item.preorderFullInventory <= 0) {
           rows.push({
@@ -517,7 +518,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
             sold90: item.preorderFullSold90
           });
         }
-        if (hasPreorderDepositOption && item.depositQty90 > 0 && item.preorderDepositInventory <= 0) {
+        if (hasBracketPrefix && hasPreorderDepositOption && item.depositQty90 > 0 && item.preorderDepositInventory <= 0) {
           rows.push({
             ...item,
             alertOption: "预售定金",
@@ -543,8 +544,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
       ...item,
       action: item.sold30 >= 3 ? "优先补货" : item.sold90 >= 3 ? "评估补货" : "观察需求"
     }))
-    .sort((a, b) => b.sold30 - a.sold30 || b.sold90 - a.sold90)
-    .slice(0, 30);
+    .sort((a, b) => b.sold30 - a.sold30 || b.sold90 - a.sold90);
 
   const slowMovingAlerts = records
     .filter((item) => item.inventory > 0 && item.productAgeDays >= 60 && item.sold90 <= 1)
@@ -552,8 +552,7 @@ function buildDashboard(products, orders, erpInventory, shopifyConfig, previousD
       ...item,
       action: item.sold90 === 0 && item.inventory >= 3 ? "建议清仓/折扣" : "继续观察"
     }))
-    .sort((a, b) => b.inventory - a.inventory || a.sold90 - b.sold90)
-    .slice(0, 30);
+    .sort((a, b) => b.inventory - a.inventory || a.sold90 - b.sold90);
 
   const stockClearanceSuggestions = hasFreshErpRows ? erpRows
     .filter((item) => item.erpStock > 0)

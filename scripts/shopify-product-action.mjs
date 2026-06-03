@@ -88,13 +88,14 @@ function nextTitle(action, title) {
   const soldOutPrefix = "【品切れ】";
   const clean = String(title || "").replace(/^【品切れ】\s*/, "");
   if (action === "mark-sold-out") return `${soldOutPrefix}${clean}`;
+  if (action === "end-preorder") return String(title || "").replace("【予約商品】", "【予約受付終了】");
   if (action === "restock") return clean;
   throw new Error(`Unsupported action: ${action}`);
 }
 
 const args = parseArgs(process.argv.slice(2));
 if (!args.action || !args.product) {
-  throw new Error("Usage: node scripts/shopify-product-action.mjs --action mark-sold-out|restock --product gid://shopify/Product/... [--commit]");
+  throw new Error("Usage: node scripts/shopify-product-action.mjs --action mark-sold-out|restock|end-preorder --product gid://shopify/Product/... [--commit]");
 }
 
 const config = await loadConfig();

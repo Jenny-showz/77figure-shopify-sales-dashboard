@@ -200,6 +200,14 @@
         background: #fff8f8;
       }
 
+      .row-manual-check td {
+        background: #fffbea;
+      }
+
+      .row-done td {
+        background: #f0fbf3;
+      }
+
       .actions {
         display: flex;
         flex-wrap: wrap;
@@ -355,11 +363,37 @@
         return `<div class="sku">${link}</div><div class="title">${escapeHtml(item.title || "")}</div>${raw}`;
       }
 
+      function soldOutKey(item) {
+        return `${item.sku || ""}::${item.alertOption || ""}`;
+      }
+
+      function soldOutStatuses() {
+        return JSON.parse(localStorage.getItem("dashboardSoldOutStatuses") || "{}");
+      }
+
+      function setSoldOutStatus(key, status) {
+        const statuses = soldOutStatuses();
+        statuses[key] = status;
+        localStorage.setItem("dashboardSoldOutStatuses", JSON.stringify(statuses));
+      }
+
+      function soldOutActionButtons(item) {
+        const disabled = !item.productId;
+        const endPreorderDisabled = disabled || !String(item.title || "").includes("【予約商品】");
+        return `<div class="actions">
+          <button type="button" data-action="end-preorder" data-product="${escapeHtml(item.productId || "")}" data-sold-out-key="${escapeHtml(soldOutKey(item))}" ${endPreorderDisabled ? "disabled" : ""}>预售截止</button>
+          <button class="primary" type="button" data-action="mark-sold-out" data-product="${escapeHtml(item.productId || "")}" ${disabled ? "disabled" : ""}>确认售罄不补</button>
+          <button type="button" data-action="manual-check" data-sold-out-key="${escapeHtml(soldOutKey(item))}">人工检查</button>
+          ${item.shopifyAdminUrl ? `<a href="${escapeHtml(item.shopifyAdminUrl)}" target="_blank" rel="noopener">Shopify</a>` : ""}
+        </div>`;
+      }
+
       function table(items, type) {
         if (!items.length) return '<div class="empty">当前没有触发提醒的商品。</div>';
         const rows = items.map((item) => {
           if (type === "soldOut") {
-            return `<tr>
+            const rowClass = item.localStatus === "manual-check" ? "row-manual-check" : item.localStatus === "preorder-ended" ? "row-done" : "";
+            return `<tr class="${rowClass}">
               <td>${productCell(item)}</td>
               <td>${escapeHtml(item.alertOption || "售罄")}</td>
               <td>${formatNumber(item.alertInventory)}</td>
@@ -368,6 +402,7 @@
               <td>${item.salesStatusText || "无"}</td>
               <td>${daysLabel(item.daysSinceLastSale)}</td>
               <td><span class="tag hot">${item.action}</span></td>
+              <td>${soldOutActionButtons(item)}</td>
             </tr>`;
           }
           return `<tr>
@@ -380,7 +415,7 @@
           </tr>`;
         }).join("");
         const headers = type === "soldOut"
-          ? "<tr><th>商品</th><th>售罄选项</th><th>选项库存</th><th>30天销量</th><th>90天销量</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>"
+          ? "<tr><th>商品</th><th>售罄选项</th><th>选项库存</th><th>30天销量</th><th>90天销量</th><th>状态拆分</th><th>最近实销</th><th>建议</th><th>操作</th></tr>"
           : "<tr><th>商品</th><th>实物库存</th><th>90天实销</th><th>状态拆分</th><th>最近实销</th><th>建议</th></tr>";
         return `<table><thead>${headers}</thead><tbody>${rows}</tbody></table>`;
       }
@@ -452,12 +487,27 @@
         return items.filter((item) => !ignored.has(item.sku));
       }
 
+      function visibleSoldOutAlerts(items) {
+        const statuses = soldOutStatuses();
+        const rank = { "": 0, "manual-check": 1, "preorder-ended": 2 };
+        return items
+          .map((item) => ({ ...item, localStatus: statuses[soldOutKey(item)] || "" }))
+          .sort((a, b) => {
+            const left = rank[a.localStatus] ?? 0;
+            const right = rank[b.localStatus] ?? 0;
+            if (left !== right) return left - right;
+            return b.sold30 - a.sold30 || b.sold90 - a.sold90;
+          });
+      }
+
       async function runProductAction(action, productId, button) {
         if (!productId) return;
+        const defaultLabel = button.dataset.defaultLabel || button.textContent;
+        button.dataset.defaultLabel = defaultLabel;
         if (!actionApiUrl) {
           await navigator.clipboard.writeText(commandFor(action, productId));
           button.textContent = "已复制命令";
-          setTimeout(() => { button.textContent = action === "mark-sold-out" ? "确认售罄并修改状态" : "再入荷"; }, 1600);
+          setTimeout(() => { button.textContent = defaultLabel; }, 1600);
           return;
         }
         button.disabled = true;
@@ -484,7 +534,7 @@
           metric("90天定金", data.summary.depositQty90),
           metric("90天尾款", data.summary.balanceQty90)
         ].join("");
-        renderPagedTable("soldOut", "sold-out", data.soldOutAlerts || [], (items) => table(items, "soldOut"));
+        renderPagedTable("soldOut", "sold-out", visibleSoldOutAlerts(data.soldOutAlerts || []), (items) => table(items, "soldOut"));
         renderPagedTable("slowMoving", "slow-moving", data.slowMovingAlerts || [], (items) => table(items, "slowMoving"));
         renderPagedTable("stockClearance", "stock-clearance", data.stockClearanceSuggestions || [], clearanceTable);
         renderPagedTable("productChecks", "product-checks", visibleProductChecks(data.shopifyProductChecks || []), productChecksTable);
@@ -516,6 +566,11 @@
         const button = event.target.closest("button[data-action]");
         if (!button) return;
         const action = button.dataset.action;
+        if (action === "manual-check") {
+          setSoldOutStatus(button.dataset.soldOutKey, "manual-check");
+          if (dashboardData) renderDashboard(dashboardData);
+          return;
+        }
         if (action === "ignore") {
           const ignored = new Set(JSON.parse(localStorage.getItem("dashboardIgnoredSkus") || "[]"));
           ignored.add(button.dataset.sku);
@@ -525,6 +580,10 @@
         }
         try {
           await runProductAction(action, button.dataset.product, button);
+          if (action === "end-preorder") {
+            setSoldOutStatus(button.dataset.soldOutKey, "preorder-ended");
+            if (dashboardData) renderDashboard(dashboardData);
+          }
         } catch (error) {
           button.disabled = false;
           button.textContent = "失败";
