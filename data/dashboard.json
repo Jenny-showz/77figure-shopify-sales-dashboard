@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-07-05T04:59:31.913Z",
+  "generatedAt": "2026-07-06T05:14:40.578Z",
   "windowDays": 90,
   "summary": {
-    "trackedSkus": 2939,
-    "soldOutAlerts": 148,
-    "slowMovingAlerts": 394,
+    "trackedSkus": 2941,
+    "soldOutAlerts": 150,
+    "slowMovingAlerts": 395,
     "stockClearanceSuggestions": 50,
     "productCheckIssues": 1150,
     "erpStockSkus": 1505,
     "erpStockValue": 308267,
     "clearanceReleaseValue": 90782,
-    "unitsSold90": 5619,
-    "depositQty90": 1535,
-    "balanceQty90": 585
+    "unitsSold90": 5627,
+    "depositQty90": 1541,
+    "balanceQty90": 588
   },
   "erpInventory": {
     "connected": false,
@@ -21,47 +21,6 @@
     "staleInboundDays": 60
   },
   "soldOutAlerts": [
-    {
-      "sku": "MSG-UBP-A04S",
-      "rawSkus": [
-        "MSG-UBP-A04S",
-        "MSG-UBP-A04S-B",
-        "MSG-UBP-A04S-D",
-        "MSG-UBP-A04S-P"
-      ],
-      "title": "【先行販売】将魂姫 MS General 1/10 UBP-A04S Mecha Break 黑豹 プラモデル",
-      "handle": "ms-general-1-10-ubp-a04s-mecha-break-panther-model-kit",
-      "productUrl": "https://77figure.com/products/ms-general-1-10-ubp-a04s-mecha-break-panther-model-kit",
-      "productId": "gid://shopify/Product/8980538032357",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/8980538032357",
-      "productCreatedAt": "2024-10-18T10:12:01Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 3,
-      "price": 6700,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 40,
-      "preorderFullSold90": 40,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 3,
-      "balanceQty30": 7,
-      "balanceQty90": 7,
-      "sold30": 40,
-      "sold90": 40,
-      "lastSaleAt": "2026-07-03T08:39:02Z",
-      "salesStatusText": "全额预约 40 / 定金 3 / 尾款 7",
-      "daysSinceLastSale": 1.8475684375,
-      "productAgeDays": 624.7829966782407,
-      "alertOption": "预售全额",
-      "alertInventory": 0,
-      "action": "优先补货"
-    },
     {
       "sku": "FC-FFNIU",
       "rawSkus": [
@@ -89,57 +48,16 @@
       "preorderFullSold90": 8,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
-      "depositQty30": 22,
+      "depositQty30": 20,
       "depositQty90": 89,
       "balanceQty30": 44,
       "balanceQty90": 44,
-      "sold30": 22,
+      "sold30": 20,
       "sold90": 89,
       "lastSaleAt": "2026-07-03T11:58:03Z",
       "salesStatusText": "全额预约 8 / 定金 89 / 尾款 44",
-      "daysSinceLastSale": 1.7093624189814816,
-      "productAgeDays": 45.088378622685184,
-      "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "优先补货"
-    },
-    {
-      "sku": "OCI-ARX-8",
-      "rawSkus": [
-        "OCI-ARX-8",
-        "OCI-ARX-8-B",
-        "OCI-ARX-8-D",
-        "OCI-ARX-8-P"
-      ],
-      "title": "【先行販売】橘猫工業 1/35 ARX-8『フルメタル・パニック！』レーバテイン プラモデル",
-      "handle": "orange-cat-industry-x-1-35-arx-8-full-metal-panic-flame-magic-sword-model-kit",
-      "productUrl": "https://77figure.com/products/orange-cat-industry-x-1-35-arx-8-full-metal-panic-flame-magic-sword-model-kit",
-      "productId": "gid://shopify/Product/8883275858149",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/8883275858149",
-      "productCreatedAt": "2024-08-05T04:43:29Z",
-      "inventory": 3,
-      "normalInventory": 0,
-      "preorderFullInventory": 3,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 14,
-      "price": 16000,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 22,
-      "preorderFullSold90": 22,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 11,
-      "depositQty90": 25,
-      "balanceQty30": 26,
-      "balanceQty90": 26,
-      "sold30": 11,
-      "sold90": 25,
-      "lastSaleAt": "2026-07-04T10:40:46Z",
-      "salesStatusText": "全额预约 22 / 定金 25 / 尾款 26",
-      "daysSinceLastSale": 0.7630314004629629,
-      "productAgeDays": 699.0111448263889,
+      "daysSinceLastSale": 2.719879375,
+      "productAgeDays": 46.098895578703704,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "优先补货"
@@ -177,9 +95,50 @@
       "sold90": 10,
       "lastSaleAt": "2026-06-14T10:05:30Z",
       "salesStatusText": "全额预约 10",
-      "daysSinceLastSale": 20.787522141203702,
-      "productAgeDays": 1054.847105474537,
+      "daysSinceLastSale": 21.798039097222222,
+      "productAgeDays": 1055.8576224305555,
       "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "优先补货"
+    },
+    {
+      "sku": "OCI-ARX-8",
+      "rawSkus": [
+        "OCI-ARX-8",
+        "OCI-ARX-8-B",
+        "OCI-ARX-8-D",
+        "OCI-ARX-8-P"
+      ],
+      "title": "【先行販売】橘猫工業 1/35 ARX-8『フルメタル・パニック！』レーバテイン プラモデル",
+      "handle": "orange-cat-industry-x-1-35-arx-8-full-metal-panic-flame-magic-sword-model-kit",
+      "productUrl": "https://77figure.com/products/orange-cat-industry-x-1-35-arx-8-full-metal-panic-flame-magic-sword-model-kit",
+      "productId": "gid://shopify/Product/8883275858149",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/8883275858149",
+      "productCreatedAt": "2024-08-05T04:43:29Z",
+      "inventory": 3,
+      "normalInventory": 0,
+      "preorderFullInventory": 3,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 14,
+      "price": 16000,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 22,
+      "preorderFullSold90": 22,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 9,
+      "depositQty90": 25,
+      "balanceQty30": 26,
+      "balanceQty90": 26,
+      "sold30": 9,
+      "sold90": 25,
+      "lastSaleAt": "2026-07-04T10:40:46Z",
+      "salesStatusText": "全额预约 22 / 定金 25 / 尾款 26",
+      "daysSinceLastSale": 1.7735483564814816,
+      "productAgeDays": 700.0216617824074,
+      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "优先补货"
     },
@@ -204,7 +163,7 @@
       "normalSold30": 8,
       "normalSold90": 11,
       "preorderFullSold30": 0,
-      "preorderFullSold90": 37,
+      "preorderFullSold90": 36,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
@@ -214,9 +173,9 @@
       "sold30": 8,
       "sold90": 11,
       "lastSaleAt": "2026-06-27T06:34:00Z",
-      "salesStatusText": "普通 11 / 全额预约 37",
-      "daysSinceLastSale": 7.9343971412037035,
-      "productAgeDays": 93.76771890046297,
+      "salesStatusText": "普通 11 / 全额预约 36",
+      "daysSinceLastSale": 8.944914097222222,
+      "productAgeDays": 94.77823585648149,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "优先补货"
@@ -254,8 +213,8 @@
       "sold90": 50,
       "lastSaleAt": "2026-07-02T16:32:32Z",
       "salesStatusText": "全额预约 50",
-      "daysSinceLastSale": 2.5187489930555556,
-      "productAgeDays": 57.525056863425924,
+      "daysSinceLastSale": 3.529265949074074,
+      "productAgeDays": 58.535573819444444,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "优先补货"
@@ -295,8 +254,8 @@
       "sold90": 11,
       "lastSaleAt": "2026-06-24T04:16:29Z",
       "salesStatusText": "全额预约 11 / 尾款 4",
-      "daysSinceLastSale": 11.029894826388889,
-      "productAgeDays": 145.51692028935184,
+      "daysSinceLastSale": 12.040411782407407,
+      "productAgeDays": 146.52743724537038,
       "alertOption": "预售全额",
       "alertInventory": -1,
       "action": "优先补货"
@@ -336,8 +295,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-07-01T16:42:26Z",
       "salesStatusText": "全额预约 21 / 定金 6 / 尾款 4",
-      "daysSinceLastSale": 3.5118739930555556,
-      "productAgeDays": 17.558066122685187,
+      "daysSinceLastSale": 4.522390949074074,
+      "productAgeDays": 18.568583078703703,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "优先补货"
@@ -374,9 +333,50 @@
       "sold90": 5,
       "lastSaleAt": "2026-06-27T16:15:44Z",
       "salesStatusText": "普通 5",
-      "daysSinceLastSale": 7.530415659722222,
-      "productAgeDays": 985.8613184375,
+      "daysSinceLastSale": 8.54093261574074,
+      "productAgeDays": 986.8718353935185,
       "alertOption": "普通库存",
+      "alertInventory": 0,
+      "action": "优先补货"
+    },
+    {
+      "sku": "FLAME-DRAGONZORD",
+      "rawSkus": [
+        "FLAME-DRAGONZORD",
+        "FLAME-DRAGONZORD-B",
+        "FLAME-DRAGONZORD-D",
+        "FLAME-DRAGONZORD-P"
+      ],
+      "title": "【予約商品】Flame Toys マイティ・モーフィン・パワーレンジャー ドラゴンゾード 塗装済み可動フィギュア",
+      "handle": "flame-toys-mighty-morphin-power-rangers-dragonzord",
+      "productUrl": "https://77figure.com/products/flame-toys-mighty-morphin-power-rangers-dragonzord",
+      "productId": "gid://shopify/Product/9227602854117",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9227602854117",
+      "productCreatedAt": "2025-07-25T10:00:53Z",
+      "inventory": 3,
+      "normalInventory": 0,
+      "preorderFullInventory": 3,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 8,
+      "price": 65800,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 4,
+      "preorderFullSold90": 4,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 5,
+      "depositQty90": 5,
+      "balanceQty30": 2,
+      "balanceQty90": 4,
+      "sold30": 5,
+      "sold90": 5,
+      "lastSaleAt": "2026-07-05T11:01:09Z",
+      "salesStatusText": "全额预约 4 / 定金 5 / 尾款 4",
+      "daysSinceLastSale": 0.7593932638888888,
+      "productAgeDays": 345.80124511574076,
+      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "优先补货"
     },
@@ -415,8 +415,49 @@
       "sold90": 4,
       "lastSaleAt": "2026-07-02T13:52:10Z",
       "salesStatusText": "全额预约 4",
-      "daysSinceLastSale": 2.6301147337962965,
-      "productAgeDays": 212.64029991898147,
+      "daysSinceLastSale": 3.640631689814815,
+      "productAgeDays": 213.650816875,
+      "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "优先补货"
+    },
+    {
+      "sku": "FLAME-ZORD",
+      "rawSkus": [
+        "FLAME-ZORD",
+        "FLAME-ZORD-B",
+        "FLAME-ZORD-D",
+        "FLAME-ZORD-P"
+      ],
+      "title": "【予約商品】（再版）Flame Toys マイティ・モーフィン・パワーレンジャー ダイノメガゾード 塗装済み可動フィギュア",
+      "handle": "flame-toys-mighty-morphin-power-rangers-dino-megazord",
+      "productUrl": "https://77figure.com/products/flame-toys-mighty-morphin-power-rangers-dino-megazord",
+      "productId": "gid://shopify/Product/9248571654373",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9248571654373",
+      "productCreatedAt": "2025-08-18T16:52:22Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 1,
+      "price": 66800,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 3,
+      "preorderFullSold90": 3,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 2,
+      "depositQty90": 3,
+      "balanceQty30": 1,
+      "balanceQty90": 1,
+      "sold30": 3,
+      "sold90": 3,
+      "lastSaleAt": "2026-07-05T10:47:08Z",
+      "salesStatusText": "全额预约 3 / 定金 3 / 尾款 1",
+      "daysSinceLastSale": 0.7691270601851852,
+      "productAgeDays": 321.5154928009259,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "优先补货"
@@ -456,8 +497,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-07-02T07:44:30Z",
       "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 2.8854388078703703,
-      "productAgeDays": 17.940739733796295,
+      "daysSinceLastSale": 3.895955763888889,
+      "productAgeDays": 18.951256689814816,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "优先补货"
@@ -494,129 +535,50 @@
       "sold90": 6,
       "lastSaleAt": "2026-06-21T06:03:13Z",
       "salesStatusText": "普通 6 / 全额预约 1 / 定金 2 / 尾款 4",
-      "daysSinceLastSale": 13.955774456018519,
-      "productAgeDays": 295.1070244560185,
+      "daysSinceLastSale": 14.966291412037037,
+      "productAgeDays": 296.11754141203704,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "评估补货"
     },
     {
-      "sku": "YM001",
+      "sku": "FLAME-ZORD",
       "rawSkus": [
-        "YM001"
+        "FLAME-ZORD",
+        "FLAME-ZORD-B",
+        "FLAME-ZORD-D",
+        "FLAME-ZORD-P"
       ],
-      "title": "一鳴模型 1/100 YM001 NT-1 プラモデル",
-      "handle": "yiming-model-1-100-ym001-nt-1-model-kit",
-      "productUrl": "https://77figure.com/products/yiming-model-1-100-ym001-nt-1-model-kit",
-      "productId": "gid://shopify/Product/9439251005669",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9439251005669",
-      "productCreatedAt": "2026-01-27T13:39:12Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 0,
-      "price": 5600,
-      "normalSold30": 2,
-      "normalSold90": 6,
-      "preorderFullSold30": 0,
-      "preorderFullSold90": 0,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 0,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 2,
-      "sold90": 6,
-      "lastSaleAt": "2026-06-06T08:05:18Z",
-      "salesStatusText": "普通 6",
-      "daysSinceLastSale": 28.870994363425925,
-      "productAgeDays": 158.63911936342592,
-      "alertOption": "普通库存",
-      "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "MU-KENSHIRO",
-      "rawSkus": [
-        "MU-KENSHIRO",
-        "MU-KENSHIRO-B",
-        "MU-KENSHIRO-D",
-        "MU-KENSHIRO-P"
-      ],
-      "title": "【予約商品】Maestro Union 1/12『北斗の拳』ケンシロウ 塗装済み可動フィギュア",
-      "handle": "maestro-union-1-12-fist-of-the-north-star-kenshiro",
-      "productUrl": "https://77figure.com/products/maestro-union-1-12-fist-of-the-north-star-kenshiro",
-      "productId": "gid://shopify/Product/9597910319333",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9597910319333",
-      "productCreatedAt": "2026-05-09T06:23:10Z",
-      "inventory": 6,
-      "normalInventory": 0,
-      "preorderFullInventory": 6,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 10,
-      "price": 13000,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 1,
-      "preorderFullSold90": 10,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 2,
-      "depositQty90": 4,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 2,
-      "sold90": 4,
-      "lastSaleAt": "2026-06-29T13:24:08Z",
-      "salesStatusText": "全额预约 10 / 定金 4",
-      "daysSinceLastSale": 5.649582326388889,
-      "productAgeDays": 56.94192028935185,
-      "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "SWT-FS079",
-      "rawSkus": [
-        "SWT-FS079",
-        "SWT-FS079-B",
-        "SWT-FS079-D",
-        "SWT-FS079-P"
-      ],
-      "title": "【予約商品】SW Toys 1/12 NO.FS079 バイオハザード ジル・バレンタイン 塗装済み可動フィギュア",
-      "handle": "sw-toys-1-12-no-fs079-biohazard-jill-valentine-action-figure",
-      "productUrl": "https://77figure.com/products/sw-toys-1-12-no-fs079-biohazard-jill-valentine-action-figure",
-      "productId": "gid://shopify/Product/9630299160805",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9630299160805",
-      "productCreatedAt": "2026-06-01T09:20:53Z",
+      "title": "【予約商品】（再版）Flame Toys マイティ・モーフィン・パワーレンジャー ダイノメガゾード 塗装済み可動フィギュア",
+      "handle": "flame-toys-mighty-morphin-power-rangers-dino-megazord",
+      "productUrl": "https://77figure.com/products/flame-toys-mighty-morphin-power-rangers-dino-megazord",
+      "productId": "gid://shopify/Product/9248571654373",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9248571654373",
+      "productCreatedAt": "2025-08-18T16:52:22Z",
       "inventory": 0,
       "normalInventory": 0,
       "preorderFullInventory": 0,
       "preorderDepositInventory": 0,
       "preorderUnknownInventory": 0,
       "totalInventory": 1,
-      "price": 14900,
+      "price": 66800,
       "normalSold30": 0,
       "normalSold90": 0,
-      "preorderFullSold30": 2,
+      "preorderFullSold30": 3,
       "preorderFullSold90": 3,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
-      "depositQty30": 1,
-      "depositQty90": 1,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
+      "depositQty30": 2,
+      "depositQty90": 3,
+      "balanceQty30": 1,
+      "balanceQty90": 1,
       "sold30": 2,
       "sold90": 3,
-      "lastSaleAt": "2026-06-28T07:34:45Z",
-      "salesStatusText": "全额预约 3 / 定金 1",
-      "daysSinceLastSale": 6.892209641203704,
-      "productAgeDays": 33.8185059375,
-      "alertOption": "预售全额",
+      "lastSaleAt": "2026-07-05T10:47:08Z",
+      "salesStatusText": "全额预约 3 / 定金 3 / 尾款 1",
+      "daysSinceLastSale": 0.7691270601851852,
+      "productAgeDays": 321.5154928009259,
+      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
     },
@@ -652,8 +614,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-07-05T00:41:48Z",
       "salesStatusText": "普通 2 / 预约待判 3 / 尾款 1",
-      "daysSinceLastSale": 0.17898047453703703,
-      "productAgeDays": 624.7926263078704,
+      "daysSinceLastSale": 1.1894974305555555,
+      "productAgeDays": 625.8031432638888,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -693,48 +655,9 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-30T04:34:27Z",
       "salesStatusText": "全额预约 5 / 定金 2 / 尾款 7",
-      "daysSinceLastSale": 5.017417974537037,
-      "productAgeDays": 422.4532860300926,
+      "daysSinceLastSale": 6.027934930555555,
+      "productAgeDays": 423.4638029861111,
       "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "观察需求"
-    },
-    {
-      "sku": "KG-MASAMUNE",
-      "rawSkus": [
-        "KG-MASAMUNE",
-        "KG-MASAMUNE-P"
-      ],
-      "title": "【予約商品】KEEPGOING 1/12 戦国Gシリーズ 伊達政宗 塗装済み可動フィギュア",
-      "handle": "keepgoing-1-12-sengoku-g-series-date-masamune",
-      "productUrl": "https://77figure.com/products/keepgoing-1-12-sengoku-g-series-date-masamune",
-      "productId": "gid://shopify/Product/9595502559461",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9595502559461",
-      "productCreatedAt": "2026-05-07T04:50:17Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 0,
-      "price": 8300,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 2,
-      "preorderFullSold90": 2,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 0,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 2,
-      "sold90": 2,
-      "lastSaleAt": "2026-06-07T01:44:42Z",
-      "salesStatusText": "全额预约 2",
-      "daysSinceLastSale": 28.13529991898148,
-      "productAgeDays": 59.006422604166666,
-      "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
     },
@@ -773,8 +696,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-15T07:34:48Z",
       "salesStatusText": "全额预约 2 / 定金 2",
-      "daysSinceLastSale": 19.892174918981482,
-      "productAgeDays": 40.923066122685185,
+      "daysSinceLastSale": 20.902691875,
+      "productAgeDays": 41.933583078703705,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -814,8 +737,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-07-02T12:12:02Z",
       "salesStatusText": "全额预约 2 / 定金 2",
-      "daysSinceLastSale": 2.6996517708333334,
-      "productAgeDays": 33.11364482638889,
+      "daysSinceLastSale": 3.710168726851852,
+      "productAgeDays": 34.124161782407405,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -842,7 +765,7 @@
       "normalSold30": 0,
       "normalSold90": 0,
       "preorderFullSold30": 1,
-      "preorderFullSold90": 26,
+      "preorderFullSold90": 22,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
@@ -850,11 +773,11 @@
       "balanceQty30": 0,
       "balanceQty90": 0,
       "sold30": 1,
-      "sold90": 26,
+      "sold90": 22,
       "lastSaleAt": "2026-06-12T13:37:41Z",
-      "salesStatusText": "全额预约 26",
-      "daysSinceLastSale": 22.64017260416667,
-      "productAgeDays": 93.95289251157408,
+      "salesStatusText": "全额预约 22",
+      "daysSinceLastSale": 23.650689560185185,
+      "productAgeDays": 94.9634094675926,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -891,8 +814,46 @@
       "sold90": 6,
       "lastSaleAt": "2026-07-02T11:00:24Z",
       "salesStatusText": "普通 6",
-      "daysSinceLastSale": 2.7493971412037035,
-      "productAgeDays": 480.53137630787035,
+      "daysSinceLastSale": 3.759914097222222,
+      "productAgeDays": 481.5418932638889,
+      "alertOption": "普通库存",
+      "alertInventory": 0,
+      "action": "评估补货"
+    },
+    {
+      "sku": "YM001",
+      "rawSkus": [
+        "YM001"
+      ],
+      "title": "一鳴模型 1/100 YM001 NT-1 プラモデル",
+      "handle": "yiming-model-1-100-ym001-nt-1-model-kit",
+      "productUrl": "https://77figure.com/products/yiming-model-1-100-ym001-nt-1-model-kit",
+      "productId": "gid://shopify/Product/9439251005669",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9439251005669",
+      "productCreatedAt": "2026-01-27T13:39:12Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 0,
+      "price": 5600,
+      "normalSold30": 1,
+      "normalSold90": 6,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 0,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 1,
+      "sold90": 6,
+      "lastSaleAt": "2026-06-06T08:05:18Z",
+      "salesStatusText": "普通 6",
+      "daysSinceLastSale": 29.881511319444446,
+      "productAgeDays": 159.64963631944445,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "评估补货"
@@ -932,9 +893,50 @@
       "sold90": 4,
       "lastSaleAt": "2026-06-07T02:25:02Z",
       "salesStatusText": "全额预约 4 / 定金 1",
-      "daysSinceLastSale": 28.10729065972222,
-      "productAgeDays": 60.31330917824074,
+      "daysSinceLastSale": 29.11780761574074,
+      "productAgeDays": 61.32382613425926,
       "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "评估补货"
+    },
+    {
+      "sku": "MU-KENSHIRO",
+      "rawSkus": [
+        "MU-KENSHIRO",
+        "MU-KENSHIRO-B",
+        "MU-KENSHIRO-D",
+        "MU-KENSHIRO-P"
+      ],
+      "title": "【予約商品】Maestro Union 1/12『北斗の拳』ケンシロウ 塗装済み可動フィギュア",
+      "handle": "maestro-union-1-12-fist-of-the-north-star-kenshiro",
+      "productUrl": "https://77figure.com/products/maestro-union-1-12-fist-of-the-north-star-kenshiro",
+      "productId": "gid://shopify/Product/9597910319333",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9597910319333",
+      "productCreatedAt": "2026-05-09T06:23:10Z",
+      "inventory": 6,
+      "normalInventory": 0,
+      "preorderFullInventory": 6,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 10,
+      "price": 13000,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 1,
+      "preorderFullSold90": 10,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 1,
+      "depositQty90": 4,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 1,
+      "sold90": 4,
+      "lastSaleAt": "2026-06-29T13:24:08Z",
+      "salesStatusText": "全额预约 10 / 定金 4",
+      "daysSinceLastSale": 6.6600992824074075,
+      "productAgeDays": 57.95243724537037,
+      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
     },
@@ -973,8 +975,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-06-20T15:10:36Z",
       "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 14.575647141203703,
-      "productAgeDays": 273.47526519675927,
+      "daysSinceLastSale": 15.586164097222222,
+      "productAgeDays": 274.4857821527778,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -1014,49 +1016,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-06-09T12:30:37Z",
       "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 25.68674667824074,
-      "productAgeDays": 154.92951288194445,
-      "alertOption": "预售全额",
-      "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "SS-RPG-06-S",
-      "rawSkus": [
-        "SS-RPG-06-S",
-        "SS-RPG-06-S-B",
-        "SS-RPG-06-S-D",
-        "SS-RPG-06-S-P"
-      ],
-      "title": "【予約商品】蝸之殻(スネイルシェル) 1/12 RPG-06 冒険者 スネイル 塗装済み可動フィギュア",
-      "handle": "snail-shell-1-12-rpg-06-snail",
-      "productUrl": "https://77figure.com/products/snail-shell-1-12-rpg-06-snail",
-      "productId": "gid://shopify/Product/9579216470245",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9579216470245",
-      "productCreatedAt": "2026-04-23T17:19:42Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 0,
-      "price": 11100,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 1,
-      "preorderFullSold90": 3,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 0,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 1,
-      "sold90": 3,
-      "lastSaleAt": "2026-06-05T18:10:29Z",
-      "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 29.45072815972222,
-      "productAgeDays": 72.48599436342593,
+      "daysSinceLastSale": 26.697263634259258,
+      "productAgeDays": 155.94002983796295,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -1096,8 +1057,49 @@
       "sold90": 3,
       "lastSaleAt": "2026-06-28T07:34:45Z",
       "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 6.892209641203704,
-      "productAgeDays": 45.03702445601852,
+      "daysSinceLastSale": 7.902726597222222,
+      "productAgeDays": 46.047541412037035,
+      "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "评估补货"
+    },
+    {
+      "sku": "SWT-FS079",
+      "rawSkus": [
+        "SWT-FS079",
+        "SWT-FS079-B",
+        "SWT-FS079-D",
+        "SWT-FS079-P"
+      ],
+      "title": "【予約商品】SW Toys 1/12 NO.FS079 バイオハザード ジル・バレンタイン 塗装済み可動フィギュア",
+      "handle": "sw-toys-1-12-no-fs079-biohazard-jill-valentine-action-figure",
+      "productUrl": "https://77figure.com/products/sw-toys-1-12-no-fs079-biohazard-jill-valentine-action-figure",
+      "productId": "gid://shopify/Product/9630299160805",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9630299160805",
+      "productCreatedAt": "2026-06-01T09:20:53Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 1,
+      "price": 14900,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 1,
+      "preorderFullSold90": 3,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 1,
+      "depositQty90": 1,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 1,
+      "sold90": 3,
+      "lastSaleAt": "2026-06-28T07:34:45Z",
+      "salesStatusText": "全额预约 3 / 定金 1",
+      "daysSinceLastSale": 7.902726597222222,
+      "productAgeDays": 34.82902289351852,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -1137,8 +1139,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-19T05:40:53Z",
       "salesStatusText": "全额预约 2 / 定金 1",
-      "daysSinceLastSale": 15.971283715277778,
-      "productAgeDays": 823.8445013078704,
+      "daysSinceLastSale": 16.981800671296295,
+      "productAgeDays": 824.8550182638888,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1176,8 +1178,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-14T10:19:33Z",
       "salesStatusText": "定金 2",
-      "daysSinceLastSale": 20.77776519675926,
-      "productAgeDays": 418.6132397337963,
+      "daysSinceLastSale": 21.78828215277778,
+      "productAgeDays": 419.6237566898148,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1201,7 +1203,7 @@
       "preorderFullInventory": 17,
       "preorderDepositInventory": 0,
       "preorderUnknownInventory": 0,
-      "totalInventory": 49,
+      "totalInventory": 48,
       "price": 11800,
       "normalSold30": 0,
       "normalSold90": 0,
@@ -1212,54 +1214,13 @@
       "depositQty30": 1,
       "depositQty90": 2,
       "balanceQty30": 10,
-      "balanceQty90": 39,
+      "balanceQty90": 40,
       "sold30": 1,
       "sold90": 2,
       "lastSaleAt": "2026-07-04T10:40:46Z",
-      "salesStatusText": "全额预约 13 / 定金 2 / 尾款 39",
-      "daysSinceLastSale": 0.7630314004629629,
-      "productAgeDays": 374.52749899305553,
-      "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "观察需求"
-    },
-    {
-      "sku": "FLAME-ZORD",
-      "rawSkus": [
-        "FLAME-ZORD",
-        "FLAME-ZORD-B",
-        "FLAME-ZORD-D",
-        "FLAME-ZORD-P"
-      ],
-      "title": "【予約商品】（再版）Flame Toys マイティ・モーフィン・パワーレンジャー ダイノメガゾード 塗装済み可動フィギュア",
-      "handle": "flame-toys-mighty-morphin-power-rangers-dino-megazord",
-      "productUrl": "https://77figure.com/products/flame-toys-mighty-morphin-power-rangers-dino-megazord",
-      "productId": "gid://shopify/Product/9248571654373",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9248571654373",
-      "productCreatedAt": "2025-08-18T16:52:22Z",
-      "inventory": 2,
-      "normalInventory": 0,
-      "preorderFullInventory": 2,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 3,
-      "price": 66800,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 1,
-      "preorderFullSold90": 1,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 1,
-      "depositQty90": 2,
-      "balanceQty30": 1,
-      "balanceQty90": 1,
-      "sold30": 1,
-      "sold90": 2,
-      "lastSaleAt": "2026-07-05T01:25:30Z",
-      "salesStatusText": "全额预约 1 / 定金 2 / 尾款 1",
-      "daysSinceLastSale": 0.1486332523148148,
-      "productAgeDays": 320.5049758449074,
+      "salesStatusText": "全额预约 13 / 定金 2 / 尾款 40",
+      "daysSinceLastSale": 1.7735483564814816,
+      "productAgeDays": 375.53801594907407,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1297,8 +1258,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-07T08:07:25Z",
       "salesStatusText": "全额预约 2",
-      "daysSinceLastSale": 27.869524456018517,
-      "productAgeDays": 129.79543880787037,
+      "daysSinceLastSale": 28.880041412037038,
+      "productAgeDays": 130.80595576388887,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1335,9 +1296,48 @@
       "sold90": 2,
       "lastSaleAt": "2026-07-03T19:24:19Z",
       "salesStatusText": "普通 2 / 全额预约 4",
-      "daysSinceLastSale": 1.399455011574074,
-      "productAgeDays": 78.48526519675926,
+      "daysSinceLastSale": 2.409971967592593,
+      "productAgeDays": 79.49578215277778,
       "alertOption": "普通库存",
+      "alertInventory": 0,
+      "action": "观察需求"
+    },
+    {
+      "sku": "KG-MASAMUNE",
+      "rawSkus": [
+        "KG-MASAMUNE",
+        "KG-MASAMUNE-P"
+      ],
+      "title": "【予約商品】KEEPGOING 1/12 戦国Gシリーズ 伊達政宗 塗装済み可動フィギュア",
+      "handle": "keepgoing-1-12-sengoku-g-series-date-masamune",
+      "productUrl": "https://77figure.com/products/keepgoing-1-12-sengoku-g-series-date-masamune",
+      "productId": "gid://shopify/Product/9595502559461",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9595502559461",
+      "productCreatedAt": "2026-05-07T04:50:17Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 0,
+      "price": 8300,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 1,
+      "preorderFullSold90": 2,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 1,
+      "sold90": 2,
+      "lastSaleAt": "2026-06-07T01:44:42Z",
+      "salesStatusText": "全额预约 2",
+      "daysSinceLastSale": 29.145816875,
+      "productAgeDays": 60.016939560185186,
+      "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
     },
@@ -1376,8 +1376,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-11T12:00:55Z",
       "salesStatusText": "全额预约 1 / 定金 2",
-      "daysSinceLastSale": 23.70737167824074,
-      "productAgeDays": 40.960623993055556,
+      "daysSinceLastSale": 24.71788863425926,
+      "productAgeDays": 41.971140949074076,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1414,50 +1414,9 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-08T07:39:21Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 26.88901519675926,
-      "productAgeDays": 611.8372096412037,
+      "daysSinceLastSale": 27.899532152777777,
+      "productAgeDays": 612.8477265972223,
       "alertOption": "普通库存",
-      "alertInventory": 0,
-      "action": "观察需求"
-    },
-    {
-      "sku": "MT-BLADE",
-      "rawSkus": [
-        "MT-BLADE",
-        "MT-BLADE-B",
-        "MT-BLADE-D",
-        "MT-BLADE-P"
-      ],
-      "title": "【先行販売】Metytoyz 冒険者の世界 ゴブリン探検隊 ゴブリンスレイヤー ゴル ラスティ ブレード 塗装済み可動フィギュア",
-      "handle": "metytoyz-adventurer-s-world-the-goblin-expedition-team-goblin-slayer-gol-rusty-blade",
-      "productUrl": "https://77figure.com/products/metytoyz-adventurer-s-world-the-goblin-expedition-team-goblin-slayer-gol-rusty-blade",
-      "productId": "gid://shopify/Product/9043832570085",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9043832570085",
-      "productCreatedAt": "2025-01-15T15:51:13Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 3,
-      "price": 7200,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 0,
-      "preorderFullSold90": 0,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 1,
-      "depositQty90": 1,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 1,
-      "sold90": 1,
-      "lastSaleAt": "2026-06-05T05:34:16Z",
-      "salesStatusText": "定金 1",
-      "daysSinceLastSale": 29.975878622685187,
-      "productAgeDays": 535.5474411226852,
-      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
     },
@@ -1496,8 +1455,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-27T11:12:08Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 7.741248993055556,
-      "productAgeDays": 526.4684249189814,
+      "daysSinceLastSale": 8.751765949074073,
+      "productAgeDays": 527.478941875,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1535,8 +1494,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-13T21:57:40Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 21.29296195601852,
-      "productAgeDays": 505.43660778935185,
+      "daysSinceLastSale": 22.303478912037036,
+      "productAgeDays": 506.4471247453704,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1573,8 +1532,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-07-01T12:46:25Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 3.6757744560185186,
-      "productAgeDays": 402.52422353009257,
+      "daysSinceLastSale": 4.686291412037037,
+      "productAgeDays": 403.5347404861111,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1614,8 +1573,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-25T07:56:06Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 9.877383252314814,
-      "productAgeDays": 275.7855082523148,
+      "daysSinceLastSale": 10.887900208333333,
+      "productAgeDays": 276.79602520833333,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1655,8 +1614,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T13:34:04Z",
       "salesStatusText": "全额预约 1 / 定金 1 / 尾款 1",
-      "daysSinceLastSale": 27.642684178240742,
-      "productAgeDays": 265.4917235300926,
+      "daysSinceLastSale": 28.65320113425926,
+      "productAgeDays": 266.50224048611113,
       "alertOption": "预售全额",
       "alertInventory": -1,
       "action": "观察需求"
@@ -1696,8 +1655,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-28T04:16:09Z",
       "salesStatusText": "全额预约 1 / 定金 1 / 尾款 1",
-      "daysSinceLastSale": 7.03012630787037,
-      "productAgeDays": 220.79211704861112,
+      "daysSinceLastSale": 8.040643263888889,
+      "productAgeDays": 221.80263400462962,
       "alertOption": "预售定金",
       "alertInventory": -1,
       "action": "观察需求"
@@ -1737,8 +1696,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-22T09:55:26Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 12.794512881944444,
-      "productAgeDays": 220.0307860300926,
+      "daysSinceLastSale": 13.805029837962962,
+      "productAgeDays": 221.0413029861111,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1778,8 +1737,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-25T22:25:14Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 9.2738184375,
-      "productAgeDays": 212.61755686342593,
+      "daysSinceLastSale": 10.284335393518518,
+      "productAgeDays": 213.62807381944444,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1819,8 +1778,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T03:21:38Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 28.067985104166667,
-      "productAgeDays": 176.5134596412037,
+      "daysSinceLastSale": 29.078502060185187,
+      "productAgeDays": 177.52397659722223,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1860,8 +1819,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-14T14:14:18Z",
       "salesStatusText": "全额预约 3 / 定金 1",
-      "daysSinceLastSale": 20.614744363425928,
-      "productAgeDays": 141.49157306712962,
+      "daysSinceLastSale": 21.625261319444444,
+      "productAgeDays": 142.50209002314816,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1898,8 +1857,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-21T08:20:59Z",
       "salesStatusText": "普通 1 / 预约待判 5",
-      "daysSinceLastSale": 13.860103159722222,
-      "productAgeDays": 122.82770732638889,
+      "daysSinceLastSale": 14.87062011574074,
+      "productAgeDays": 123.83822428240741,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -1939,8 +1898,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-07-01T13:27:15Z",
       "salesStatusText": "全额预约 1 / 尾款 1",
-      "daysSinceLastSale": 3.647417974537037,
-      "productAgeDays": 106.75293880787036,
+      "daysSinceLastSale": 4.657934930555555,
+      "productAgeDays": 107.76345576388889,
       "alertOption": "预售全额",
       "alertInventory": -1,
       "action": "观察需求"
@@ -1980,8 +1939,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-07-01T13:27:15Z",
       "salesStatusText": "全额预约 1 / 尾款 1",
-      "daysSinceLastSale": 3.647417974537037,
-      "productAgeDays": 106.73590177083334,
+      "daysSinceLastSale": 4.657934930555555,
+      "productAgeDays": 107.74641872685186,
       "alertOption": "预售全额",
       "alertInventory": -1,
       "action": "观察需求"
@@ -2021,8 +1980,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-08T07:56:36Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 26.877036030092594,
-      "productAgeDays": 82.8884133449074,
+      "daysSinceLastSale": 27.88755298611111,
+      "productAgeDays": 83.89893030092593,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -2062,8 +2021,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-11T12:00:55Z",
       "salesStatusText": "全额预约 1 / 定金 2",
-      "daysSinceLastSale": 23.70737167824074,
-      "productAgeDays": 40.960623993055556,
+      "daysSinceLastSale": 24.71788863425926,
+      "productAgeDays": 41.971140949074076,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -2091,7 +2050,7 @@
       "price": 14900,
       "normalSold30": 0,
       "normalSold90": 0,
-      "preorderFullSold30": 2,
+      "preorderFullSold30": 1,
       "preorderFullSold90": 3,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
@@ -2103,8 +2062,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-28T07:34:45Z",
       "salesStatusText": "全额预约 3 / 定金 1",
-      "daysSinceLastSale": 6.892209641203704,
-      "productAgeDays": 33.8185059375,
+      "daysSinceLastSale": 7.902726597222222,
+      "productAgeDays": 34.82902289351852,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -2142,8 +2101,49 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-17T15:03:17Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 17.580728159722224,
-      "productAgeDays": 17.785195752314817,
+      "daysSinceLastSale": 18.59124511574074,
+      "productAgeDays": 18.795712708333333,
+      "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "观察需求"
+    },
+    {
+      "sku": "TOYSTAY-TS-011A",
+      "rawSkus": [
+        "TOYSTAY-TS-011A",
+        "TOYSTAY-TS-011A-B",
+        "TOYSTAY-TS-011A-D",
+        "TOYSTAY-TS-011A-P"
+      ],
+      "title": "【予約商品】TOYSTAY 1/6 TS-011A ストリートファイター 春麗 ブルーVer. 塗装済み可動フィギュア",
+      "handle": "toystay-ts-011a-action-figure",
+      "productUrl": "https://77figure.com/products/toystay-ts-011a-action-figure",
+      "productId": "gid://shopify/Product/9692464578789",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9692464578789",
+      "productCreatedAt": "2026-07-06T02:45:08Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 1,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 2,
+      "price": 18900,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 1,
+      "preorderFullSold90": 1,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 1,
+      "sold90": 1,
+      "lastSaleAt": "2026-07-06T04:07:48Z",
+      "salesStatusText": "全额预约 1",
+      "daysSinceLastSale": 0.046441875,
+      "productAgeDays": 0.1038492824074074,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -2181,8 +2181,8 @@
       "sold90": 21,
       "lastSaleAt": "2026-05-07T20:38:29Z",
       "salesStatusText": "定金 21",
-      "daysSinceLastSale": 58.34795038194444,
-      "productAgeDays": 59.469119363425925,
+      "daysSinceLastSale": 59.35846733796296,
+      "productAgeDays": 60.479636319444445,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2206,7 +2206,7 @@
       "preorderFullInventory": 0,
       "preorderDepositInventory": 0,
       "preorderUnknownInventory": 0,
-      "totalInventory": 8,
+      "totalInventory": 9,
       "price": 12700,
       "normalSold30": 0,
       "normalSold90": 0,
@@ -2216,14 +2216,14 @@
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
       "depositQty90": 4,
-      "balanceQty30": 5,
-      "balanceQty90": 14,
+      "balanceQty30": 4,
+      "balanceQty90": 13,
       "sold30": 0,
       "sold90": 15,
       "lastSaleAt": "2026-05-19T11:44:41Z",
-      "salesStatusText": "全额预约 15 / 定金 4 / 尾款 14",
-      "daysSinceLastSale": 46.71864482638889,
-      "productAgeDays": 179.40766103009258,
+      "salesStatusText": "全额预约 15 / 定金 4 / 尾款 13",
+      "daysSinceLastSale": 47.72916178240741,
+      "productAgeDays": 180.41817798611112,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2263,8 +2263,8 @@
       "sold90": 9,
       "lastSaleAt": "2026-06-20T04:26:28Z",
       "salesStatusText": "全额预约 2 / 定金 9 / 尾款 5",
-      "daysSinceLastSale": 15.022961956018518,
-      "productAgeDays": 80.55527677083333,
+      "daysSinceLastSale": 16.033478912037037,
+      "productAgeDays": 81.56579372685185,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2302,8 +2302,8 @@
       "sold90": 8,
       "lastSaleAt": "2026-05-24T21:30:44Z",
       "salesStatusText": "全额预约 8",
-      "daysSinceLastSale": 41.31166565972222,
-      "productAgeDays": 73.75710547453704,
+      "daysSinceLastSale": 42.32218261574074,
+      "productAgeDays": 74.76762243055556,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2338,13 +2338,13 @@
       "depositQty30": 0,
       "depositQty90": 0,
       "balanceQty30": 0,
-      "balanceQty90": 2,
+      "balanceQty90": 1,
       "sold30": 0,
       "sold90": 7,
       "lastSaleAt": "2026-05-24T08:35:33Z",
-      "salesStatusText": "全额预约 7 / 尾款 2",
-      "daysSinceLastSale": 41.849987418981485,
-      "productAgeDays": 511.8104966782407,
+      "salesStatusText": "全额预约 7 / 尾款 1",
+      "daysSinceLastSale": 42.860504375,
+      "productAgeDays": 512.8210136342593,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2382,8 +2382,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-06-02T00:50:40Z",
       "salesStatusText": "定金 6",
-      "daysSinceLastSale": 33.17282306712963,
-      "productAgeDays": 446.7639226041667,
+      "daysSinceLastSale": 34.18334002314815,
+      "productAgeDays": 447.77443956018516,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2420,8 +2420,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-05-04T09:29:29Z",
       "salesStatusText": "普通 6",
-      "daysSinceLastSale": 61.81253371527778,
-      "productAgeDays": 180.4990846412037,
+      "daysSinceLastSale": 62.82305067129629,
+      "productAgeDays": 181.50960159722223,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2461,8 +2461,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-06-25T03:33:08Z",
       "salesStatusText": "普通 1 / 全额预约 6 / 尾款 3",
-      "daysSinceLastSale": 10.059998993055556,
-      "productAgeDays": 141.52451288194445,
+      "daysSinceLastSale": 11.070515949074075,
+      "productAgeDays": 142.53502983796295,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2500,8 +2500,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-05-27T13:38:39Z",
       "salesStatusText": "定金 6",
-      "daysSinceLastSale": 38.63950130787037,
-      "productAgeDays": 96.73549667824074,
+      "daysSinceLastSale": 39.65001826388889,
+      "productAgeDays": 97.74601363425926,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2541,8 +2541,8 @@
       "sold90": 6,
       "lastSaleAt": "2026-05-03T09:13:23Z",
       "salesStatusText": "全额预约 6",
-      "daysSinceLastSale": 62.823714270833335,
-      "productAgeDays": 87.52561241898148,
+      "daysSinceLastSale": 63.83423122685185,
+      "productAgeDays": 88.536129375,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2582,8 +2582,8 @@
       "sold90": 5,
       "lastSaleAt": "2026-06-01T14:53:37Z",
       "salesStatusText": "全额预约 4 / 定金 5 / 尾款 1",
-      "daysSinceLastSale": 33.587441122685185,
-      "productAgeDays": 275.78009158564817,
+      "daysSinceLastSale": 34.597958078703705,
+      "productAgeDays": 276.79060854166664,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2623,8 +2623,8 @@
       "sold90": 5,
       "lastSaleAt": "2026-07-04T11:48:49Z",
       "salesStatusText": "全额预约 46 / 定金 5 / 尾款 1",
-      "daysSinceLastSale": 0.7157744560185185,
-      "productAgeDays": 80.5967698263889,
+      "daysSinceLastSale": 1.726291412037037,
+      "productAgeDays": 81.60728678240741,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2663,47 +2663,9 @@
       "sold90": 5,
       "lastSaleAt": "2026-05-18T17:11:01Z",
       "salesStatusText": "全额预约 6 / 定金 5 / 尾款 6",
-      "daysSinceLastSale": 47.49202445601852,
-      "productAgeDays": 53.70701288194444,
+      "daysSinceLastSale": 48.50254141203704,
+      "productAgeDays": 54.717529837962964,
       "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "GLS-WWING",
-      "rawSkus": [
-        "GLS-WWING"
-      ],
-      "title": "GL Studio スノーホワイト ウィングゼロ EW MGSD プラモデル",
-      "handle": "gl-studio-snow-white-wing-zero-ew-mgsd-model-kit",
-      "productUrl": "https://77figure.com/products/gl-studio-snow-white-wing-zero-ew-mgsd-model-kit",
-      "productId": "gid://shopify/Product/9268298383589",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9268298383589",
-      "productCreatedAt": "2025-09-08T06:13:56Z",
-      "inventory": 0,
-      "normalInventory": 0,
-      "preorderFullInventory": 0,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 0,
-      "price": 3600,
-      "normalSold30": 0,
-      "normalSold90": 4,
-      "preorderFullSold30": 0,
-      "preorderFullSold90": 0,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 0,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 0,
-      "sold90": 4,
-      "lastSaleAt": "2026-05-20T12:52:42Z",
-      "salesStatusText": "普通 4",
-      "daysSinceLastSale": 45.67141103009259,
-      "productAgeDays": 299.9483323263889,
-      "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "评估补货"
     },
@@ -2726,7 +2688,7 @@
       "preorderFullInventory": 0,
       "preorderDepositInventory": 0,
       "preorderUnknownInventory": 0,
-      "totalInventory": 8,
+      "totalInventory": 9,
       "price": 12700,
       "normalSold30": 0,
       "normalSold90": 0,
@@ -2736,14 +2698,14 @@
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
       "depositQty90": 4,
-      "balanceQty30": 5,
-      "balanceQty90": 14,
+      "balanceQty30": 4,
+      "balanceQty90": 13,
       "sold30": 0,
       "sold90": 4,
       "lastSaleAt": "2026-05-19T11:44:41Z",
-      "salesStatusText": "全额预约 15 / 定金 4 / 尾款 14",
-      "daysSinceLastSale": 46.71864482638889,
-      "productAgeDays": 179.40766103009258,
+      "salesStatusText": "全额预约 15 / 定金 4 / 尾款 13",
+      "daysSinceLastSale": 47.72916178240741,
+      "productAgeDays": 180.41817798611112,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2783,8 +2745,8 @@
       "sold90": 4,
       "lastSaleAt": "2026-05-28T12:13:17Z",
       "salesStatusText": "全额预约 4 / 定金 4",
-      "daysSinceLastSale": 37.69878371527778,
-      "productAgeDays": 72.46679297453704,
+      "daysSinceLastSale": 38.7093006712963,
+      "productAgeDays": 73.47730993055555,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2822,8 +2784,8 @@
       "sold90": 4,
       "lastSaleAt": "2026-05-21T08:23:40Z",
       "salesStatusText": "定金 4",
-      "daysSinceLastSale": 44.858239733796296,
-      "productAgeDays": 54.780867048611114,
+      "daysSinceLastSale": 45.868756689814816,
+      "productAgeDays": 55.79138400462963,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2842,17 +2804,17 @@
       "productId": "gid://shopify/Product/8980538032357",
       "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/8980538032357",
       "productCreatedAt": "2024-10-18T10:12:01Z",
-      "inventory": 0,
+      "inventory": 21,
       "normalInventory": 0,
-      "preorderFullInventory": 0,
+      "preorderFullInventory": 21,
       "preorderDepositInventory": 0,
       "preorderUnknownInventory": 0,
-      "totalInventory": 3,
+      "totalInventory": 24,
       "price": 6700,
       "normalSold30": 0,
       "normalSold90": 0,
-      "preorderFullSold30": 40,
-      "preorderFullSold90": 40,
+      "preorderFullSold30": 41,
+      "preorderFullSold90": 41,
       "preorderUnknownQty30": 0,
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
@@ -2861,10 +2823,10 @@
       "balanceQty90": 7,
       "sold30": 0,
       "sold90": 3,
-      "lastSaleAt": "2026-07-03T08:39:02Z",
-      "salesStatusText": "全额预约 40 / 定金 3 / 尾款 7",
-      "daysSinceLastSale": 1.8475684375,
-      "productAgeDays": 624.7829966782407,
+      "lastSaleAt": "2026-07-06T01:37:07Z",
+      "salesStatusText": "全额预约 41 / 定金 3 / 尾款 7",
+      "daysSinceLastSale": 0.15108307870370372,
+      "productAgeDays": 625.7935136342593,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -2904,9 +2866,47 @@
       "sold90": 3,
       "lastSaleAt": "2026-04-13T19:08:20Z",
       "salesStatusText": "全额预约 3 / 尾款 1",
-      "daysSinceLastSale": 82.41055454861112,
-      "productAgeDays": 473.99608695601853,
+      "daysSinceLastSale": 83.42107150462962,
+      "productAgeDays": 475.00660391203706,
       "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "评估补货"
+    },
+    {
+      "sku": "GLS-WWING",
+      "rawSkus": [
+        "GLS-WWING"
+      ],
+      "title": "GL Studio スノーホワイト ウィングゼロ EW MGSD プラモデル",
+      "handle": "gl-studio-snow-white-wing-zero-ew-mgsd-model-kit",
+      "productUrl": "https://77figure.com/products/gl-studio-snow-white-wing-zero-ew-mgsd-model-kit",
+      "productId": "gid://shopify/Product/9268298383589",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9268298383589",
+      "productCreatedAt": "2025-09-08T06:13:56Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 0,
+      "price": 3600,
+      "normalSold30": 0,
+      "normalSold90": 3,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 0,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 0,
+      "sold90": 3,
+      "lastSaleAt": "2026-05-20T12:52:42Z",
+      "salesStatusText": "普通 3",
+      "daysSinceLastSale": 46.68192798611111,
+      "productAgeDays": 300.9588492824074,
+      "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "评估补货"
     },
@@ -2945,49 +2945,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-06-01T14:53:37Z",
       "salesStatusText": "定金 3",
-      "daysSinceLastSale": 33.587441122685185,
-      "productAgeDays": 274.8954388078704,
-      "alertOption": "预售定金",
-      "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "FANGCUN-FC-001A",
-      "rawSkus": [
-        "FANGCUN-FC-001A",
-        "FANGCUN-FC-001A-B",
-        "FANGCUN-FC-001A-D",
-        "FANGCUN-FC-001A-P"
-      ],
-      "title": "【予約商品】方寸スタジオ × 戦馬スタジオ 1/12 FC-001A ワーヒーロー アキリア 塗装済み可動フィギュア",
-      "handle": "fangcun-studio-war-horse-studio-1-12-fc-001a-war-hero-achillia",
-      "productUrl": "https://77figure.com/products/fangcun-studio-war-horse-studio-1-12-fc-001a-war-hero-achillia",
-      "productId": "gid://shopify/Product/9455741960421",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9455741960421",
-      "productCreatedAt": "2026-02-09T17:23:07Z",
-      "inventory": 8,
-      "normalInventory": 0,
-      "preorderFullInventory": 8,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": 27,
-      "price": 10600,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 0,
-      "preorderFullSold90": 4,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 3,
-      "balanceQty30": 1,
-      "balanceQty90": 1,
-      "sold30": 0,
-      "sold90": 3,
-      "lastSaleAt": "2026-05-16T09:44:02Z",
-      "salesStatusText": "全额预约 4 / 定金 3 / 尾款 1",
-      "daysSinceLastSale": 49.80242954861111,
-      "productAgeDays": 145.48362167824075,
+      "daysSinceLastSale": 34.597958078703705,
+      "productAgeDays": 275.90595576388887,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -3027,8 +2986,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-05-20T12:46:01Z",
       "salesStatusText": "全额预约 2 / 定金 3",
-      "daysSinceLastSale": 45.6760522337963,
-      "productAgeDays": 109.74858695601851,
+      "daysSinceLastSale": 46.68656918981481,
+      "productAgeDays": 110.75910391203703,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -3066,49 +3025,10 @@
       "sold90": 3,
       "lastSaleAt": "2026-05-21T14:48:57Z",
       "salesStatusText": "定金 3",
-      "daysSinceLastSale": 44.59068186342593,
-      "productAgeDays": 96.74830917824075,
+      "daysSinceLastSale": 45.60119881944444,
+      "productAgeDays": 97.75882613425927,
       "alertOption": "预售定金",
       "alertInventory": 0,
-      "action": "评估补货"
-    },
-    {
-      "sku": "YIYAG-GELGOOG3-RV",
-      "rawSkus": [
-        "YIYAG-GELGOOG3-RV",
-        "YIYAG-GELGOOG3-RV-P"
-      ],
-      "title": "【予約受付終了】YIYA-G ゲルググIII 通常版 プラモデル",
-      "handle": "yiya-g-gelgoog-3-model-kit-regular-ver",
-      "productUrl": "https://77figure.com/products/yiya-g-gelgoog-3-model-kit-regular-ver",
-      "productId": "gid://shopify/Product/9542046843109",
-      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9542046843109",
-      "productCreatedAt": "2026-04-02T10:40:51Z",
-      "inventory": -1,
-      "normalInventory": 0,
-      "preorderFullInventory": -1,
-      "preorderDepositInventory": 0,
-      "preorderUnknownInventory": 0,
-      "totalInventory": -1,
-      "price": 5200,
-      "normalSold30": 0,
-      "normalSold90": 0,
-      "preorderFullSold30": 0,
-      "preorderFullSold90": 3,
-      "preorderUnknownQty30": 0,
-      "preorderUnknownQty90": 0,
-      "depositQty30": 0,
-      "depositQty90": 0,
-      "balanceQty30": 0,
-      "balanceQty90": 0,
-      "sold30": 0,
-      "sold90": 3,
-      "lastSaleAt": "2026-05-08T16:23:33Z",
-      "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 57.52498741898148,
-      "productAgeDays": 93.7629735300926,
-      "alertOption": "预售全额",
-      "alertInventory": -1,
       "action": "评估补货"
     },
     {
@@ -3146,8 +3066,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-06-20T15:10:36Z",
       "salesStatusText": "全额预约 5 / 定金 3",
-      "daysSinceLastSale": 14.575647141203703,
-      "productAgeDays": 86.93783464120371,
+      "daysSinceLastSale": 15.586164097222222,
+      "productAgeDays": 87.94835159722223,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -3185,8 +3105,49 @@
       "sold90": 3,
       "lastSaleAt": "2026-05-30T19:25:37Z",
       "salesStatusText": "全额预约 3",
-      "daysSinceLastSale": 35.398552233796295,
-      "productAgeDays": 75.64892260416667,
+      "daysSinceLastSale": 36.409069189814815,
+      "productAgeDays": 76.65943956018519,
+      "alertOption": "预售全额",
+      "alertInventory": 0,
+      "action": "评估补货"
+    },
+    {
+      "sku": "SS-RPG-06-S",
+      "rawSkus": [
+        "SS-RPG-06-S",
+        "SS-RPG-06-S-B",
+        "SS-RPG-06-S-D",
+        "SS-RPG-06-S-P"
+      ],
+      "title": "【予約商品】蝸之殻(スネイルシェル) 1/12 RPG-06 冒険者 スネイル 塗装済み可動フィギュア",
+      "handle": "snail-shell-1-12-rpg-06-snail",
+      "productUrl": "https://77figure.com/products/snail-shell-1-12-rpg-06-snail",
+      "productId": "gid://shopify/Product/9579216470245",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9579216470245",
+      "productCreatedAt": "2026-04-23T17:19:42Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 0,
+      "price": 11100,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 3,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 0,
+      "sold90": 3,
+      "lastSaleAt": "2026-06-05T18:10:29Z",
+      "salesStatusText": "全额预约 3",
+      "daysSinceLastSale": 30.46124511574074,
+      "productAgeDays": 73.49651131944445,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "评估补货"
@@ -3225,8 +3186,8 @@
       "sold90": 3,
       "lastSaleAt": "2026-05-18T07:54:56Z",
       "salesStatusText": "全额预约 2 / 定金 3 / 尾款 2",
-      "daysSinceLastSale": 47.8781934375,
-      "productAgeDays": 69.45351751157408,
+      "daysSinceLastSale": 48.888710393518515,
+      "productAgeDays": 70.4640344675926,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "评估补货"
@@ -3263,8 +3224,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-05-15T14:32:06Z",
       "salesStatusText": "普通 2",
-      "daysSinceLastSale": 50.602383252314816,
-      "productAgeDays": 1202.5257281597221,
+      "daysSinceLastSale": 51.612900208333336,
+      "productAgeDays": 1203.5362451157407,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3301,8 +3262,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-05-18T17:55:37Z",
       "salesStatusText": "普通 2",
-      "daysSinceLastSale": 47.461052233796295,
-      "productAgeDays": 904.7096980671296,
+      "daysSinceLastSale": 48.471569189814815,
+      "productAgeDays": 905.7202150231482,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3339,8 +3300,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-05-14T14:08:46Z",
       "salesStatusText": "普通 2",
-      "daysSinceLastSale": 51.61858695601852,
-      "productAgeDays": 676.5523716782408,
+      "daysSinceLastSale": 52.62910391203704,
+      "productAgeDays": 677.5628886342593,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3380,8 +3341,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-02T15:56:05Z",
       "salesStatusText": "全额预约 1 / 定金 2",
-      "daysSinceLastSale": 32.54406149305556,
-      "productAgeDays": 540.5737837152777,
+      "daysSinceLastSale": 33.55457844907407,
+      "productAgeDays": 541.5843006712963,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3421,8 +3382,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-07-01T11:54:46Z",
       "salesStatusText": "全额预约 21 / 定金 2 / 尾款 2",
-      "daysSinceLastSale": 3.711642511574074,
-      "productAgeDays": 501.50955917824075,
+      "daysSinceLastSale": 4.722159467592593,
+      "productAgeDays": 502.5200761342593,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3457,13 +3418,13 @@
       "depositQty30": 0,
       "depositQty90": 0,
       "balanceQty30": 0,
-      "balanceQty90": 2,
+      "balanceQty90": 1,
       "sold30": 0,
       "sold90": 2,
       "lastSaleAt": "2026-05-15T15:44:42Z",
-      "salesStatusText": "全额预约 2 / 尾款 2",
-      "daysSinceLastSale": 50.551966585648145,
-      "productAgeDays": 274.9237026967593,
+      "salesStatusText": "全额预约 2 / 尾款 1",
+      "daysSinceLastSale": 51.562483541666666,
+      "productAgeDays": 275.93421965277776,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3498,13 +3459,13 @@
       "depositQty30": 0,
       "depositQty90": 0,
       "balanceQty30": 0,
-      "balanceQty90": 1,
+      "balanceQty90": 0,
       "sold30": 0,
       "sold90": 2,
       "lastSaleAt": "2026-05-12T09:47:43Z",
-      "salesStatusText": "全额预约 2 / 尾款 1",
-      "daysSinceLastSale": 53.79987167824074,
-      "productAgeDays": 274.9090730671296,
+      "salesStatusText": "全额预约 2",
+      "daysSinceLastSale": 54.81038863425926,
+      "productAgeDays": 275.91959002314815,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3541,9 +3502,50 @@
       "sold90": 2,
       "lastSaleAt": "2026-04-22T07:42:16Z",
       "salesStatusText": "普通 2",
-      "daysSinceLastSale": 73.8869897337963,
-      "productAgeDays": 159.7814573263889,
+      "daysSinceLastSale": 74.89750668981482,
+      "productAgeDays": 160.7919742824074,
       "alertOption": "普通库存",
+      "alertInventory": 0,
+      "action": "观察需求"
+    },
+    {
+      "sku": "FANGCUN-FC-001A",
+      "rawSkus": [
+        "FANGCUN-FC-001A",
+        "FANGCUN-FC-001A-B",
+        "FANGCUN-FC-001A-D",
+        "FANGCUN-FC-001A-P"
+      ],
+      "title": "【予約商品】方寸スタジオ × 戦馬スタジオ 1/12 FC-001A ワーヒーロー アキリア 塗装済み可動フィギュア",
+      "handle": "fangcun-studio-war-horse-studio-1-12-fc-001a-war-hero-achillia",
+      "productUrl": "https://77figure.com/products/fangcun-studio-war-horse-studio-1-12-fc-001a-war-hero-achillia",
+      "productId": "gid://shopify/Product/9455741960421",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9455741960421",
+      "productCreatedAt": "2026-02-09T17:23:07Z",
+      "inventory": 8,
+      "normalInventory": 0,
+      "preorderFullInventory": 8,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 27,
+      "price": 10600,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 4,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 2,
+      "balanceQty30": 1,
+      "balanceQty90": 1,
+      "sold30": 0,
+      "sold90": 2,
+      "lastSaleAt": "2026-05-16T09:44:02Z",
+      "salesStatusText": "全额预约 4 / 定金 2 / 尾款 1",
+      "daysSinceLastSale": 50.81294650462963,
+      "productAgeDays": 146.49413863425926,
+      "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
     },
@@ -3582,10 +3584,49 @@
       "sold90": 2,
       "lastSaleAt": "2026-04-14T12:13:20Z",
       "salesStatusText": "全额预约 2",
-      "daysSinceLastSale": 81.69874899305556,
-      "productAgeDays": 117.6199758449074,
+      "daysSinceLastSale": 82.70926594907408,
+      "productAgeDays": 118.63049280092592,
       "alertOption": "预售全额",
       "alertInventory": 0,
+      "action": "观察需求"
+    },
+    {
+      "sku": "YIYAG-GELGOOG3-RV",
+      "rawSkus": [
+        "YIYAG-GELGOOG3-RV",
+        "YIYAG-GELGOOG3-RV-P"
+      ],
+      "title": "【予約受付終了】YIYA-G ゲルググIII 通常版 プラモデル",
+      "handle": "yiya-g-gelgoog-3-model-kit-regular-ver",
+      "productUrl": "https://77figure.com/products/yiya-g-gelgoog-3-model-kit-regular-ver",
+      "productId": "gid://shopify/Product/9542046843109",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9542046843109",
+      "productCreatedAt": "2026-04-02T10:40:51Z",
+      "inventory": -1,
+      "normalInventory": 0,
+      "preorderFullInventory": -1,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": -1,
+      "price": 5200,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 2,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 0,
+      "sold90": 2,
+      "lastSaleAt": "2026-05-08T16:23:33Z",
+      "salesStatusText": "全额预约 2",
+      "daysSinceLastSale": 58.535504375,
+      "productAgeDays": 94.77349048611111,
+      "alertOption": "预售全额",
+      "alertInventory": -1,
       "action": "观察需求"
     },
     {
@@ -3623,8 +3664,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-05-03T00:21:02Z",
       "salesStatusText": "定金 2",
-      "daysSinceLastSale": 63.19340177083333,
-      "productAgeDays": 80.52121427083334,
+      "daysSinceLastSale": 64.20391872685185,
+      "productAgeDays": 81.53173122685185,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3664,8 +3705,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-05-26T07:36:38Z",
       "salesStatusText": "全额预约 2",
-      "daysSinceLastSale": 39.89090177083333,
-      "productAgeDays": 46.91686241898148,
+      "daysSinceLastSale": 40.90141872685185,
+      "productAgeDays": 47.927379375,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3705,8 +3746,8 @@
       "sold90": 2,
       "lastSaleAt": "2026-06-15T07:34:48Z",
       "salesStatusText": "全额预约 2 / 定金 2",
-      "daysSinceLastSale": 19.892174918981482,
-      "productAgeDays": 40.923066122685185,
+      "daysSinceLastSale": 20.902691875,
+      "productAgeDays": 41.933583078703705,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3743,8 +3784,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-08T10:33:44Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 57.76791565972222,
-      "productAgeDays": 1365.5970244560185,
+      "daysSinceLastSale": 58.77843261574074,
+      "productAgeDays": 1366.607541412037,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3781,8 +3822,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-30T15:54:59Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 65.54482538194445,
-      "productAgeDays": 1362.852730474537,
+      "daysSinceLastSale": 66.55534233796297,
+      "productAgeDays": 1363.8632474305555,
       "alertOption": "普通库存",
       "alertInventory": -2,
       "action": "观察需求"
@@ -3820,8 +3861,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-10T09:23:33Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 55.816654085648146,
-      "productAgeDays": 834.8877883449074,
+      "daysSinceLastSale": 56.827171041666666,
+      "productAgeDays": 835.8983053009259,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3861,8 +3902,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-19T05:40:53Z",
       "salesStatusText": "全额预约 2 / 定金 1",
-      "daysSinceLastSale": 15.971283715277778,
-      "productAgeDays": 823.8445013078704,
+      "daysSinceLastSale": 16.981800671296295,
+      "productAgeDays": 824.8550182638888,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3899,8 +3940,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-14T13:25:12Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 81.64884158564814,
-      "productAgeDays": 780.5471749189815,
+      "daysSinceLastSale": 82.65935854166666,
+      "productAgeDays": 781.557691875,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3938,8 +3979,49 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-16T16:04:08Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 79.53847121527778,
-      "productAgeDays": 592.8401147337963,
+      "daysSinceLastSale": 80.5489881712963,
+      "productAgeDays": 593.8506316898148,
+      "alertOption": "预售定金",
+      "alertInventory": 0,
+      "action": "观察需求"
+    },
+    {
+      "sku": "MT-BLADE",
+      "rawSkus": [
+        "MT-BLADE",
+        "MT-BLADE-B",
+        "MT-BLADE-D",
+        "MT-BLADE-P"
+      ],
+      "title": "【先行販売】Metytoyz 冒険者の世界 ゴブリン探検隊 ゴブリンスレイヤー ゴル ラスティ ブレード 塗装済み可動フィギュア",
+      "handle": "metytoyz-adventurer-s-world-the-goblin-expedition-team-goblin-slayer-gol-rusty-blade",
+      "productUrl": "https://77figure.com/products/metytoyz-adventurer-s-world-the-goblin-expedition-team-goblin-slayer-gol-rusty-blade",
+      "productId": "gid://shopify/Product/9043832570085",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/9043832570085",
+      "productCreatedAt": "2025-01-15T15:51:13Z",
+      "inventory": 0,
+      "normalInventory": 0,
+      "preorderFullInventory": 0,
+      "preorderDepositInventory": 0,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 3,
+      "price": 7200,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 0,
+      "preorderFullSold90": 0,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 1,
+      "balanceQty30": 0,
+      "balanceQty90": 0,
+      "sold30": 0,
+      "sold90": 1,
+      "lastSaleAt": "2026-06-05T05:34:16Z",
+      "salesStatusText": "定金 1",
+      "daysSinceLastSale": 30.986395578703704,
+      "productAgeDays": 536.5579580787037,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -3979,8 +4061,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-13T23:35:45Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 82.22484853009259,
-      "productAgeDays": 535.5268855671296,
+      "daysSinceLastSale": 83.2353654861111,
+      "productAgeDays": 536.5374025231481,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4020,8 +4102,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-27T20:50:14Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 38.33979065972222,
-      "productAgeDays": 509.4232397337963,
+      "daysSinceLastSale": 39.35030761574074,
+      "productAgeDays": 510.4337566898148,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4061,8 +4143,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-16T09:42:18Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 49.80363325231482,
-      "productAgeDays": 508.77778834490744,
+      "daysSinceLastSale": 50.81415020833333,
+      "productAgeDays": 509.7883053009259,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4099,8 +4181,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-24T02:39:13Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 42.09744112268518,
-      "productAgeDays": 437.6931355671296,
+      "daysSinceLastSale": 43.1079580787037,
+      "productAgeDays": 438.70365252314815,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4137,8 +4219,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-19T01:21:00Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 77.15175825231482,
-      "productAgeDays": 418.71847121527776,
+      "daysSinceLastSale": 78.16227520833333,
+      "productAgeDays": 419.7289881712963,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4178,8 +4260,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-24T02:53:07Z",
       "salesStatusText": "全额预约 1 / 尾款 1",
-      "daysSinceLastSale": 72.08778834490741,
-      "productAgeDays": 405.9027420486111,
+      "daysSinceLastSale": 73.09830530092593,
+      "productAgeDays": 406.91325900462965,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4219,8 +4301,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-26T20:28:40Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 39.354767511574074,
-      "productAgeDays": 379.71579760416665,
+      "daysSinceLastSale": 40.365284467592595,
+      "productAgeDays": 380.7263145601852,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4257,8 +4339,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-22T17:19:37Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 73.4860522337963,
-      "productAgeDays": 371.33751056712964,
+      "daysSinceLastSale": 74.49656918981482,
+      "productAgeDays": 372.3480275231482,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4296,8 +4378,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-26T06:51:53Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 69.92197815972222,
-      "productAgeDays": 339.0773948263889,
+      "daysSinceLastSale": 70.93249511574074,
+      "productAgeDays": 340.0879117824074,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4334,8 +4416,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-01T16:17:45Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 64.52901519675926,
-      "productAgeDays": 331.5707397337963,
+      "daysSinceLastSale": 65.53953215277778,
+      "productAgeDays": 332.58125668981484,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4375,8 +4457,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-07T00:24:36Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 59.19092491898148,
-      "productAgeDays": 312.5073485300926,
+      "daysSinceLastSale": 60.201441875,
+      "productAgeDays": 313.51786548611113,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4416,8 +4498,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-02T14:07:53Z",
       "salesStatusText": "定金 1 / 尾款 1",
-      "daysSinceLastSale": 32.619200381944445,
-      "productAgeDays": 297.7909249189815,
+      "daysSinceLastSale": 33.629717337962965,
+      "productAgeDays": 298.801441875,
       "alertOption": "预售定金",
       "alertInventory": -1,
       "action": "观察需求"
@@ -4457,8 +4539,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-11T15:18:26Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 54.57020732638889,
-      "productAgeDays": 274.9326494560185,
+      "daysSinceLastSale": 55.58072428240741,
+      "productAgeDays": 275.94316641203704,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4495,8 +4577,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-15T04:04:38Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 51.03812399305556,
-      "productAgeDays": 268.34879528935187,
+      "daysSinceLastSale": 52.04864094907408,
+      "productAgeDays": 269.35931224537035,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4536,8 +4618,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T13:34:04Z",
       "salesStatusText": "全额预约 1 / 定金 1 / 尾款 1",
-      "daysSinceLastSale": 27.642684178240742,
-      "productAgeDays": 265.4917235300926,
+      "daysSinceLastSale": 28.65320113425926,
+      "productAgeDays": 266.50224048611113,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4574,8 +4656,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-12T12:07:12Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 83.70300825231482,
-      "productAgeDays": 249.80862167824074,
+      "daysSinceLastSale": 84.71352520833334,
+      "productAgeDays": 250.81913863425925,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4613,8 +4695,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-18T09:07:28Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 47.82782306712963,
-      "productAgeDays": 236.83932769675926,
+      "daysSinceLastSale": 48.83834002314815,
+      "productAgeDays": 237.8498446527778,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4654,8 +4736,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-08T16:48:23Z",
       "salesStatusText": "全额预约 1 / 定金 1 / 尾款 3",
-      "daysSinceLastSale": 57.507742048611114,
-      "productAgeDays": 228.94726751157407,
+      "daysSinceLastSale": 58.51825900462963,
+      "productAgeDays": 229.9577844675926,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4695,8 +4777,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-08T16:48:23Z",
       "salesStatusText": "全额预约 1 / 定金 1 / 尾款 3",
-      "daysSinceLastSale": 57.507742048611114,
-      "productAgeDays": 228.94726751157407,
+      "daysSinceLastSale": 58.51825900462963,
+      "productAgeDays": 229.9577844675926,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4733,8 +4815,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-14T21:11:37Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 81.32494112268519,
-      "productAgeDays": 221.76843649305556,
+      "daysSinceLastSale": 82.33545807870371,
+      "productAgeDays": 222.77895344907407,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4772,8 +4854,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-21T17:28:40Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 44.479767511574074,
-      "productAgeDays": 195.4769897337963,
+      "daysSinceLastSale": 45.490284467592595,
+      "productAgeDays": 196.4875066898148,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4810,8 +4892,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-08T15:09:21Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 57.57651519675926,
-      "productAgeDays": 178.78233695601853,
+      "daysSinceLastSale": 58.58703215277778,
+      "productAgeDays": 179.79285391203703,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4848,8 +4930,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-15T05:58:06Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 50.95932769675926,
-      "productAgeDays": 174.42046195601853,
+      "daysSinceLastSale": 51.96984465277778,
+      "productAgeDays": 175.43097891203703,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4886,8 +4968,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-10T06:43:06Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 85.92807769675926,
-      "productAgeDays": 155.7741309375,
+      "daysSinceLastSale": 86.93859465277778,
+      "productAgeDays": 156.78464789351852,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4924,8 +5006,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-28T15:32:18Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 67.56057769675925,
-      "productAgeDays": 148.52254528935185,
+      "daysSinceLastSale": 68.57109465277777,
+      "productAgeDays": 149.53306224537036,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -4963,8 +5045,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-24T02:50:36Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 72.08953603009259,
-      "productAgeDays": 144.75555454861112,
+      "daysSinceLastSale": 73.10005298611111,
+      "productAgeDays": 145.76607150462962,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5001,8 +5083,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-19T12:01:54Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 76.70668880787036,
-      "productAgeDays": 127.50275362268519,
+      "daysSinceLastSale": 77.71720576388888,
+      "productAgeDays": 128.5132705787037,
       "alertOption": "普通库存",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5042,8 +5124,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-19T03:43:27Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 47.0528346412037,
-      "productAgeDays": 114.8160522337963,
+      "daysSinceLastSale": 48.06335159722222,
+      "productAgeDays": 115.82656918981482,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5083,8 +5165,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-03T13:08:33Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 62.660404085648146,
-      "productAgeDays": 114.80812399305556,
+      "daysSinceLastSale": 63.670921041666666,
+      "productAgeDays": 115.81864094907408,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5122,8 +5204,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-09T08:38:47Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 86.84774204861111,
-      "productAgeDays": 86.92964019675927,
+      "daysSinceLastSale": 87.85825900462963,
+      "productAgeDays": 87.94015715277777,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5163,8 +5245,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-03T00:16:41Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 63.19642260416666,
-      "productAgeDays": 72.47692028935185,
+      "daysSinceLastSale": 64.20693956018519,
+      "productAgeDays": 73.48743724537037,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5204,8 +5286,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-26T08:55:51Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 69.83589019675927,
-      "productAgeDays": 71.47085547453703,
+      "daysSinceLastSale": 70.84640715277777,
+      "productAgeDays": 72.48137243055555,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5245,8 +5327,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-01T04:24:48Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 65.02411936342592,
-      "productAgeDays": 68.57166565972223,
+      "daysSinceLastSale": 66.03463631944445,
+      "productAgeDays": 69.58218261574073,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5285,8 +5367,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-07T03:56:43Z",
       "salesStatusText": "全额预约 2 / 定金 1 / 尾款 1",
-      "daysSinceLastSale": 59.04362167824074,
-      "productAgeDays": 67.54452445601852,
+      "daysSinceLastSale": 60.05413863425926,
+      "productAgeDays": 68.55504141203704,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5326,8 +5408,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-02T03:27:17Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 64.06406149305556,
-      "productAgeDays": 65.95892260416667,
+      "daysSinceLastSale": 65.07457844907407,
+      "productAgeDays": 66.96943956018518,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5367,8 +5449,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-02T03:27:17Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 64.06406149305556,
-      "productAgeDays": 65.92866797453703,
+      "daysSinceLastSale": 65.07457844907407,
+      "productAgeDays": 66.93918493055556,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5408,8 +5490,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-07T00:27:05Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 59.189200381944445,
-      "productAgeDays": 61.370832326388886,
+      "daysSinceLastSale": 60.199717337962966,
+      "productAgeDays": 62.381349282407406,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5449,8 +5531,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-29T11:38:38Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 66.72284621527778,
-      "productAgeDays": 60.34145732638889,
+      "daysSinceLastSale": 67.73336317129629,
+      "productAgeDays": 61.351974282407404,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5490,8 +5572,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T02:25:02Z",
       "salesStatusText": "全额预约 4 / 定金 1",
-      "daysSinceLastSale": 28.10729065972222,
-      "productAgeDays": 60.31330917824074,
+      "daysSinceLastSale": 29.11780761574074,
+      "productAgeDays": 61.32382613425926,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5531,8 +5613,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-26T16:00:18Z",
       "salesStatusText": "全额预约 7 / 定金 1",
-      "daysSinceLastSale": 8.541133252314815,
-      "productAgeDays": 56.981341585648146,
+      "daysSinceLastSale": 9.551650208333333,
+      "productAgeDays": 57.991858541666666,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5572,8 +5654,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-18T16:47:17Z",
       "salesStatusText": "全额预约 1 / 定金 1",
-      "daysSinceLastSale": 47.5085059375,
-      "productAgeDays": 52.56484853009259,
+      "daysSinceLastSale": 48.51902289351852,
+      "productAgeDays": 53.57536548611111,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5613,8 +5695,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-18T16:47:17Z",
       "salesStatusText": "全额预约 1 / 定金 1",
-      "daysSinceLastSale": 47.5085059375,
-      "productAgeDays": 52.56484853009259,
+      "daysSinceLastSale": 48.51902289351852,
+      "productAgeDays": 53.57536548611111,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5648,14 +5730,14 @@
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
       "depositQty90": 1,
-      "balanceQty30": 1,
+      "balanceQty30": 0,
       "balanceQty90": 1,
       "sold30": 0,
       "sold90": 1,
       "lastSaleAt": "2026-05-25T22:29:14Z",
       "salesStatusText": "定金 1 / 尾款 1",
-      "daysSinceLastSale": 40.271040659722225,
-      "productAgeDays": 52.127070752314815,
+      "daysSinceLastSale": 41.28155761574074,
+      "productAgeDays": 53.137587708333335,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5694,8 +5776,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-01T05:24:19Z",
       "salesStatusText": "定金 1 / 尾款 1",
-      "daysSinceLastSale": 33.982788344907405,
-      "productAgeDays": 45.66101751157407,
+      "daysSinceLastSale": 34.993305300925925,
+      "productAgeDays": 46.67153446759259,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5735,8 +5817,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-01T02:10:55Z",
       "salesStatusText": "全额预约 1 / 定金 1",
-      "daysSinceLastSale": 34.11709390046296,
-      "productAgeDays": 40.93106380787037,
+      "daysSinceLastSale": 35.12761085648148,
+      "productAgeDays": 41.94158076388889,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5776,8 +5858,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-01T02:10:55Z",
       "salesStatusText": "全额预约 1 / 定金 1",
-      "daysSinceLastSale": 34.11709390046296,
-      "productAgeDays": 40.93106380787037,
+      "daysSinceLastSale": 35.12761085648148,
+      "productAgeDays": 41.94158076388889,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5817,8 +5899,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-25T08:42:31Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 40.84514945601852,
-      "productAgeDays": 40.91407306712963,
+      "daysSinceLastSale": 41.85566641203704,
+      "productAgeDays": 41.92459002314815,
       "alertOption": "预售全额",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5858,8 +5940,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-27T09:55:13Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 38.794663344907406,
-      "productAgeDays": 39.94063556712963,
+      "daysSinceLastSale": 39.805180300925926,
+      "productAgeDays": 40.951152523148146,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5899,8 +5981,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-27T09:56:57Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 38.793459641203704,
-      "productAgeDays": 39.930172604166664,
+      "daysSinceLastSale": 39.803976597222224,
+      "productAgeDays": 40.940689560185184,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5940,8 +6022,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-27T09:58:35Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 38.792325381944444,
-      "productAgeDays": 39.88547353009259,
+      "daysSinceLastSale": 39.802842337962964,
+      "productAgeDays": 40.89599048611111,
       "alertOption": "预售定金",
       "alertInventory": 0,
       "action": "观察需求"
@@ -5982,7 +6064,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 161.98396890046297,
+      "productAgeDays": 162.99448585648148,
       "action": "建议清仓/折扣"
     },
     {
@@ -6019,7 +6101,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 164.59067028935186,
+      "productAgeDays": 165.60118724537037,
       "action": "建议清仓/折扣"
     },
     {
@@ -6055,7 +6137,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 150.4109943634259,
+      "productAgeDays": 151.42151131944445,
       "action": "建议清仓/折扣"
     },
     {
@@ -6092,8 +6174,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T01:35:12Z",
       "salesStatusText": "普通 1 / 尾款 6",
-      "daysSinceLastSale": 28.141897141203703,
-      "productAgeDays": 207.59551982638888,
+      "daysSinceLastSale": 29.152414097222223,
+      "productAgeDays": 208.60603678240741,
       "action": "继续观察"
     },
     {
@@ -6130,7 +6212,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 187.8335059375,
+      "productAgeDays": 188.8440228935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -6165,8 +6247,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-26T04:42:25Z",
       "salesStatusText": "预约待判 1",
-      "daysSinceLastSale": 70.01188556712962,
-      "productAgeDays": 126.46454760416667,
+      "daysSinceLastSale": 71.02240252314814,
+      "productAgeDays": 127.47506456018519,
       "action": "继续观察"
     },
     {
@@ -6207,7 +6289,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 373.7220591782407,
+      "productAgeDays": 374.73257613425926,
       "action": "建议清仓/折扣"
     },
     {
@@ -6243,7 +6325,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 150.4109943634259,
+      "productAgeDays": 151.42151131944445,
       "action": "建议清仓/折扣"
     },
     {
@@ -6281,7 +6363,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 22",
       "daysSinceLastSale": null,
-      "productAgeDays": 318.5896633449074,
+      "productAgeDays": 319.6001803009259,
       "action": "建议清仓/折扣"
     },
     {
@@ -6319,7 +6401,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 220.94929297453703,
+      "productAgeDays": 221.95980993055556,
       "action": "建议清仓/折扣"
     },
     {
@@ -6355,7 +6437,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 201.56227908564816,
+      "productAgeDays": 202.57279604166666,
       "action": "建议清仓/折扣"
     },
     {
@@ -6393,8 +6475,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-02T15:50:25Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 63.54799667824074,
-      "productAgeDays": 246.92085547453703,
+      "daysSinceLastSale": 64.55851363425926,
+      "productAgeDays": 247.93137243055557,
       "action": "继续观察"
     },
     {
@@ -6430,7 +6512,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 212.78803140046296,
+      "productAgeDays": 213.7985483564815,
       "action": "建议清仓/折扣"
     },
     {
@@ -6466,7 +6548,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 173.86278834490741,
+      "productAgeDays": 174.87330530092592,
       "action": "建议清仓/折扣"
     },
     {
@@ -6503,8 +6585,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-10T23:23:07Z",
       "salesStatusText": "全额预约 1 / 尾款 2",
-      "daysSinceLastSale": 85.23362167824074,
-      "productAgeDays": 96.84532306712963,
+      "daysSinceLastSale": 86.24413863425926,
+      "productAgeDays": 97.85584002314815,
       "action": "继续观察"
     },
     {
@@ -6540,7 +6622,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 227.66005686342592,
+      "productAgeDays": 228.67057381944446,
       "action": "建议清仓/折扣"
     },
     {
@@ -6575,8 +6657,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-19T01:58:29Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 47.12572815972222,
-      "productAgeDays": 194.93116797453703,
+      "daysSinceLastSale": 48.13624511574074,
+      "productAgeDays": 195.94168493055557,
       "action": "继续观察"
     },
     {
@@ -6613,8 +6695,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-30T00:36:46Z",
       "salesStatusText": "普通 1 / 尾款 1",
-      "daysSinceLastSale": 36.18247584490741,
-      "productAgeDays": 197.41380686342592,
+      "daysSinceLastSale": 37.19299280092593,
+      "productAgeDays": 198.42432381944445,
       "action": "继续观察"
     },
     {
@@ -6650,7 +6732,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1356.8516888078705,
+      "productAgeDays": 1357.8622057638888,
       "action": "建议清仓/折扣"
     },
     {
@@ -6688,7 +6770,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1284.8972559375,
+      "productAgeDays": 1285.9077728935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -6727,7 +6809,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1137.6383786226852,
+      "productAgeDays": 1138.6488955787038,
       "action": "建议清仓/折扣"
     },
     {
@@ -6766,7 +6848,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 992.7870707523148,
+      "productAgeDays": 993.7975877083334,
       "action": "建议清仓/折扣"
     },
     {
@@ -6805,7 +6887,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 981.8595128819444,
+      "productAgeDays": 982.870029837963,
       "action": "建议清仓/折扣"
     },
     {
@@ -6844,7 +6926,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 954.7650800115741,
+      "productAgeDays": 955.7755969675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -6883,7 +6965,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 946.5604966782407,
+      "productAgeDays": 947.5710136342593,
       "action": "建议清仓/折扣"
     },
     {
@@ -6922,7 +7004,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 898.8020013078703,
+      "productAgeDays": 899.8125182638889,
       "action": "建议清仓/折扣"
     },
     {
@@ -6958,7 +7040,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 890.5095476041666,
+      "productAgeDays": 891.5200645601852,
       "action": "建议清仓/折扣"
     },
     {
@@ -6994,7 +7076,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 885.6627073263888,
+      "productAgeDays": 886.6732242824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -7033,7 +7115,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 866.7642698263888,
+      "productAgeDays": 867.7747867824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -7072,7 +7154,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 862.6226147337962,
+      "productAgeDays": 863.6331316898148,
       "action": "建议清仓/折扣"
     },
     {
@@ -7111,7 +7193,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 842.9235059375,
+      "productAgeDays": 843.9340228935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -7150,7 +7232,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 830.7393276967592,
+      "productAgeDays": 831.7498446527778,
       "action": "建议清仓/折扣"
     },
     {
@@ -7189,7 +7271,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 830.7387258449074,
+      "productAgeDays": 831.7492428009259,
       "action": "建议清仓/折扣"
     },
     {
@@ -7228,7 +7310,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 830.7302073263888,
+      "productAgeDays": 831.7407242824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -7267,7 +7349,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 828.8121170486111,
+      "productAgeDays": 829.8226340046297,
       "action": "建议清仓/折扣"
     },
     {
@@ -7306,7 +7388,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 828.809767511574,
+      "productAgeDays": 829.8202844675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -7345,7 +7427,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 828.8024526967592,
+      "productAgeDays": 829.8129696527777,
       "action": "建议清仓/折扣"
     },
     {
@@ -7384,7 +7466,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 813.9385522337963,
+      "productAgeDays": 814.9490691898148,
       "action": "建议清仓/折扣"
     },
     {
@@ -7423,7 +7505,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 813.931955011574,
+      "productAgeDays": 814.9424719675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -7462,7 +7544,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 813.7952999189815,
+      "productAgeDays": 814.805816875,
       "action": "建议清仓/折扣"
     },
     {
@@ -7501,7 +7583,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 782.7934133449074,
+      "productAgeDays": 783.8039303009259,
       "action": "建议清仓/折扣"
     },
     {
@@ -7540,7 +7622,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 745.7189110300926,
+      "productAgeDays": 746.7294279861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -7579,7 +7661,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 745.7100684375,
+      "productAgeDays": 746.7205853935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -7618,7 +7700,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 727.6950915856481,
+      "productAgeDays": 728.7056085416667,
       "action": "建议清仓/折扣"
     },
     {
@@ -7657,7 +7739,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 727.6735290856482,
+      "productAgeDays": 728.6840460416666,
       "action": "建议清仓/折扣"
     },
     {
@@ -7696,7 +7778,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 716.7397675115741,
+      "productAgeDays": 717.7502844675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -7735,7 +7817,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 716.7182281597222,
+      "productAgeDays": 717.7287451157407,
       "action": "建议清仓/折扣"
     },
     {
@@ -7774,7 +7856,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 711.8164110300926,
+      "productAgeDays": 712.8269279861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -7813,7 +7895,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 711.8091193634259,
+      "productAgeDays": 712.8196363194445,
       "action": "建议清仓/折扣"
     },
     {
@@ -7849,7 +7931,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 708.6220707523148,
+      "productAgeDays": 709.6325877083333,
       "action": "建议清仓/折扣"
     },
     {
@@ -7888,7 +7970,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 628.6697096412037,
+      "productAgeDays": 629.6802265972223,
       "action": "建议清仓/折扣"
     },
     {
@@ -7927,7 +8009,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 610.9520591782407,
+      "productAgeDays": 611.9625761342593,
       "action": "建议清仓/折扣"
     },
     {
@@ -7966,7 +8048,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 575.685531400463,
+      "productAgeDays": 576.6960483564815,
       "action": "建议清仓/折扣"
     },
     {
@@ -8005,7 +8087,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 572.6540614930556,
+      "productAgeDays": 573.664578449074,
       "action": "建议清仓/折扣"
     },
     {
@@ -8044,7 +8126,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 572.6459133449074,
+      "productAgeDays": 573.6564303009259,
       "action": "建议清仓/折扣"
     },
     {
@@ -8083,7 +8165,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 572.6378693634259,
+      "productAgeDays": 573.6483863194444,
       "action": "建议清仓/折扣"
     },
     {
@@ -8122,7 +8204,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 562.6401378819445,
+      "productAgeDays": 563.650654837963,
       "action": "建议清仓/折扣"
     },
     {
@@ -8158,7 +8240,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 554.0061795486112,
+      "productAgeDays": 555.0166965046296,
       "action": "建议清仓/折扣"
     },
     {
@@ -8197,7 +8279,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 546.4356124189815,
+      "productAgeDays": 547.446129375,
       "action": "建议清仓/折扣"
     },
     {
@@ -8236,7 +8318,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 537.4765730671296,
+      "productAgeDays": 538.4870900231482,
       "action": "建议清仓/折扣"
     },
     {
@@ -8275,7 +8357,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 537.4505082523148,
+      "productAgeDays": 538.4610252083334,
       "action": "建议清仓/折扣"
     },
     {
@@ -8314,7 +8396,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.6499526967592,
+      "productAgeDays": 534.6604696527778,
       "action": "建议清仓/折扣"
     },
     {
@@ -8353,7 +8435,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.6379735300926,
+      "productAgeDays": 534.6484904861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -8392,7 +8474,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.6285406597223,
+      "productAgeDays": 534.6390576157407,
       "action": "建议清仓/折扣"
     },
     {
@@ -8431,7 +8513,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.6197675115741,
+      "productAgeDays": 534.6302844675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -8470,7 +8552,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.6109480671296,
+      "productAgeDays": 534.6214650231482,
       "action": "建议清仓/折扣"
     },
     {
@@ -8509,7 +8591,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 533.5997327893518,
+      "productAgeDays": 534.6102497453704,
       "action": "建议清仓/折扣"
     },
     {
@@ -8548,7 +8630,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 523.7124179745371,
+      "productAgeDays": 524.7229349305555,
       "action": "建议清仓/折扣"
     },
     {
@@ -8587,7 +8669,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 523.6919202893519,
+      "productAgeDays": 524.7024372453703,
       "action": "建议清仓/折扣"
     },
     {
@@ -8626,7 +8708,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 510.5640499189815,
+      "productAgeDays": 511.574566875,
       "action": "建议清仓/折扣"
     },
     {
@@ -8665,7 +8747,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 510.55231380787035,
+      "productAgeDays": 511.5628307638889,
       "action": "建议清仓/折扣"
     },
     {
@@ -8704,7 +8786,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 508.450531400463,
+      "productAgeDays": 509.46104835648146,
       "action": "建议清仓/折扣"
     },
     {
@@ -8743,7 +8825,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 499.5871749189815,
+      "productAgeDays": 500.597691875,
       "action": "建议清仓/折扣"
     },
     {
@@ -8782,7 +8864,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 494.54468649305556,
+      "productAgeDays": 495.5552034490741,
       "action": "建议清仓/折扣"
     },
     {
@@ -8821,7 +8903,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 493.6431934375,
+      "productAgeDays": 494.6537103935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -8860,7 +8942,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 493.6307281597222,
+      "productAgeDays": 494.64124511574073,
       "action": "建议清仓/折扣"
     },
     {
@@ -8899,7 +8981,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 484.55678140046297,
+      "productAgeDays": 485.5672983564815,
       "action": "建议清仓/折扣"
     },
     {
@@ -8938,7 +9020,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 474.6084017708333,
+      "productAgeDays": 475.61891872685186,
       "action": "建议清仓/折扣"
     },
     {
@@ -8977,7 +9059,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 467.4630198263889,
+      "productAgeDays": 468.4735367824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -9016,7 +9098,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 429.75615640046294,
+      "productAgeDays": 430.7666733564815,
       "action": "建议清仓/折扣"
     },
     {
@@ -9055,7 +9137,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 388.49804297453704,
+      "productAgeDays": 389.5085599305556,
       "action": "建议清仓/折扣"
     },
     {
@@ -9094,7 +9176,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 388.48696658564813,
+      "productAgeDays": 389.49748354166667,
       "action": "建议清仓/折扣"
     },
     {
@@ -9133,7 +9215,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 387.7925337152778,
+      "productAgeDays": 388.8030506712963,
       "action": "建议清仓/折扣"
     },
     {
@@ -9172,7 +9254,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 387.48888788194444,
+      "productAgeDays": 388.49940483796297,
       "action": "建议清仓/折扣"
     },
     {
@@ -9211,7 +9293,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 345.5638878819444,
+      "productAgeDays": 346.57440483796296,
       "action": "建议清仓/折扣"
     },
     {
@@ -9250,7 +9332,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 306.8070013078704,
+      "productAgeDays": 307.81751826388887,
       "action": "建议清仓/折扣"
     },
     {
@@ -9287,7 +9369,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 270.8780198263889,
+      "productAgeDays": 271.8885367824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -9326,7 +9408,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 265.4588300115741,
+      "productAgeDays": 266.46934696759257,
       "action": "建议清仓/折扣"
     },
     {
@@ -9365,7 +9447,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 265.4479735300926,
+      "productAgeDays": 266.4584904861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -9404,7 +9486,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 265.43979065972223,
+      "productAgeDays": 266.45030761574077,
       "action": "建议清仓/折扣"
     },
     {
@@ -9441,7 +9523,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 222.61668880787036,
+      "productAgeDays": 223.6272057638889,
       "action": "建议清仓/折扣"
     },
     {
@@ -9480,7 +9562,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.5125221412037,
+      "productAgeDays": 220.5230390972222,
       "action": "建议清仓/折扣"
     },
     {
@@ -9519,7 +9601,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.50374899305555,
+      "productAgeDays": 220.5142659490741,
       "action": "建议清仓/折扣"
     },
     {
@@ -9558,7 +9640,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.4953809375,
+      "productAgeDays": 220.50589789351852,
       "action": "建议清仓/折扣"
     },
     {
@@ -9597,7 +9679,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.48124899305554,
+      "productAgeDays": 220.49176594907408,
       "action": "建议清仓/折扣"
     },
     {
@@ -9636,7 +9718,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.46095964120371,
+      "productAgeDays": 220.47147659722222,
       "action": "建议清仓/折扣"
     },
     {
@@ -9675,7 +9757,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 219.21187399305555,
+      "productAgeDays": 220.22239094907408,
       "action": "建议清仓/折扣"
     },
     {
@@ -9714,7 +9796,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 217.70380686342594,
+      "productAgeDays": 218.71432381944445,
       "action": "建议清仓/折扣"
     },
     {
@@ -9753,7 +9835,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 215.80562399305555,
+      "productAgeDays": 216.81614094907408,
       "action": "建议清仓/折扣"
     },
     {
@@ -9792,7 +9874,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 157.4669434375,
+      "productAgeDays": 158.47746039351853,
       "action": "建议清仓/折扣"
     },
     {
@@ -9831,7 +9913,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 157.4549758449074,
+      "productAgeDays": 158.46549280092592,
       "action": "建议清仓/折扣"
     },
     {
@@ -9870,7 +9952,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 157.44672353009258,
+      "productAgeDays": 158.45724048611112,
       "action": "建议清仓/折扣"
     },
     {
@@ -9909,7 +9991,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 156.77670038194444,
+      "productAgeDays": 157.78721733796297,
       "action": "建议清仓/折扣"
     },
     {
@@ -9948,7 +10030,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 155.04164251157408,
+      "productAgeDays": 156.0521594675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -9987,7 +10069,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 155.03666565972222,
+      "productAgeDays": 156.04718261574075,
       "action": "建议清仓/折扣"
     },
     {
@@ -10026,7 +10108,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 123.81267260416666,
+      "productAgeDays": 124.82318956018518,
       "action": "建议清仓/折扣"
     },
     {
@@ -10065,7 +10147,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 123.7888647337963,
+      "productAgeDays": 124.79938168981481,
       "action": "建议清仓/折扣"
     },
     {
@@ -10104,7 +10186,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 72.5412258449074,
+      "productAgeDays": 73.55174280092592,
       "action": "建议清仓/折扣"
     },
     {
@@ -10143,7 +10225,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 68.24460547453704,
+      "productAgeDays": 69.25512243055556,
       "action": "建议清仓/折扣"
     },
     {
@@ -10182,7 +10264,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 68.15813556712963,
+      "productAgeDays": 69.16865252314815,
       "action": "建议清仓/折扣"
     },
     {
@@ -10221,7 +10303,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 67.51393417824075,
+      "productAgeDays": 68.52445113425927,
       "action": "建议清仓/折扣"
     },
     {
@@ -10259,8 +10341,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-25T23:31:30Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 40.22779991898148,
-      "productAgeDays": 848.7880082523149,
+      "daysSinceLastSale": 41.238316875,
+      "productAgeDays": 849.7985252083333,
       "action": "继续观察"
     },
     {
@@ -10298,8 +10380,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-25T23:47:53Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 40.21642260416667,
-      "productAgeDays": 654.0007628819444,
+      "daysSinceLastSale": 41.22693956018519,
+      "productAgeDays": 655.011279837963,
       "action": "继续观察"
     },
     {
@@ -10334,8 +10416,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-18T07:36:26Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 77.89104065972222,
-      "productAgeDays": 411.97451288194446,
+      "daysSinceLastSale": 78.90155761574074,
+      "productAgeDays": 412.98502983796294,
       "action": "继续观察"
     },
     {
@@ -10371,7 +10453,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1365.5793392708333,
+      "productAgeDays": 1366.589856226852,
       "action": "建议清仓/折扣"
     },
     {
@@ -10407,7 +10489,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1363.8251031597222,
+      "productAgeDays": 1364.8356201157408,
       "action": "建议清仓/折扣"
     },
     {
@@ -10443,7 +10525,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1362.847580011574,
+      "productAgeDays": 1363.8580969675927,
       "action": "建议清仓/折扣"
     },
     {
@@ -10479,7 +10561,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 696.3508207523148,
+      "productAgeDays": 697.3613377083333,
       "action": "建议清仓/折扣"
     },
     {
@@ -10518,7 +10600,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 529.6227536226852,
+      "productAgeDays": 530.6332705787037,
       "action": "建议清仓/折扣"
     },
     {
@@ -10557,7 +10639,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 529.6085406597222,
+      "productAgeDays": 530.6190576157408,
       "action": "建议清仓/折扣"
     },
     {
@@ -10596,7 +10678,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 527.5944434375,
+      "productAgeDays": 528.6049603935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -10635,7 +10717,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 422.668980474537,
+      "productAgeDays": 423.67949743055556,
       "action": "建议清仓/折扣"
     },
     {
@@ -10674,7 +10756,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 227.70303140046298,
+      "productAgeDays": 228.71354835648148,
       "action": "建议清仓/折扣"
     },
     {
@@ -10712,8 +10794,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-17T03:51:23Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 49.04732538194445,
-      "productAgeDays": 523.7057976041667,
+      "daysSinceLastSale": 50.05784233796296,
+      "productAgeDays": 524.7163145601852,
       "action": "继续观察"
     },
     {
@@ -10750,8 +10832,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-29T10:19:14Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 66.77798510416666,
-      "productAgeDays": 236.78755686342592,
+      "daysSinceLastSale": 67.78850206018518,
+      "productAgeDays": 237.79807381944445,
       "action": "继续观察"
     },
     {
@@ -10787,7 +10869,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1376.520080011574,
+      "productAgeDays": 1377.5305969675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -10823,7 +10905,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 675.6326841782408,
+      "productAgeDays": 676.6432011342592,
       "action": "建议清仓/折扣"
     },
     {
@@ -10859,8 +10941,47 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 169.74962862268518,
+      "productAgeDays": 170.7601455787037,
       "action": "建议清仓/折扣"
+    },
+    {
+      "sku": "HMC-EUREKA",
+      "rawSkus": [
+        "HMC-EUREKA",
+        "HMC-EUREKA-B",
+        "HMC-EUREKA-D",
+        "HMC-EUREKA-P"
+      ],
+      "title": "【先行販売】HeavyMecha パシフィック・リム ストライカー・エウレカ 塗装済み可動フィギュア",
+      "handle": "heavymecha-pacific-rim-striker-eureka",
+      "productUrl": "https://77figure.com/products/heavymecha-pacific-rim-striker-eureka",
+      "productId": "gid://shopify/Product/8777772794085",
+      "shopifyAdminUrl": "https://admin.shopify.com/store/showz6688/products/8777772794085",
+      "productCreatedAt": "2024-05-28T10:59:36Z",
+      "inventory": 8,
+      "normalInventory": 0,
+      "preorderFullInventory": 8,
+      "preorderDepositInventory": -6,
+      "preorderUnknownInventory": 0,
+      "totalInventory": 9,
+      "price": 38200,
+      "normalSold30": 0,
+      "normalSold90": 0,
+      "preorderFullSold30": 1,
+      "preorderFullSold90": 1,
+      "preorderUnknownQty30": 0,
+      "preorderUnknownQty90": 0,
+      "depositQty30": 0,
+      "depositQty90": 0,
+      "balanceQty30": 3,
+      "balanceQty90": 3,
+      "sold30": 1,
+      "sold90": 1,
+      "lastSaleAt": "2026-07-03T12:48:08Z",
+      "salesStatusText": "全额预约 1 / 尾款 3",
+      "daysSinceLastSale": 2.6850992824074074,
+      "productAgeDays": 768.7604696527778,
+      "action": "继续观察"
     },
     {
       "sku": "MH-SA04",
@@ -10894,8 +11015,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-25T09:56:08Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 40.794026770833334,
-      "productAgeDays": 277.8034249189815,
+      "daysSinceLastSale": 41.804543726851854,
+      "productAgeDays": 278.813941875,
       "action": "继续观察"
     },
     {
@@ -10932,8 +11053,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-30T09:20:58Z",
       "salesStatusText": "普通 1 / 尾款 4",
-      "daysSinceLastSale": 65.81844806712962,
-      "productAgeDays": 258.4251726041667,
+      "daysSinceLastSale": 66.82896502314814,
+      "productAgeDays": 259.4356895601852,
       "action": "继续观察"
     },
     {
@@ -10968,8 +11089,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-14T11:02:02Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 81.74826288194444,
-      "productAgeDays": 239.79955917824074,
+      "daysSinceLastSale": 82.75877983796296,
+      "productAgeDays": 240.81007613425925,
       "action": "继续观察"
     },
     {
@@ -11005,7 +11126,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1362.8415730671297,
+      "productAgeDays": 1363.852090023148,
       "action": "建议清仓/折扣"
     },
     {
@@ -11043,7 +11164,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1206.6454388078703,
+      "productAgeDays": 1207.6559557638889,
       "action": "建议清仓/折扣"
     },
     {
@@ -11079,7 +11200,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 948.5763184375,
+      "productAgeDays": 949.5868353935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -11115,7 +11236,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 883.6324411226852,
+      "productAgeDays": 884.6429580787037,
       "action": "建议清仓/折扣"
     },
     {
@@ -11153,7 +11274,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 395.6360175115741,
+      "productAgeDays": 396.6465344675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -11189,7 +11310,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 166.79467491898149,
+      "productAgeDays": 167.805191875,
       "action": "建议清仓/折扣"
     },
     {
@@ -11225,7 +11346,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 599.8481818634259,
+      "productAgeDays": 600.8586988194445,
       "action": "建议清仓/折扣"
     },
     {
@@ -11261,7 +11382,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 254.71376056712964,
+      "productAgeDays": 255.72427752314815,
       "action": "建议清仓/折扣"
     },
     {
@@ -11297,7 +11418,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 248.80789251157407,
+      "productAgeDays": 249.8184094675926,
       "action": "建议清仓/折扣"
     },
     {
@@ -11333,7 +11454,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 165.9532744560185,
+      "productAgeDays": 166.96379141203704,
       "action": "建议清仓/折扣"
     },
     {
@@ -11368,8 +11489,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-07T06:55:53Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 88.91920038194445,
-      "productAgeDays": 169.75639945601853,
+      "daysSinceLastSale": 89.92971733796297,
+      "productAgeDays": 170.76691641203703,
       "action": "继续观察"
     },
     {
@@ -11407,7 +11528,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1411.8332744560184,
+      "productAgeDays": 1412.843791412037,
       "action": "建议清仓/折扣"
     },
     {
@@ -11443,7 +11564,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1404.773783715278,
+      "productAgeDays": 1405.7843006712963,
       "action": "建议清仓/折扣"
     },
     {
@@ -11479,7 +11600,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1404.7713763078705,
+      "productAgeDays": 1405.7818932638888,
       "action": "建议清仓/折扣"
     },
     {
@@ -11515,7 +11636,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1365.570230474537,
+      "productAgeDays": 1366.5807474305554,
       "action": "建议清仓/折扣"
     },
     {
@@ -11551,7 +11672,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1347.9988878819445,
+      "productAgeDays": 1349.009404837963,
       "action": "建议清仓/折扣"
     },
     {
@@ -11587,7 +11708,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1303.963216585648,
+      "productAgeDays": 1304.9737335416667,
       "action": "建议清仓/折扣"
     },
     {
@@ -11623,7 +11744,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1234.7215499189815,
+      "productAgeDays": 1235.732066875,
       "action": "建议清仓/折扣"
     },
     {
@@ -11659,7 +11780,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1151.9044087152777,
+      "productAgeDays": 1152.9149256712963,
       "action": "建议清仓/折扣"
     },
     {
@@ -11695,7 +11816,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1151.738332326389,
+      "productAgeDays": 1152.7488492824075,
       "action": "建议清仓/折扣"
     },
     {
@@ -11731,7 +11852,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 544.6319202893518,
+      "productAgeDays": 545.6424372453704,
       "action": "建议清仓/折扣"
     },
     {
@@ -11769,7 +11890,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 506.5659364930556,
+      "productAgeDays": 507.57645344907405,
       "action": "建议清仓/折扣"
     },
     {
@@ -11808,7 +11929,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 485.57733695601854,
+      "productAgeDays": 486.587853912037,
       "action": "建议清仓/折扣"
     },
     {
@@ -11846,7 +11967,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 452.0006008449074,
+      "productAgeDays": 453.01111780092594,
       "action": "建议清仓/折扣"
     },
     {
@@ -11882,7 +12003,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 450.7235985300926,
+      "productAgeDays": 451.73411548611114,
       "action": "建议清仓/折扣"
     },
     {
@@ -11918,7 +12039,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 450.7235985300926,
+      "productAgeDays": 451.73411548611114,
       "action": "建议清仓/折扣"
     },
     {
@@ -11954,7 +12075,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 309.96347121527776,
+      "productAgeDays": 310.9739881712963,
       "action": "建议清仓/折扣"
     },
     {
@@ -11992,7 +12113,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 227.6759133449074,
+      "productAgeDays": 228.68643030092593,
       "action": "建议清仓/折扣"
     },
     {
@@ -12028,7 +12149,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 155.57407306712963,
+      "productAgeDays": 156.58459002314814,
       "action": "建议清仓/折扣"
     },
     {
@@ -12067,7 +12188,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 145.49827445601852,
+      "productAgeDays": 146.50879141203703,
       "action": "建议清仓/折扣"
     },
     {
@@ -12103,7 +12224,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1433.5926610300926,
+      "productAgeDays": 1434.6031779861112,
       "action": "建议清仓/折扣"
     },
     {
@@ -12139,7 +12260,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1213.7965730671297,
+      "productAgeDays": 1214.8070900231482,
       "action": "建议清仓/折扣"
     },
     {
@@ -12175,7 +12296,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1165.6024989930556,
+      "productAgeDays": 1166.613015949074,
       "action": "建议清仓/折扣"
     },
     {
@@ -12211,7 +12332,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1123.5667351041666,
+      "productAgeDays": 1124.5772520601852,
       "action": "建议清仓/折扣"
     },
     {
@@ -12250,7 +12371,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 963.8239110300926,
+      "productAgeDays": 964.8344279861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -12289,7 +12410,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 960.8089573263888,
+      "productAgeDays": 961.8194742824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -12325,7 +12446,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 955.749119363426,
+      "productAgeDays": 956.7596363194444,
       "action": "建议清仓/折扣"
     },
     {
@@ -12361,7 +12482,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 788.718968900463,
+      "productAgeDays": 789.7294858564815,
       "action": "建议清仓/折扣"
     },
     {
@@ -12398,7 +12519,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 680.7978809375,
+      "productAgeDays": 681.8083978935185,
       "action": "建议清仓/折扣"
     },
     {
@@ -12434,7 +12555,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 544.6551031597222,
+      "productAgeDays": 545.6656201157407,
       "action": "建议清仓/折扣"
     },
     {
@@ -12470,7 +12591,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 450.7235985300926,
+      "productAgeDays": 451.73411548611114,
       "action": "建议清仓/折扣"
     },
     {
@@ -12508,7 +12629,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 422.68898047453706,
+      "productAgeDays": 423.69949743055554,
       "action": "建议清仓/折扣"
     },
     {
@@ -12544,7 +12665,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 404.74197815972224,
+      "productAgeDays": 405.7524951157407,
       "action": "建议清仓/折扣"
     },
     {
@@ -12583,7 +12704,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 354.7948948263889,
+      "productAgeDays": 355.8054117824074,
       "action": "建议清仓/折扣"
     },
     {
@@ -12621,7 +12742,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 273.5150221412037,
+      "productAgeDays": 274.52553909722224,
       "action": "建议清仓/折扣"
     },
     {
@@ -12652,14 +12773,14 @@
       "preorderUnknownQty90": 0,
       "depositQty30": 0,
       "depositQty90": 0,
-      "balanceQty30": 5,
+      "balanceQty30": 4,
       "balanceQty90": 5,
       "sold30": 0,
       "sold90": 0,
       "lastSaleAt": null,
       "salesStatusText": "尾款 5",
       "daysSinceLastSale": null,
-      "productAgeDays": 218.54828603009258,
+      "productAgeDays": 219.55880298611112,
       "action": "建议清仓/折扣"
     },
     {
@@ -12695,7 +12816,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 215.8515383449074,
+      "productAgeDays": 216.86205530092593,
       "action": "建议清仓/折扣"
     },
     {
@@ -12732,8 +12853,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-28T10:35:11Z",
       "salesStatusText": "普通 1 / 尾款 1",
-      "daysSinceLastSale": 6.766908715277777,
-      "productAgeDays": 450.81812399305556,
+      "daysSinceLastSale": 7.777425671296296,
+      "productAgeDays": 451.8286409490741,
       "action": "继续观察"
     },
     {
@@ -12771,8 +12892,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-29T06:01:29Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 5.956978159722222,
-      "productAgeDays": 422.4623138078704,
+      "daysSinceLastSale": 6.967495115740741,
+      "productAgeDays": 423.4728307638889,
       "action": "继续观察"
     },
     {
@@ -12807,8 +12928,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-13T14:28:15Z",
       "salesStatusText": "预约待判 1",
-      "daysSinceLastSale": 21.605056863425926,
-      "productAgeDays": 236.80012630787036,
+      "daysSinceLastSale": 22.615573819444446,
+      "productAgeDays": 237.8106432638889,
       "action": "继续观察"
     },
     {
@@ -12843,8 +12964,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-28T20:25:29Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 67.35697815972222,
-      "productAgeDays": 202.01710547453703,
+      "daysSinceLastSale": 68.36749511574074,
+      "productAgeDays": 203.02762243055557,
       "action": "继续观察"
     },
     {
@@ -12880,7 +13001,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1409.924917974537,
+      "productAgeDays": 1410.9354349305556,
       "action": "建议清仓/折扣"
     },
     {
@@ -12916,7 +13037,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1405.8834827893518,
+      "productAgeDays": 1406.8939997453704,
       "action": "建议清仓/折扣"
     },
     {
@@ -12952,7 +13073,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1377.935705011574,
+      "productAgeDays": 1378.9462219675927,
       "action": "建议清仓/折扣"
     },
     {
@@ -12988,7 +13109,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1333.7904966782407,
+      "productAgeDays": 1334.8010136342593,
       "action": "建议清仓/折扣"
     },
     {
@@ -13025,7 +13146,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1174.7551031597222,
+      "productAgeDays": 1175.7656201157408,
       "action": "建议清仓/折扣"
     },
     {
@@ -13061,7 +13182,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1143.6427767708333,
+      "productAgeDays": 1144.6532937268519,
       "action": "建议清仓/折扣"
     },
     {
@@ -13097,7 +13218,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1090.6149642708333,
+      "productAgeDays": 1091.625481226852,
       "action": "建议清仓/折扣"
     },
     {
@@ -13133,7 +13254,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1089.811144826389,
+      "productAgeDays": 1090.8216617824073,
       "action": "建议清仓/折扣"
     },
     {
@@ -13172,7 +13293,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1011.7707860300926,
+      "productAgeDays": 1012.7813029861111,
       "action": "建议清仓/折扣"
     },
     {
@@ -13211,7 +13332,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 929.7279272337963,
+      "productAgeDays": 930.7384441898148,
       "action": "建议清仓/折扣"
     },
     {
@@ -13250,7 +13371,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 907.7321286226852,
+      "productAgeDays": 908.7426455787037,
       "action": "建议清仓/折扣"
     },
     {
@@ -13287,7 +13408,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 814.8518276967593,
+      "productAgeDays": 815.8623446527778,
       "action": "建议清仓/折扣"
     },
     {
@@ -13325,7 +13446,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 682.4530429745371,
+      "productAgeDays": 683.4635599305556,
       "action": "建议清仓/折扣"
     },
     {
@@ -13361,7 +13482,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 674.4966540856482,
+      "productAgeDays": 675.5071710416667,
       "action": "建议清仓/折扣"
     },
     {
@@ -13399,7 +13520,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 672.8304619560186,
+      "productAgeDays": 673.840978912037,
       "action": "建议清仓/折扣"
     },
     {
@@ -13435,7 +13556,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 667.5960869560186,
+      "productAgeDays": 668.606603912037,
       "action": "建议清仓/折扣"
     },
     {
@@ -13474,7 +13595,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 1",
       "daysSinceLastSale": null,
-      "productAgeDays": 627.7205892708333,
+      "productAgeDays": 628.7311062268518,
       "action": "建议清仓/折扣"
     },
     {
@@ -13512,7 +13633,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 491.58460547453706,
+      "productAgeDays": 492.59512243055553,
       "action": "建议清仓/折扣"
     },
     {
@@ -13550,7 +13671,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 400.65457075231484,
+      "productAgeDays": 401.6650877083333,
       "action": "建议清仓/折扣"
     },
     {
@@ -13588,7 +13709,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 299.0173022337963,
+      "productAgeDays": 300.0278191898148,
       "action": "建议清仓/折扣"
     },
     {
@@ -13625,7 +13746,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 253.79704760416666,
+      "productAgeDays": 254.8075645601852,
       "action": "建议清仓/折扣"
     },
     {
@@ -13663,7 +13784,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 226.78837862268517,
+      "productAgeDays": 227.7988955787037,
       "action": "建议清仓/折扣"
     },
     {
@@ -13701,7 +13822,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 226.76893417824073,
+      "productAgeDays": 227.77945113425926,
       "action": "建议清仓/折扣"
     },
     {
@@ -13739,7 +13860,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 4",
       "daysSinceLastSale": null,
-      "productAgeDays": 202.04299667824074,
+      "productAgeDays": 203.05351363425925,
       "action": "建议清仓/折扣"
     },
     {
@@ -13777,7 +13898,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 1",
       "daysSinceLastSale": null,
-      "productAgeDays": 155.7859596412037,
+      "productAgeDays": 156.7964765972222,
       "action": "建议清仓/折扣"
     },
     {
@@ -13813,8 +13934,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-08T03:46:26Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 58.05076288194444,
-      "productAgeDays": 326.8350221412037,
+      "daysSinceLastSale": 59.061279837962964,
+      "productAgeDays": 327.84553909722223,
       "action": "继续观察"
     },
     {
@@ -13851,8 +13972,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-27T16:42:52Z",
       "salesStatusText": "普通 1 / 尾款 5",
-      "daysSinceLastSale": 7.511573067129629,
-      "productAgeDays": 204.5431008449074,
+      "daysSinceLastSale": 8.522090023148149,
+      "productAgeDays": 205.55361780092593,
       "action": "继续观察"
     },
     {
@@ -13890,8 +14011,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-15T13:53:06Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 50.629466585648146,
-      "productAgeDays": 149.93426982638888,
+      "daysSinceLastSale": 51.639983541666666,
+      "productAgeDays": 150.94478678240742,
       "action": "继续观察"
     },
     {
@@ -13926,8 +14047,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-07T11:18:12Z",
       "salesStatusText": "预约待判 1",
-      "daysSinceLastSale": 88.7370360300926,
-      "productAgeDays": 122.81080917824075,
+      "daysSinceLastSale": 89.74755298611112,
+      "productAgeDays": 123.82132613425927,
       "action": "继续观察"
     },
     {
@@ -13963,7 +14084,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1365.6113878819444,
+      "productAgeDays": 1366.621904837963,
       "action": "继续观察"
     },
     {
@@ -13999,7 +14120,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1212.6462142708333,
+      "productAgeDays": 1213.656731226852,
       "action": "继续观察"
     },
     {
@@ -14035,7 +14156,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1079.7066656597221,
+      "productAgeDays": 1080.7171826157407,
       "action": "继续观察"
     },
     {
@@ -14071,7 +14192,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1065.8022790856483,
+      "productAgeDays": 1066.8127960416666,
       "action": "继续观察"
     },
     {
@@ -14107,7 +14228,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1059.0192119560186,
+      "productAgeDays": 1060.029728912037,
       "action": "继续观察"
     },
     {
@@ -14145,7 +14266,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1051.7810522337963,
+      "productAgeDays": 1052.7915691898147,
       "action": "继续观察"
     },
     {
@@ -14182,7 +14303,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 964.5401841782408,
+      "productAgeDays": 965.5507011342593,
       "action": "继续观察"
     },
     {
@@ -14220,7 +14341,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 963.8285638078704,
+      "productAgeDays": 964.8390807638889,
       "action": "继续观察"
     },
     {
@@ -14256,7 +14377,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 948.8617698263889,
+      "productAgeDays": 949.8722867824074,
       "action": "继续观察"
     },
     {
@@ -14293,7 +14414,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 900.7057165856481,
+      "productAgeDays": 901.7162335416666,
       "action": "继续观察"
     },
     {
@@ -14332,7 +14453,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 849.7478577893519,
+      "productAgeDays": 850.7583747453704,
       "action": "继续观察"
     },
     {
@@ -14368,7 +14489,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 814.8156934375,
+      "productAgeDays": 815.8262103935185,
       "action": "继续观察"
     },
     {
@@ -14404,7 +14525,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 813.9655545486111,
+      "productAgeDays": 814.9760715046297,
       "action": "继续观察"
     },
     {
@@ -14440,7 +14561,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 807.8976726041667,
+      "productAgeDays": 808.9081895601852,
       "action": "继续观察"
     },
     {
@@ -14478,7 +14599,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 800.6657860300926,
+      "productAgeDays": 801.6763029861111,
       "action": "继续观察"
     },
     {
@@ -14514,7 +14635,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 778.8253809375,
+      "productAgeDays": 779.8358978935186,
       "action": "继续观察"
     },
     {
@@ -14550,7 +14671,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 752.6742119560186,
+      "productAgeDays": 753.684728912037,
       "action": "继续观察"
     },
     {
@@ -14586,7 +14707,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 727.7773138078703,
+      "productAgeDays": 728.7878307638889,
       "action": "继续观察"
     },
     {
@@ -14622,7 +14743,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 714.7788300115741,
+      "productAgeDays": 715.7893469675926,
       "action": "继续观察"
     },
     {
@@ -14660,7 +14781,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 710.7819202893519,
+      "productAgeDays": 711.7924372453704,
       "action": "继续观察"
     },
     {
@@ -14698,7 +14819,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 705.906792974537,
+      "productAgeDays": 706.9173099305556,
       "action": "继续观察"
     },
     {
@@ -14736,7 +14857,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 672.8491425115741,
+      "productAgeDays": 673.8596594675926,
       "action": "继续观察"
     },
     {
@@ -14772,7 +14893,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 624.7343276967592,
+      "productAgeDays": 625.7448446527778,
       "action": "继续观察"
     },
     {
@@ -14808,7 +14929,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 621.6717582523148,
+      "productAgeDays": 622.6822752083333,
       "action": "继续观察"
     },
     {
@@ -14844,7 +14965,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 604.5678462152778,
+      "productAgeDays": 605.5783631712962,
       "action": "继续观察"
     },
     {
@@ -14881,7 +15002,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 596.5481587152777,
+      "productAgeDays": 597.5586756712963,
       "action": "继续观察"
     },
     {
@@ -14917,7 +15038,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 590.830531400463,
+      "productAgeDays": 591.8410483564815,
       "action": "继续观察"
     },
     {
@@ -14953,7 +15074,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 586.8915499189815,
+      "productAgeDays": 587.902066875,
       "action": "继续观察"
     },
     {
@@ -14991,7 +15112,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 452.9453230671296,
+      "productAgeDays": 453.95584002314814,
       "action": "继续观察"
     },
     {
@@ -15030,7 +15151,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 422.50486010416665,
+      "productAgeDays": 423.5153770601852,
       "action": "继续观察"
     },
     {
@@ -15066,7 +15187,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 411.9852420486111,
+      "productAgeDays": 412.99575900462963,
       "action": "继续观察"
     },
     {
@@ -15105,7 +15226,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 354.80070501157405,
+      "productAgeDays": 355.8112219675926,
       "action": "继续观察"
     },
     {
@@ -15141,7 +15262,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 283.78829760416664,
+      "productAgeDays": 284.7988145601852,
       "action": "继续观察"
     },
     {
@@ -15177,7 +15298,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 264.69781149305555,
+      "productAgeDays": 265.7083284490741,
       "action": "继续观察"
     },
     {
@@ -15213,7 +15334,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 264.68763788194445,
+      "productAgeDays": 265.698154837963,
       "action": "继续观察"
     },
     {
@@ -15249,7 +15370,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 263.3565383449074,
+      "productAgeDays": 264.3670553009259,
       "action": "继续观察"
     },
     {
@@ -15288,7 +15409,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 257.3435059375,
+      "productAgeDays": 258.3540228935185,
       "action": "继续观察"
     },
     {
@@ -15326,7 +15447,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 226.7744087152778,
+      "productAgeDays": 227.7849256712963,
       "action": "继续观察"
     },
     {
@@ -15363,7 +15484,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 222.73071658564814,
+      "productAgeDays": 223.74123354166667,
       "action": "继续观察"
     },
     {
@@ -15399,7 +15520,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 198.4269434375,
+      "productAgeDays": 199.4374603935185,
       "action": "继续观察"
     },
     {
@@ -15438,7 +15559,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 181.52749899305556,
+      "productAgeDays": 182.53801594907407,
       "action": "继续观察"
     },
     {
@@ -15474,7 +15595,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 180.00013788194445,
+      "productAgeDays": 181.01065483796296,
       "action": "继续观察"
     },
     {
@@ -15513,7 +15634,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 170.60626056712962,
+      "productAgeDays": 171.61677752314816,
       "action": "继续观察"
     },
     {
@@ -15549,7 +15670,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 169.7254272337963,
+      "productAgeDays": 170.7359441898148,
       "action": "继续观察"
     },
     {
@@ -15586,7 +15707,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 124.56017260416667,
+      "productAgeDays": 125.57068956018519,
       "action": "继续观察"
     },
     {
@@ -15622,7 +15743,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 120.48604065972222,
+      "productAgeDays": 121.49655761574074,
       "action": "继续观察"
     },
     {
@@ -15657,8 +15778,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-19T11:46:38Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 76.71729065972222,
-      "productAgeDays": 1117.5265267708332,
+      "daysSinceLastSale": 77.72780761574074,
+      "productAgeDays": 1118.5370437268518,
       "action": "继续观察"
     },
     {
@@ -15695,8 +15816,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-24T03:30:19Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 72.06195501157407,
-      "productAgeDays": 705.8366772337963,
+      "daysSinceLastSale": 73.07247196759259,
+      "productAgeDays": 706.8471941898148,
       "action": "继续观察"
     },
     {
@@ -15733,8 +15854,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-21T13:59:16Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 74.62518417824074,
-      "productAgeDays": 334.99116797453706,
+      "daysSinceLastSale": 75.63570113425926,
+      "productAgeDays": 336.00168493055554,
       "action": "继续观察"
     },
     {
@@ -15772,8 +15893,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-07T03:21:38Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 28.067985104166667,
-      "productAgeDays": 176.5134596412037,
+      "daysSinceLastSale": 29.078502060185187,
+      "productAgeDays": 177.52397659722223,
       "action": "继续观察"
     },
     {
@@ -15811,8 +15932,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-11T16:02:30Z",
       "salesStatusText": "普通 1 / 尾款 3",
-      "daysSinceLastSale": 54.539605474537034,
-      "productAgeDays": 151.43714019675926,
+      "daysSinceLastSale": 55.550122430555554,
+      "productAgeDays": 152.44765715277777,
       "action": "继续观察"
     },
     {
@@ -15849,8 +15970,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-13T10:38:44Z",
       "salesStatusText": "定金 1 / 尾款 2",
-      "daysSinceLastSale": 82.7644434375,
-      "productAgeDays": 108.77246427083334,
+      "daysSinceLastSale": 83.77496039351851,
+      "productAgeDays": 109.78298122685185,
       "action": "继续观察"
     },
     {
@@ -15886,8 +16007,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-21T22:42:15Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 74.26200130787036,
-      "productAgeDays": 74.58460547453704,
+      "daysSinceLastSale": 75.27251826388888,
+      "productAgeDays": 75.59512243055555,
       "action": "继续观察"
     },
     {
@@ -15925,8 +16046,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-03T00:16:41Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 63.19642260416666,
-      "productAgeDays": 72.47692028935185,
+      "daysSinceLastSale": 64.20693956018519,
+      "productAgeDays": 73.48743724537037,
       "action": "继续观察"
     },
     {
@@ -15964,8 +16085,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-29T11:38:38Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 66.72284621527778,
-      "productAgeDays": 60.34145732638889,
+      "daysSinceLastSale": 67.73336317129629,
+      "productAgeDays": 61.351974282407404,
       "action": "继续观察"
     },
     {
@@ -16001,7 +16122,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1404.7970013078705,
+      "productAgeDays": 1405.8075182638888,
       "action": "继续观察"
     },
     {
@@ -16037,7 +16158,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1363.7724179745371,
+      "productAgeDays": 1364.7829349305555,
       "action": "继续观察"
     },
     {
@@ -16073,7 +16194,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1333.8073022337962,
+      "productAgeDays": 1334.8178191898148,
       "action": "继续观察"
     },
     {
@@ -16109,7 +16230,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1263.5976031597222,
+      "productAgeDays": 1264.6081201157408,
       "action": "继续观察"
     },
     {
@@ -16145,7 +16266,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1155.725867048611,
+      "productAgeDays": 1156.7363840046296,
       "action": "继续观察"
     },
     {
@@ -16181,7 +16302,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1153.0007976041666,
+      "productAgeDays": 1154.0113145601852,
       "action": "继续观察"
     },
     {
@@ -16217,7 +16338,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1144.7086795486111,
+      "productAgeDays": 1145.7191965046297,
       "action": "继续观察"
     },
     {
@@ -16253,7 +16374,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1144.7036216782408,
+      "productAgeDays": 1145.7141386342594,
       "action": "继续观察"
     },
     {
@@ -16289,7 +16410,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1121.896341585648,
+      "productAgeDays": 1122.9068585416667,
       "action": "继续观察"
     },
     {
@@ -16327,7 +16448,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1100.829605474537,
+      "productAgeDays": 1101.8401224305555,
       "action": "继续观察"
     },
     {
@@ -16363,7 +16484,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1083.5588300115742,
+      "productAgeDays": 1084.5693469675925,
       "action": "继续观察"
     },
     {
@@ -16399,7 +16520,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1062.8070244560186,
+      "productAgeDays": 1063.8175414120371,
       "action": "继续观察"
     },
     {
@@ -16435,7 +16556,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1060.768656400463,
+      "productAgeDays": 1061.7791733564816,
       "action": "继续观察"
     },
     {
@@ -16471,7 +16592,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1053.8769318634259,
+      "productAgeDays": 1054.8874488194444,
       "action": "继续观察"
     },
     {
@@ -16507,7 +16628,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1047.8137026967593,
+      "productAgeDays": 1048.8242196527779,
       "action": "继续观察"
     },
     {
@@ -16543,7 +16664,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1047.8029156597222,
+      "productAgeDays": 1048.8134326157408,
       "action": "继续观察"
     },
     {
@@ -16579,7 +16700,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1040.7945244560185,
+      "productAgeDays": 1041.805041412037,
       "action": "继续观察"
     },
     {
@@ -16615,7 +16736,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1033.9387605671295,
+      "productAgeDays": 1034.949277523148,
       "action": "继续观察"
     },
     {
@@ -16651,7 +16772,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1033.8204388078705,
+      "productAgeDays": 1034.8309557638888,
       "action": "继续观察"
     },
     {
@@ -16687,7 +16808,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 1032.788031400463,
+      "productAgeDays": 1033.7985483564814,
       "action": "继续观察"
     },
     {
@@ -16725,7 +16846,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 961.8145823263889,
+      "productAgeDays": 962.8250992824075,
       "action": "继续观察"
     },
     {
@@ -16761,7 +16882,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 950.7559364930555,
+      "productAgeDays": 951.7664534490741,
       "action": "继续观察"
     },
     {
@@ -16798,7 +16919,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 921.5717582523148,
+      "productAgeDays": 922.5822752083334,
       "action": "继续观察"
     },
     {
@@ -16834,7 +16955,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 920.9052073263889,
+      "productAgeDays": 921.9157242824074,
       "action": "继续观察"
     },
     {
@@ -16871,7 +16992,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 899.6835753819445,
+      "productAgeDays": 900.694092337963,
       "action": "继续观察"
     },
     {
@@ -16907,7 +17028,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 881.6505545486111,
+      "productAgeDays": 882.6610715046296,
       "action": "继续观察"
     },
     {
@@ -16945,7 +17066,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 850.840681863426,
+      "productAgeDays": 851.8511988194444,
       "action": "继续观察"
     },
     {
@@ -16981,7 +17102,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 843.8004851041667,
+      "productAgeDays": 844.8110020601852,
       "action": "继续观察"
     },
     {
@@ -17019,7 +17140,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 843.7924642708333,
+      "productAgeDays": 844.8029812268519,
       "action": "继续观察"
     },
     {
@@ -17056,7 +17177,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 841.7712258449075,
+      "productAgeDays": 842.7817428009259,
       "action": "继续观察"
     },
     {
@@ -17092,7 +17213,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 837.7654040856481,
+      "productAgeDays": 838.7759210416667,
       "action": "继续观察"
     },
     {
@@ -17128,7 +17249,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 809.8002999189815,
+      "productAgeDays": 810.810816875,
       "action": "继续观察"
     },
     {
@@ -17164,7 +17285,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 801.8203577893519,
+      "productAgeDays": 802.8308747453704,
       "action": "继续观察"
     },
     {
@@ -17200,7 +17321,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 800.6513763078704,
+      "productAgeDays": 801.6618932638889,
       "action": "继续观察"
     },
     {
@@ -17236,7 +17357,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 743.7168161226851,
+      "productAgeDays": 744.7273330787037,
       "action": "继续观察"
     },
     {
@@ -17274,7 +17395,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 738.8447096412037,
+      "productAgeDays": 739.8552265972222,
       "action": "继续观察"
     },
     {
@@ -17310,7 +17431,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 714.8265499189815,
+      "productAgeDays": 715.837066875,
       "action": "继续观察"
     },
     {
@@ -17348,7 +17469,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 705.8971286226852,
+      "productAgeDays": 706.9076455787038,
       "action": "继续观察"
     },
     {
@@ -17385,7 +17506,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 705.5447559375,
+      "productAgeDays": 706.5552728935185,
       "action": "继续观察"
     },
     {
@@ -17422,7 +17543,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 705.2734712152778,
+      "productAgeDays": 706.2839881712963,
       "action": "继续观察"
     },
     {
@@ -17460,7 +17581,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 702.076792974537,
+      "productAgeDays": 703.0873099305555,
       "action": "继续观察"
     },
     {
@@ -17497,7 +17618,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 700.6748369560186,
+      "productAgeDays": 701.685353912037,
       "action": "继续观察"
     },
     {
@@ -17533,7 +17654,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 694.8532281597222,
+      "productAgeDays": 695.8637451157407,
       "action": "继续观察"
     },
     {
@@ -17572,7 +17693,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 678.3597675115741,
+      "productAgeDays": 679.3702844675926,
       "action": "继续观察"
     },
     {
@@ -17610,7 +17731,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 663.6376610300925,
+      "productAgeDays": 664.6481779861111,
       "action": "继续观察"
     },
     {
@@ -17648,7 +17769,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 657.6905082523148,
+      "productAgeDays": 658.7010252083334,
       "action": "继续观察"
     },
     {
@@ -17684,7 +17805,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 653.7784827893519,
+      "productAgeDays": 654.7889997453703,
       "action": "继续观察"
     },
     {
@@ -17720,7 +17841,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 645.9034017708333,
+      "productAgeDays": 646.9139187268519,
       "action": "继续观察"
     },
     {
@@ -17756,7 +17877,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 629.7556818634259,
+      "productAgeDays": 630.7661988194444,
       "action": "继续观察"
     },
     {
@@ -17794,7 +17915,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 628.4967003819445,
+      "productAgeDays": 629.507217337963,
       "action": "继续观察"
     },
     {
@@ -17830,7 +17951,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 614.5645707523148,
+      "productAgeDays": 615.5750877083333,
       "action": "继续观察"
     },
     {
@@ -17868,7 +17989,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 611.8497675115741,
+      "productAgeDays": 612.8602844675926,
       "action": "继续观察"
     },
     {
@@ -17904,7 +18025,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 603.5296633449074,
+      "productAgeDays": 604.540180300926,
       "action": "继续观察"
     },
     {
@@ -17942,7 +18063,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 590.6517698263889,
+      "productAgeDays": 591.6622867824074,
       "action": "继续观察"
     },
     {
@@ -17980,7 +18101,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 1",
       "daysSinceLastSale": null,
-      "productAgeDays": 578.8794781597222,
+      "productAgeDays": 579.8899951157407,
       "action": "继续观察"
     },
     {
@@ -18016,7 +18137,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 576.548181863426,
+      "productAgeDays": 577.5586988194444,
       "action": "继续观察"
     },
     {
@@ -18052,7 +18173,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 575.5206702893519,
+      "productAgeDays": 576.5311872453703,
       "action": "继续观察"
     },
     {
@@ -18088,7 +18209,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 574.9645476041667,
+      "productAgeDays": 575.9750645601852,
       "action": "继续观察"
     },
     {
@@ -18124,7 +18245,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 571.7973485300926,
+      "productAgeDays": 572.8078654861112,
       "action": "继续观察"
     },
     {
@@ -18160,7 +18281,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 544.5926957523149,
+      "productAgeDays": 545.6032127083333,
       "action": "继续观察"
     },
     {
@@ -18198,7 +18319,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 541.8142119560185,
+      "productAgeDays": 542.824728912037,
       "action": "继续观察"
     },
     {
@@ -18234,7 +18355,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 509.5250684375,
+      "productAgeDays": 510.53558539351855,
       "action": "继续观察"
     },
     {
@@ -18270,7 +18391,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 508.6056471412037,
+      "productAgeDays": 509.6161640972222,
       "action": "继续观察"
     },
     {
@@ -18306,7 +18427,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 508.57482538194444,
+      "productAgeDays": 509.58534233796297,
       "action": "继续观察"
     },
     {
@@ -18342,7 +18463,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 506.707730474537,
+      "productAgeDays": 507.71824743055555,
       "action": "继续观察"
     },
     {
@@ -18378,7 +18499,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 499.56811241898146,
+      "productAgeDays": 500.578629375,
       "action": "继续观察"
     },
     {
@@ -18414,7 +18535,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 495.6141309375,
+      "productAgeDays": 496.6246478935185,
       "action": "继续观察"
     },
     {
@@ -18450,7 +18571,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 494.6725105671296,
+      "productAgeDays": 495.68302752314816,
       "action": "继续观察"
     },
     {
@@ -18487,7 +18608,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 492.78152677083335,
+      "productAgeDays": 493.79204372685183,
       "action": "继续观察"
     },
     {
@@ -18523,7 +18644,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 473.7556008449074,
+      "productAgeDays": 474.76611780092594,
       "action": "继续观察"
     },
     {
@@ -18561,7 +18682,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 471.73046195601853,
+      "productAgeDays": 472.74097891203706,
       "action": "继续观察"
     },
     {
@@ -18598,7 +18719,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 465.88267260416666,
+      "productAgeDays": 466.8931895601852,
       "action": "继续观察"
     },
     {
@@ -18634,7 +18755,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 441.8141656597222,
+      "productAgeDays": 442.82468261574076,
       "action": "继续观察"
     },
     {
@@ -18670,7 +18791,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 435.0747790856482,
+      "productAgeDays": 436.08529604166665,
       "action": "继续观察"
     },
     {
@@ -18706,7 +18827,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 431.54393417824076,
+      "productAgeDays": 432.55445113425924,
       "action": "继续观察"
     },
     {
@@ -18742,7 +18863,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 424.7299295486111,
+      "productAgeDays": 425.74044650462963,
       "action": "继续观察"
     },
     {
@@ -18780,7 +18901,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 411.9992698263889,
+      "productAgeDays": 413.0097867824074,
       "action": "继续观察"
     },
     {
@@ -18816,7 +18937,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 409.68575130787036,
+      "productAgeDays": 410.6962682638889,
       "action": "继续观察"
     },
     {
@@ -18852,7 +18973,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 409.67021890046294,
+      "productAgeDays": 410.6807358564815,
       "action": "继续观察"
     },
     {
@@ -18890,7 +19011,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 383.6113647337963,
+      "productAgeDays": 384.6218816898148,
       "action": "继续观察"
     },
     {
@@ -18927,7 +19048,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 381.85135315972224,
+      "productAgeDays": 382.8618701157407,
       "action": "继续观察"
     },
     {
@@ -18963,7 +19084,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 355.86344806712964,
+      "productAgeDays": 356.8739650231482,
       "action": "继续观察"
     },
     {
@@ -19001,7 +19122,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 355.7752883449074,
+      "productAgeDays": 356.7858053009259,
       "action": "继续观察"
     },
     {
@@ -19040,7 +19161,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 351.78827445601854,
+      "productAgeDays": 352.798791412037,
       "action": "继续观察"
     },
     {
@@ -19076,7 +19197,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 348.9448832523148,
+      "productAgeDays": 349.95540020833334,
       "action": "继续观察"
     },
     {
@@ -19112,7 +19233,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 340.9477536226852,
+      "productAgeDays": 341.9582705787037,
       "action": "继续观察"
     },
     {
@@ -19148,7 +19269,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 323.8530198263889,
+      "productAgeDays": 324.8635367824074,
       "action": "继续观察"
     },
     {
@@ -19184,7 +19305,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 316.82520732638886,
+      "productAgeDays": 317.8357242824074,
       "action": "继续观察"
     },
     {
@@ -19222,7 +19343,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 295.8061795486111,
+      "productAgeDays": 296.81669650462965,
       "action": "继续观察"
     },
     {
@@ -19258,7 +19379,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 263.3505545486111,
+      "productAgeDays": 264.36107150462965,
       "action": "继续观察"
     },
     {
@@ -19296,7 +19417,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 262.39092491898145,
+      "productAgeDays": 263.401441875,
       "action": "继续观察"
     },
     {
@@ -19334,7 +19455,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 262.3828693634259,
+      "productAgeDays": 263.39338631944446,
       "action": "继续观察"
     },
     {
@@ -19372,7 +19493,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 262.3535638078704,
+      "productAgeDays": 263.36408076388886,
       "action": "继续观察"
     },
     {
@@ -19408,7 +19529,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 235.50418880787038,
+      "productAgeDays": 236.51470576388888,
       "action": "继续观察"
     },
     {
@@ -19444,7 +19565,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 229.51499899305554,
+      "productAgeDays": 230.52551594907408,
       "action": "继续观察"
     },
     {
@@ -19482,7 +19603,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 228.47465177083333,
+      "productAgeDays": 229.48516872685184,
       "action": "继续观察"
     },
     {
@@ -19518,7 +19639,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 205.58009158564815,
+      "productAgeDays": 206.59060854166665,
       "action": "继续观察"
     },
     {
@@ -19554,7 +19675,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 204.56440871527778,
+      "productAgeDays": 205.57492567129628,
       "action": "继续观察"
     },
     {
@@ -19590,7 +19711,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 204.17693186342592,
+      "productAgeDays": 205.18744881944446,
       "action": "继续观察"
     },
     {
@@ -19628,7 +19749,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 3",
       "daysSinceLastSale": null,
-      "productAgeDays": 186.88273047453703,
+      "productAgeDays": 187.89324743055556,
       "action": "继续观察"
     },
     {
@@ -19666,7 +19787,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 1",
       "daysSinceLastSale": null,
-      "productAgeDays": 186.8728346412037,
+      "productAgeDays": 187.88335159722223,
       "action": "继续观察"
     },
     {
@@ -19705,7 +19826,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 177.56067028935186,
+      "productAgeDays": 178.57118724537037,
       "action": "继续观察"
     },
     {
@@ -19743,7 +19864,7 @@
       "lastSaleAt": null,
       "salesStatusText": "尾款 1",
       "daysSinceLastSale": null,
-      "productAgeDays": 174.50355223379628,
+      "productAgeDays": 175.51406918981482,
       "action": "继续观察"
     },
     {
@@ -19780,7 +19901,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 171.94652677083334,
+      "productAgeDays": 172.95704372685185,
       "action": "继续观察"
     },
     {
@@ -19819,7 +19940,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 165.92339019675927,
+      "productAgeDays": 166.93390715277778,
       "action": "继续观察"
     },
     {
@@ -19855,7 +19976,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 152.50267260416666,
+      "productAgeDays": 153.5131895601852,
       "action": "继续观察"
     },
     {
@@ -19894,7 +20015,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 144.74482538194445,
+      "productAgeDays": 145.75534233796296,
       "action": "继续观察"
     },
     {
@@ -19933,7 +20054,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 140.4770707523148,
+      "productAgeDays": 141.48758770833334,
       "action": "继续观察"
     },
     {
@@ -19972,7 +20093,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 119.4935059375,
+      "productAgeDays": 120.50402289351852,
       "action": "继续观察"
     },
     {
@@ -20009,7 +20130,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 104.8079735300926,
+      "productAgeDays": 105.81849048611112,
       "action": "继续观察"
     },
     {
@@ -20048,7 +20169,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 104.79688556712964,
+      "productAgeDays": 105.80740252314814,
       "action": "继续观察"
     },
     {
@@ -20087,7 +20208,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 103.81173510416667,
+      "productAgeDays": 104.82225206018518,
       "action": "继续观察"
     },
     {
@@ -20126,7 +20247,7 @@
       "lastSaleAt": null,
       "salesStatusText": "无",
       "daysSinceLastSale": null,
-      "productAgeDays": 103.79115640046297,
+      "productAgeDays": 104.80167335648149,
       "action": "继续观察"
     },
     {
@@ -20164,8 +20285,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-28T18:48:41Z",
       "salesStatusText": "全额预约 1 / 尾款 2",
-      "daysSinceLastSale": 37.424200381944445,
-      "productAgeDays": 1046.8114110300926,
+      "daysSinceLastSale": 38.434717337962965,
+      "productAgeDays": 1047.8219279861112,
       "action": "继续观察"
     },
     {
@@ -20202,8 +20323,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-11T15:49:02Z",
       "salesStatusText": "普通 1 / 尾款 3",
-      "daysSinceLastSale": 23.548957326388887,
-      "productAgeDays": 809.7165846412037,
+      "daysSinceLastSale": 24.559474282407407,
+      "productAgeDays": 810.7271015972223,
       "action": "继续观察"
     },
     {
@@ -20238,8 +20359,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-26T12:27:09Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 69.68915408564814,
-      "productAgeDays": 780.5314457523148,
+      "daysSinceLastSale": 70.69967104166666,
+      "productAgeDays": 781.5419627083334,
       "action": "继续观察"
     },
     {
@@ -20274,8 +20395,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-09T09:35:26Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 25.808401770833335,
-      "productAgeDays": 723.728980474537,
+      "daysSinceLastSale": 26.81891872685185,
+      "productAgeDays": 724.7394974305555,
       "action": "继续观察"
     },
     {
@@ -20312,8 +20433,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-25T14:16:58Z",
       "salesStatusText": "普通 1 / 尾款 1",
-      "daysSinceLastSale": 70.61289251157407,
-      "productAgeDays": 701.4832860300926,
+      "daysSinceLastSale": 71.6234094675926,
+      "productAgeDays": 702.4938029861111,
       "action": "继续观察"
     },
     {
@@ -20348,8 +20469,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-09T03:36:06Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 57.05793880787037,
-      "productAgeDays": 630.7764457523148,
+      "daysSinceLastSale": 58.06845576388889,
+      "productAgeDays": 631.7869627083334,
       "action": "继续观察"
     },
     {
@@ -20384,8 +20505,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-18T17:55:37Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 47.461052233796295,
-      "productAgeDays": 604.5678462152778,
+      "daysSinceLastSale": 48.471569189814815,
+      "productAgeDays": 605.5783631712962,
       "action": "继续观察"
     },
     {
@@ -20423,8 +20544,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-25T06:25:51Z",
       "salesStatusText": "全额预约 1 / 尾款 2",
-      "daysSinceLastSale": 70.94005686342592,
-      "productAgeDays": 336.0621170486111,
+      "daysSinceLastSale": 71.95057381944444,
+      "productAgeDays": 337.0726340046296,
       "action": "继续观察"
     },
     {
@@ -20459,8 +20580,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-19T07:06:27Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 76.91186241898149,
-      "productAgeDays": 285.8716193634259,
+      "daysSinceLastSale": 77.922379375,
+      "productAgeDays": 286.88213631944444,
       "action": "继续观察"
     },
     {
@@ -20498,8 +20619,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-06-25T07:56:06Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 9.877383252314814,
-      "productAgeDays": 275.7855082523148,
+      "daysSinceLastSale": 10.887900208333333,
+      "productAgeDays": 276.79602520833333,
       "action": "继续观察"
     },
     {
@@ -20536,8 +20657,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-05-18T14:38:12Z",
       "salesStatusText": "普通 1",
-      "daysSinceLastSale": 47.598147141203704,
-      "productAgeDays": 228.3971286226852,
+      "daysSinceLastSale": 48.608664097222224,
+      "productAgeDays": 229.4076455787037,
       "action": "继续观察"
     },
     {
@@ -20572,8 +20693,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-07T12:44:13Z",
       "salesStatusText": "预约待判 1",
-      "daysSinceLastSale": 88.6773022337963,
-      "productAgeDays": 117.63305454861111,
+      "daysSinceLastSale": 89.68781918981482,
+      "productAgeDays": 118.64357150462963,
       "action": "继续观察"
     },
     {
@@ -20609,8 +20730,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-30T13:06:07Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 65.66209390046296,
-      "productAgeDays": 73.61499899305555,
+      "daysSinceLastSale": 66.67261085648148,
+      "productAgeDays": 74.62551594907407,
       "action": "继续观察"
     },
     {
@@ -20648,8 +20769,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-26T08:55:51Z",
       "salesStatusText": "定金 1",
-      "daysSinceLastSale": 69.83589019675927,
-      "productAgeDays": 71.47085547453703,
+      "daysSinceLastSale": 70.84640715277777,
+      "productAgeDays": 72.48137243055555,
       "action": "继续观察"
     },
     {
@@ -20684,8 +20805,8 @@
       "sold90": 1,
       "lastSaleAt": "2026-04-28T07:46:23Z",
       "salesStatusText": "全额预约 1",
-      "daysSinceLastSale": 67.8841309375,
-      "productAgeDays": 68.55879528935185,
+      "daysSinceLastSale": 68.89464789351852,
+      "productAgeDays": 69.56931224537037,
       "action": "继续观察"
     }
   ],
